@@ -1,17 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Memory Games</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.3.js"
+        integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
+
 <body>
-    <p>Hello World</p>
-    <script src="assets/js/script.js"></script>    
+    <div class="background-img">
+        <header is="header" class="header-text">Kid's Memory Pair's Games</header>
+
+        <!--start section-->
+        <section class="start-game">
+            <h2>To find out how to play the game press the button below</h2>
+            <button type="button" id="instruct-btn" class="btn btn-primary">Instructions</button>
+
+            <!--modal for instructions-->
+            <div class="instruction-overlay">
+                <!--modal content-->
+                <div class="instruction-content">
+                    <h2 class="modal-title">Instructions</h2>
+                    <h3>To start the game</h3>
+                    <p>Click/press the start button</p>
+                    <h3>Choose A Game style</h3>
+                    <p>Click/press a a button to select a game style</p>
+                    </ul>
+                    <ol class="instruction-list">
+                        <li>Select a card to start the game and flip a card</li>
+                        <li>select a 2nd card to flip it</li>
+                        <li>if the pictures match the cards stay flipped,<br> pick another 2 cards</li>
+                        <li>if the pictures dont match the cards flip back over</li>
+                        <li>You can only flip 2 cards at once</li>
+                        <li>Win the game by matching 8 pairs of pictures</li>
+                        <li>Restart the game to try to beat your number of moves or your best time</li>
+                    </ol>
+                    <h3>To Choose Another Game Style</h3>
+                    <p>Click Press the reset button, select start and then select the game style of your choice</p>
+                    <!--modal close button-->
+                    <button class="close-modal-btn">Close</button>
+                </div>
+            </div>
+            <!-- end of instructions -->
+
+            <!-- start game button -->
+            <h2>Press start below to begin</h2>
+            <button type="button" id="start-button" class="btn btn-primary">Start</button>
+        </section>
+
+        <!-- Choose game style -->
+        <section class="choose-game">
+            <h2>Press a button to choose a game style</h2>
+            <div class="btn-group">
+                <button type="button" id="farm-btn" class="btn btn-primary">Farm game</button>
+                <button type="button" id="space-btn" class="btn btn-secondary">Space Game</button>
+                <button type="button" id="cars-btn" class="btn btn-success">Cars Game</button>
+            </div>
+        </section>
+
+        <!-- Main Game -->
+        <section class="main-game">
+            <div class="game-text">
+                <h3><span class="game-type">0</span> Memory Game</h3>
+                <p>See if you can match all the cards</p>
+                <p>Try to beat your best time and number of moves</p>
+                <p>Good Luck !!!</p>
+            </div>
+
+            <!-- Timer/turns taken -->
+            <div class="timer-turns-wrap">
+                <div id="timer">--min--secs</div>
+                <div>
+                    <p>Turns taken: <span id="moves"> 0</span></p>
+                </div>
+            </div>
+
+            <!-- cards for farm game -->
+            <section id="game-cards">
+                <div class="farm-cards">
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                </div>
+
+                <!-- cardss for space game -->
+                <div class="farm-cardss">
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                </div>
+
+                <!-- cardss for car game -->
+                <div class="farm-cardss">
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                </div>
+            </section>
+
+            <!-- reset to choose different game -->
+            <div class="game-btn-wrap">
+                <div>
+                    <p>Change Game Style</p>
+                    <button type="button" id="reset-btn" class="btn btn-primary">New Game Style</button>
+                </div>
+                <div>
+                    <p>Reset Current Game</p>
+                    <button type="button" id="reset-btn" class="btn btn-primary">Reset Game</button>
+                </div>
+            </div>
+
+        </section>
+        <footer>
+            <div class="footer-text">Marks Created this game ---- add github icon</div>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+    </script>
+    <script src="assets/js/script.js"></script>
 </body>
+
 </html>
