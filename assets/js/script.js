@@ -4,6 +4,6 @@ $(".instruct-btn").on("click", function() {
   });
   
   //removes the "active" class to .popup instructions-overlay and .popup-instructions-content when the "Close" button is clicked 
-  $(".close, .popup-instruction-overlay").on("click", function() {
+  $(".close-modal-btn").on("click", function() {
     $(".popup-instruction-overlay, .popup-instruction-content").removeClass("active");
   });
