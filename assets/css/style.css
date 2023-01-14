@@ -1,0 +1,31 @@
+
+/*instructions popup styling */
+
+.popup-instruction-overlay {
+    /*Hides instructions pop-up*/
+    visibility: hidden;
+    position: absolute;
+    background: #b96d6d;
+    border: 3px solid #666666;
+    width: 50%;
+    height: auto;
+    left: 25%;
+    top:25%
+
+  }
+  
+  .popup-instruction-overlay.active {
+    /*displays instructions popup*/
+    visibility: visible;
+  }
+  
+  .popup-instruction-content {
+    /*Hides instructions pop-up content*/
+    visibility: hidden;
+  }
+  
+  .popup-instruction-content.active {
+    /*Shows instructions pop-up content */
+    visibility: visible;
+  }
+  
