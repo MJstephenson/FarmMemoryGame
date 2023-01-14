@@ -15,49 +15,54 @@
 
 <body>
     <div class="background-img">
-        <header is="header" class="header-text">Kid's Memory Pair's Games</header>
+        <header is="header" class="header-text text-center py-5 px-2 display-1">Kid's Memory Pair's Games</header>
 
         <!--start section-->
-        <section class="start-game">
-            <h2>To find out how to play the game press the button below</h2>
-            <button type="button" id="instruct-btn" class="btn btn-primary">Instructions</button>
+        <section class="start-game text-center">
+            <h2 class="py-5 px-4">To find out how to play the game press the button below</h2>
+            <button type="button" id="instruct-btn" class="btn btn-primary text-center">Instructions</button>
+        </section>
 
-            <!--modal for instructions-->
-            <div class="instruction-overlay">
-                <!--modal content-->
-                <div class="instruction-content">
-                    <h2 class="modal-title">Instructions</h2>
-                    <h3>To start the game</h3>
-                    <p>Click/press the start button</p>
-                    <h3>Choose A Game style</h3>
-                    <p>Click/press a a button to select a game style</p>
-                    </ul>
-                    <ol class="instruction-list">
-                        <li>Select a card to start the game and flip a card</li>
-                        <li>select a 2nd card to flip it</li>
-                        <li>if the pictures match the cards stay flipped,<br> pick another 2 cards</li>
-                        <li>if the pictures dont match the cards flip back over</li>
-                        <li>You can only flip 2 cards at once</li>
-                        <li>Win the game by matching 8 pairs of pictures</li>
-                        <li>Restart the game to try to beat your number of moves or your best time</li>
-                    </ol>
-                    <h3>To Choose Another Game Style</h3>
-                    <p>Click Press the reset button, select start and then select the game style of your choice</p>
-                    <!--modal close button-->
-                    <button class="close-modal-btn">Close</button>
-                </div>
+        </section>
+        <!--modal for instructions-->
+        <div class="instruction-overlay">
+            <!--modal content-->
+            <div class="instruction-content">
+                <h2 class="modal-title">Instructions</h2>
+                <h3>To start the game</h3>
+                <p>Click/press the start button</p>
+                <h3>Choose A Game style</h3>
+                <p>Click/press a a button to select a game style</p>
+                </ul>
+                <ol class="instruction-list">
+                    <li>Select a card to start the game and flip a card</li>
+                    <li>select a 2nd card to flip it</li>
+                    <li>if the pictures match the cards stay flipped,<br> pick another 2 cards</li>
+                    <li>if the pictures dont match the cards flip back over</li>
+                    <li>You can only flip 2 cards at once</li>
+                    <li>Win the game by matching 8 pairs of pictures</li>
+                    <li>Restart the game to try to beat your number of moves or your best time</li>
+                </ol>
+                <h3>To Choose Another Game Style</h3>
+                <p>Click Press the reset button, select start and then select the game style of your choice</p>
+                <!--modal close button-->
+                <button class="close-modal-btn">Close</button>
             </div>
-            <!-- end of instructions -->
+        </div>
+        <!-- end of instructions -->
 
-            <!-- start game button -->
-            <h2>Press start below to begin</h2>
-            <button type="button" id="start-button" class="btn btn-primary">Start</button>
+        <!-- start game button -->
+        <div class="text-center">
+            <h2 class="py-5">Press start below to begin</h2>
+            <button type="button" id="start-button" class="btn btn-primary ">Start</button>
+        </div>
+
         </section>
 
         <!-- Choose game style -->
-        <section class="choose-game">
-            <h2>Press a button to choose a game style</h2>
-            <div class="btn-group">
+        <section class="choose-game text-center">
+            <h2 class="py-5 px-4">Press a button to choose a game style</h2>
+            <div class="btn-choose">
                 <button type="button" id="farm-btn" class="btn btn-primary">Farm game</button>
                 <button type="button" id="space-btn" class="btn btn-secondary">Space Game</button>
                 <button type="button" id="cars-btn" class="btn btn-success">Cars Game</button>
@@ -66,98 +71,93 @@
 
         <!-- Main Game -->
         <section class="main-game">
-            <div class="game-text">
-                <h3><span class="game-type">0</span> Memory Game</h3>
-                <p>See if you can match all the cards</p>
+            <div class="game-text text-center display-5 px-2">
+                <h3 class="display-1"><span class="game-type display-1">0</span> Memory Game</h3>
+                <p class="pt-5 px-5">See if you can match all the cards</p>
                 <p>Try to beat your best time and number of moves</p>
                 <p>Good Luck !!!</p>
             </div>
 
             <!-- Timer/turns taken -->
-            <div class="timer-turns-wrap">
-                <div id="timer">--min--secs</div>
-                <div>
-                    <p>Turns taken: <span id="moves"> 0</span></p>
-                </div>
-            </div>
-
-            <!-- cards for farm game -->
-            <section id="game-cards">
-                <div class="farm-cards">
-                    <div class="cards"></div>
-                    <div class="cards"></div>
-                    <div class="cards"></div>
-                    <div class="cards"></div>
-                    <div class="cards"></div>
-                    <div class="cards"></div>
-                    <div class="cards"></div>
-                    <div class="cards"></div>
-                    <div class="cards"></div>
-                    <div class="cards"></div>
-                    <div class="cards"></div>
-                    <div class="cards"></div>
-                    <div class="cards"></div>
-                    <div class="cards"></div>
-                    <div class="cards"></div>
-                    <div class="cards"></div>
+     
+                <div class="timer-turns-wrap d-flex justify-content-center align-center p-5">
+                    <div id="timer" class="pe-5">--min--secs</div>
+                    <p>Turns taken: <span id="moves" class=""> 0</span></p>
                 </div>
 
-                <!-- cardss for space game -->
-                <div class="farm-cardss">
-                    <div class="cards"></div>
-                    <div class="cards"></div>
-                    <div class="cards"></div>
-                    <div class="cards"></div>
-                    <div class="cards"></div>
-                    <div class="cards"></div>
-                    <div class="cards"></div>
-                    <div class="cards"></div>
-                    <div class="cards"></div>
-                    <div class="cards"></div>
-                    <div class="cards"></div>
-                    <div class="cards"></div>
-                    <div class="cards"></div>
-                    <div class="cards"></div>
-                    <div class="cards"></div>
-                    <div class="cards"></div>
-                </div>
+                <!-- cards for farm game -->
+                <section id="game-cards">
+                    <div class="farm-cards">
+                        <div class="cards"></div>
+                        <div class="cards"></div>
+                        <div class="cards"></div>
+                        <div class="cards"></div>
+                        <div class="cards"></div>
+                        <div class="cards"></div>
+                        <div class="cards"></div>
+                        <div class="cards"></div>
+                        <div class="cards"></div>
+                        <div class="cards"></div>
+                        <div class="cards"></div>
+                        <div class="cards"></div>
+                        <div class="cards"></div>
+                        <div class="cards"></div>
+                        <div class="cards"></div>
+                        <div class="cards"></div>
+                    </div>
 
-                <!-- cardss for car game -->
-                <div class="farm-cardss">
-                    <div class="cards"></div>
-                    <div class="cards"></div>
-                    <div class="cards"></div>
-                    <div class="cards"></div>
-                    <div class="cards"></div>
-                    <div class="cards"></div>
-                    <div class="cards"></div>
-                    <div class="cards"></div>
-                    <div class="cards"></div>
-                    <div class="cards"></div>
-                    <div class="cards"></div>
-                    <div class="cards"></div>
-                    <div class="cards"></div>
-                    <div class="cards"></div>
-                    <div class="cards"></div>
-                    <div class="cards"></div>
-                </div>
-            </section>
+                    <!-- cardss for space game -->
+                    <div class="farm-cardss">
+                        <div class="cards"></div>
+                        <div class="cards"></div>
+                        <div class="cards"></div>
+                        <div class="cards"></div>
+                        <div class="cards"></div>
+                        <div class="cards"></div>
+                        <div class="cards"></div>
+                        <div class="cards"></div>
+                        <div class="cards"></div>
+                        <div class="cards"></div>
+                        <div class="cards"></div>
+                        <div class="cards"></div>
+                        <div class="cards"></div>
+                        <div class="cards"></div>
+                        <div class="cards"></div>
+                        <div class="cards"></div>
+                    </div>
 
-            <!-- reset to choose different game -->
-            <div class="game-btn-wrap">
-                <div>
-                    <p>Change Game Style</p>
-                    <button type="button" id="reset-btn" class="btn btn-primary">New Game Style</button>
-                </div>
-                <div>
-                    <p>Reset Current Game</p>
-                    <button type="button" id="reset-btn" class="btn btn-primary">Reset Game</button>
-                </div>
-            </div>
+                    <!-- cardss for car game -->
+                    <div class="farm-cardss">
+                        <div class="cards"></div>
+                        <div class="cards"></div>
+                        <div class="cards"></div>
+                        <div class="cards"></div>
+                        <div class="cards"></div>
+                        <div class="cards"></div>
+                        <div class="cards"></div>
+                        <div class="cards"></div>
+                        <div class="cards"></div>
+                        <div class="cards"></div>
+                        <div class="cards"></div>
+                        <div class="cards"></div>
+                        <div class="cards"></div>
+                        <div class="cards"></div>
+                        <div class="cards"></div>
+                        <div class="cards"></div>
+                    </div>
+                </section>
 
+              
+                <!-- reset to choose different game -->
+              
+                    <div class="d-flex flex-column flex-md-row justify-content-center text-center">
+                        <p class="my-2 pe-3">Change Game Style <button type="button" id="reset-btn" class="btn btn-primary">New Game Style</button></p>
+                        <p class="my-2 ps-3">Reset Current Game<button type="button" id="reset-btn" class="btn btn-primary mx-2">Reset Game</button></p>
+                    </div>
+               
         </section>
         <footer>
-            <div class="footer-text">Marks Created this game ---- add github icon</div>
+            <div class="footer-text text-center">Marks Created this game ---- add github icon</div>
         </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
