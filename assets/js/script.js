@@ -7,3 +7,9 @@ $(".instruct-btn").on("click", function() {
   $(".close-modal-btn").on("click", function() {
     $(".popup-instruction-overlay, .popup-instruction-content").removeClass("active");
   });
+
+  //appends an "active class to .choose-game when the "start" button is pressed and hides the begin section from the DOM
+  $("#start-button").on("click", function() {
+    $(".choose-game").addClass("active");
+    $(".begin-section").addClass("inactive");
+  });

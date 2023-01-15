@@ -11,7 +11,6 @@
     height: auto;
     left: 2.5%;
     top:16%
-
   }
   
   .popup-instruction-overlay.active {
@@ -31,10 +30,29 @@
     margin-right: 30px;
   }
 
+/*game start and selectors*/
+
+  /*hides choose game buttons from DOM*/
   .choose-game {
     display: none;
   }
 
+  /*Shows choose game buttons in DOM*/
+  .choose-game.active {
+    display:block;
+  }
+
+  /*Shows the start section at the beggining of the game*/
+  .begin-section {
+    display: block;
+  }
+
+  /*Hides the start section at the beggining of the game*/
+  .begin-section.inactive {
+    display:none;
+  }
+
+  /*Hides main game from DOM*/
   .main-game {
     display: none;
   }
