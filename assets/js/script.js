@@ -20,3 +20,10 @@ $(".instruct-btn").on("click", function() {
     $(".choose-game").removeClass("active");
     $(".main-game, .farm-cards").addClass("active");
   });
+
+  //On space game button click, hide all Dom Elements, and only show main game section with space cards only
+  $("#space-btn").on("click", function() {
+    $(".header-text, .instructions").addClass("inactive");
+    $(".choose-game").removeClass("active");
+    $(".main-game, .space-cards").addClass("active");
+  });
