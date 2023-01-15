@@ -52,7 +52,31 @@
     display:none;
   }
 
+  /*Shows the main title in the DOM*/
+  .header-text {
+    display:block;
+  }
+
+  /*Hides the main title in the DOM*/
+  .header-text.inactive {
+    display:none;
+  }
+
+  /*Shows the instructions in the dom*/
+  .instructions {
+    display:block;
+  }
+
+  /*Hides the instructions in the DOM*/
+  .instructions.inactive {
+    display:none;
+  }
   /*Hides main game from DOM*/
   .main-game {
     display: none;
+  }
+
+  /*Shows main game in DOM*/
+  .main-game.active {
+    display:block;
   }
