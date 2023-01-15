@@ -14,9 +14,9 @@ $(".instruct-btn").on("click", function() {
     $(".begin-section").addClass("inactive");
   });
 
-  //
+  //On farm game button click, hide all Dom Elements, and only show main game section with farm cards only
   $("#farm-btn").on("click", function() {
     $(".header-text, .instructions").addClass("inactive");
     $(".choose-game").removeClass("active");
-    $(".main-game").addClass("active");
+    $(".main-game, .farm-cards").addClass("active");
   });
