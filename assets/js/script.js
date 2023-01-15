@@ -27,3 +27,12 @@ $(".instruct-btn").on("click", function() {
     $(".choose-game").removeClass("active");
     $(".main-game, .space-cards").addClass("active");
   });
+
+  //On car game button click, hide all Dom Elements, and only show main game section with car cards only
+  $("#cars-btn").on("click", function() {
+    $(".header-text, .instructions").addClass("inactive");
+    $(".choose-game").removeClass("active");
+    $(".main-game, .car-cards").addClass("active");
+  });
+
+  
