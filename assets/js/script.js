@@ -40,4 +40,20 @@ $(".instruct-btn").on("click", function() {
     $(".header-text, .instructions").removeClass("inactive");
     $(".choose-game").addClass("active");
     $(".main-game").removeClass("active");
+
+    resetGameStyle()
   });
+
+ //Add reset game style function to clear the prevous game when choosing a new style of game
+  function resetGameStyle() {
+    const cardsList = ['.farm-cards', '.space-cards', '.car-cards'].forEach(item => {
+    const div = document.querySelector(item);
+    div.classList.remove('active');
+     })
+
+    //JQuery Version
+    //const cardsList = ['.farm-cards', '.space-cards', '.car-cards'];
+    //$(cardsList).each(function(item) {
+    // $(cardsList[item]).removeClass('active');
+    //})
+  }
