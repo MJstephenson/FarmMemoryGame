@@ -88,7 +88,11 @@
 
   /*Shows farm cards in the DOM*/
   .farm-cards.active {
-    display:block;
+    justify-content: center;
+    display: grid; 
+    grid-template-columns: repeat(4, auto); 
+    grid-gap: 22px; 
+    width: 100%;
   }
 
   /*Hides space cards from DOM*/
@@ -98,7 +102,11 @@
 
   /*Shows space cards in the DOM*/
   .space-cards.active {
-    display:block;
+    justify-content: center;
+    display: grid; 
+    grid-template-columns: repeat(4, auto); 
+    grid-gap: 22px; 
+    width: 100%;
   }
 
   /*Hides car cards from DOM*/
@@ -108,5 +116,29 @@
 
   /*Shows car cards in the DOM*/
   .car-cards.active {
-    display:block;
+    justify-content: center;
+    display: grid; 
+    grid-template-columns: repeat(4, auto); 
+    grid-gap: 22px; 
+    width: 100%;
   }
+
+  /*make grid for farm cards*/
+  .cards-f {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(25, 207, 116);
+  }
+
+  .cards-s {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(49, 44, 44);
+  }
+
+  .cards-c {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(26, 41, 170);
+  }
+
