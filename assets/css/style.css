@@ -80,3 +80,33 @@
   .main-game.active {
     display:block;
   }
+
+  /*Hides farm cards from DOM*/
+  .farm-cards {
+    display: none;
+  }
+
+  /*Shows farm cards in the DOM*/
+  .farm-cards.active {
+    display:block;
+  }
+
+  /*Hides space cards from DOM*/
+  .space-cards {
+    display: none;
+  }
+
+  /*Shows space cards in the DOM*/
+  .space-cards.active {
+    display:block;
+  }
+
+  /*Hides car cards from DOM*/
+  .car-cards {
+    display: none;
+  }
+
+  /*Shows car cards in the DOM*/
+  .car-cards.active {
+    display:block;
+  }
