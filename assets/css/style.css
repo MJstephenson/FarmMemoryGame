@@ -7,10 +7,10 @@
     position: absolute;
     background: #b96d6d;
     border: 3px solid #666666;
-    width: 50%;
+    width: 95%;
     height: auto;
-    left: 25%;
-    top:25%
+    left: 2.5%;
+    top:20%
 
   }
   
@@ -27,5 +27,11 @@
   .popup-instruction-content.active {
     /*Shows instructions pop-up content */
     visibility: visible;
+    list-style-position: inside;
+    margin-right: 30px;
   }
+
+  .close-modal-btn {
   
+  }  
+
