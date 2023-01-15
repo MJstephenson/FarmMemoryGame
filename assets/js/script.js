@@ -35,4 +35,9 @@ $(".instruct-btn").on("click", function() {
     $(".main-game, .car-cards").addClass("active");
   });
 
-  
+  //On new game style button click, hide all Dom Elements, and show header, instructions and choose style section
+  $("#new-style-btn").on("click", function() {
+    $(".header-text, .instructions").removeClass("inactive");
+    $(".choose-game").addClass("active");
+    $(".main-game").removeClass("active");
+  });
