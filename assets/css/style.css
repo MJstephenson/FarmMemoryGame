@@ -31,7 +31,10 @@
     margin-right: 30px;
   }
 
-  .close-modal-btn {
-  
-  }  
+  .choose-game {
+    display: none;
+  }
 
+  .main-game {
+    display: none;
+  }
