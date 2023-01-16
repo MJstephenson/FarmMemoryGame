@@ -57,3 +57,30 @@ $(".instruct-btn").on("click", function() {
     // $(cardsList[item]).removeClass('active');
     //})
   }
+
+  //timer
+  let timer;
+  let milliseconds = 0;
+  let seconds = 0;
+  let minutes = 0;
+
+  document.querySelector('.farm-cards').addEventListener('click', startTimer);
+
+
+  function startTimer() {
+      milliseconds++;
+
+      if (milliseconds >= 100) {
+          seconds++;
+          milliseconds = 0;
+      }
+  
+      if (seconds >= 60) {
+          minutes++;
+          seconds = 0;
+      }
+
+      document.querySelector('#timer').innerHTML = `${minutes}:${seconds}:${milliseconds}`;
+      timer = setTimeout(startTimer, 10);
+  }
+
