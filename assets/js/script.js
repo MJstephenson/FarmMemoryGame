@@ -90,5 +90,10 @@ function startTimer() {
 
  function resetTimer() {
         clearTimeout(timer); //clears timer https://developer.mozilla.org/en-US/docs/Web/API/clearInterval
+        timer = null //resets the timer to 0 when a new game starts on a card click
+        milliseconds = 0;
+        seconds = 0;
+        minutes = 0;
         document.querySelector('#timer').innerHTML = `00:00:00`;
     }
+
