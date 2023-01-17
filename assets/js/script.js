@@ -63,13 +63,21 @@ let timer;
 let milliseconds = 0;
 let seconds = 0;
 let minutes = 0;
+let gameState = 0
 
-document.querySelector('.car-cards').addEventListener('click', startTimer);//start timer on car card click
-document.querySelector('.space-cards').addEventListener('click', startTimer);//start timer on space card click
-document.querySelector('.farm-cards').addEventListener('click', startTimer);//start timer on farm card click
+document.querySelector('.car-cards').addEventListener('click', startGame);//start timer on car card click
+document.querySelector('.space-cards').addEventListener('click', startGame);//start timer on space card click
+document.querySelector('.farm-cards').addEventListener('click', startGame);//start timer on farm card click
 document.querySelector('#new-style-btn').addEventListener('click', resetTimer);//reset timer on new game style button click
 document.querySelector('#reset-btn').addEventListener('click', resetTimer);//reset timer on reset button click
 
+
+function startGame() {//function to start the timer if a gameState is 0 (not running).
+  if (gameState == 0){
+    startTimer();
+    gameState = 1 //Adds the gameState to 1. This stops the startTimer function from repeating on each click and speeding the timer up
+  }
+}
 //start timer function
 function startTimer() {
     milliseconds++;
@@ -95,5 +103,6 @@ function startTimer() {
         seconds = 0;
         minutes = 0;
         document.querySelector('#timer').innerHTML = `00:00:00`;
+        gameState = 0 //on click of reset button sets the gameState to 0 (not running)
     }
 
