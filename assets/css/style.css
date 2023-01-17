@@ -30,7 +30,7 @@
     margin-right: 30px;
   }
 
-/*game start and selectors*/
+ /*game start and selectors*/
 
   /*hides choose game buttons from DOM*/
   .choose-game {
@@ -142,3 +142,12 @@
     background-color: rgb(26, 41, 170);
   }
 
+  footer {
+    bottom:0;
+    position: fixed;
+    width:100%;
+  }
+
+  #main-container {
+    overflow: ;
+  }

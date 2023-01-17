@@ -65,9 +65,7 @@ let seconds = 0;
 let minutes = 0;
 let gameState = 0
 
-document.querySelector('.car-cards').addEventListener('click', startGame);//start timer on car card click
-document.querySelector('.space-cards').addEventListener('click', startGame);//start timer on space card click
-document.querySelector('.farm-cards').addEventListener('click', startGame);//start timer on farm card click
+document.querySelector('.start-btn').addEventListener('click', startGame);//start timer on start button click
 document.querySelector('#new-style-btn').addEventListener('click', resetTimer);//reset timer on new game style button click
 document.querySelector('#reset-btn').addEventListener('click', resetTimer);//reset timer on reset button click
 
