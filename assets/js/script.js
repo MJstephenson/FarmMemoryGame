@@ -64,6 +64,8 @@ let milliseconds = 0;
 let seconds = 0;
 let minutes = 0;
 
+document.querySelector('.car-cards').addEventListener('click', startTimer);//start timer on car card click
+document.querySelector('.space-cards').addEventListener('click', startTimer);//start timer on space card click
 document.querySelector('.farm-cards').addEventListener('click', startTimer);//start timer on farm card click
 document.querySelector('#new-style-btn').addEventListener('click', resetTimer);//reset timer on new game style button click
 document.querySelector('#reset-btn').addEventListener('click', resetTimer);//reset timer on reset button click
@@ -87,6 +89,6 @@ function startTimer() {
 }
 
  function resetTimer() {
-        clearInterval(timer); //clears timer https://developer.mozilla.org/en-US/docs/Web/API/clearInterval
+        clearTimeout(timer); //clears timer https://developer.mozilla.org/en-US/docs/Web/API/clearInterval
         document.querySelector('#timer').innerHTML = `00:00:00`;
     }
