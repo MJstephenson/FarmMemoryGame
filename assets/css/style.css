@@ -151,13 +151,14 @@
     padding-bottom: 0rem;    /* Footer height */
   }
   
-  #start-btn {
-    margin-bottom: 37vh;
-  }
+.block {
+  height: 410px;
+  display: block;
+}
 
-  #space-btn {
-    margin-bottom: 37vh;
-  }
+.block.inactive {
+  display:none;
+}
 
   #footer {
     position: absolute;

@@ -19,6 +19,7 @@ $("#farm-btn").on("click", function() {
   $(".header-text, .instructions").addClass("inactive");
   $(".choose-game").removeClass("active");
   $(".main-game, .farm-cards").addClass("active");
+  $(".block").addClass("inactive"); //hide block for page layout
 });
 
 //On space game button click, hide all Dom Elements, and only show main game section with space cards only
@@ -26,6 +27,7 @@ $("#space-btn").on("click", function() {
   $(".header-text, .instructions").addClass("inactive");
   $(".choose-game").removeClass("active");
   $(".main-game, .space-cards").addClass("active");
+  $(".block").addClass("inactive"); //hide block for page layout
 });
 
 //On car game button click, hide all Dom Elements, and only show main game section with car cards only
@@ -33,13 +35,16 @@ $("#cars-btn").on("click", function() {
   $(".header-text, .instructions").addClass("inactive");
   $(".choose-game").removeClass("active");
   $(".main-game, .car-cards").addClass("active");
+  $(".block").addClass("inactive"); //hide block for page layout
 });
 
 //On new game style button click, hide all Dom Elements, and show header, instructions and choose style section
 $("#new-style-btn").on("click", function() {
   $(".header-text, .instructions").removeClass("inactive");
   $(".choose-game").addClass("active");
-  $(".main-game").removeClass("active");
+  $(".main-game").removeClass("active"); //hide block for page layout
+  $(".block.inactive").removeClass("inactive"); //hide block for page layout
+  
 
   resetGameStyle()
 });
