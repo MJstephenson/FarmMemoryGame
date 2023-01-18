@@ -2,171 +2,173 @@
 /*instructions popup styling */
 
 .popup-instruction-overlay {
-    /*Hides instructions pop-up*/
-    visibility: hidden;
-    position: absolute;
-    background: #b96d6d;
-    border: 3px solid #666666;
-    width: 95%;
-    height: auto;
-    left: 2.5%;
-    top:16%
-  }
-  
-  .popup-instruction-overlay.active {
-    /*displays instructions popup*/
-    visibility: visible;
-  }
-  
-  .popup-instruction-content {
-    /*Hides instructions pop-up content*/
-    visibility: hidden;
-  }
-  
-  .popup-instruction-content.active {
-    /*Shows instructions pop-up content */
-    visibility: visible;
-    list-style-position: inside;
-    margin-right: 30px;
-  }
+  /*Hides instructions pop-up*/
+  visibility: hidden;
+  position: absolute;
+  background: #b96d6d;
+  border: 3px solid #666666;
+  width: 95%;
+  height: auto;
+  left: 2.5%;
+  top:16%
+}
 
- /*game start and selectors*/
+.popup-instruction-overlay.active {
+  /*displays instructions popup*/
+  visibility: visible;
+}
 
-  /*hides choose game buttons from DOM*/
-  .choose-game {
-    display: none;
-  }
+.popup-instruction-content {
+  /*Hides instructions pop-up content*/
+  visibility: hidden;
+}
 
-  /*Shows choose game buttons in DOM*/
-  .choose-game.active {
-    display:block;
-  }
+.popup-instruction-content.active {
+  /*Shows instructions pop-up content */
+  visibility: visible;
+  list-style-position: inside;
+  margin-right: 30px;
+}
 
-  /*Shows the start section at the beggining of the game*/
-  .begin-section {
-    display: block;
-  }
+/*game start and selectors*/
 
-  /*Hides the start section at the beggining of the game*/
-  .begin-section.inactive {
-    display:none;
-  }
+/*hides choose game buttons from DOM*/
+.choose-game {
+  display: none;
+}
 
-  /*Shows the main title in the DOM*/
-  .header-text {
-    display:block;
-  }
+/*Shows choose game buttons in DOM*/
+.choose-game.active {
+  display:block;
+}
 
-  /*Hides the main title in the DOM*/
-  .header-text.inactive {
-    display:none;
-  }
-
-  /*Shows the instructions in the dom*/
-  .instructions {
-    display:block;
-  }
-
-  /*Hides the instructions in the DOM*/
-  .instructions.inactive {
-    display:none;
-  }
-  /*Hides main game from DOM*/
-  .main-game {
-    display: none;
-  }
-
-  /*Shows main game in DOM*/
-  .main-game.active {
-    display:block;
-  }
-
-  /*Hides farm cards from DOM*/
-  .farm-cards {
-    display: none;
-  }
-
-  /*Shows farm cards in the DOM*/
-  .farm-cards.active {
-    justify-content: center;
-    display: grid; 
-    grid-template-columns: repeat(4, auto); 
-    grid-gap: 22px; 
-    width: 100%;
-  }
-
-  /*Hides space cards from DOM*/
-  .space-cards {
-    display: none;
-  }
-
-  /*Shows space cards in the DOM*/
-  .space-cards.active {
-    justify-content: center;
-    display: grid; 
-    grid-template-columns: repeat(4, auto); 
-    grid-gap: 22px; 
-    width: 100%;
-  }
-
-  /*Hides car cards from DOM*/
-  .car-cards {
-    display: none;
-  }
-
-  /*Shows car cards in the DOM*/
-  .car-cards.active {
-    justify-content: center;
-    display: grid; 
-    grid-template-columns: repeat(4, auto); 
-    grid-gap: 22px; 
-    width: 100%;
-  }
-
-  /*make grid for farm cards*/
-  .cards-f {
-    width: 100px;
-    height: 100px;
-    background-color: rgb(25, 207, 116);
-  }
-
-  .cards-s {
-    width: 100px;
-    height: 100px;
-    background-color: rgb(49, 44, 44);
-  }
-
-  .cards-c {
-    width: 100px;
-    height: 100px;
-    background-color: rgb(26, 41, 170);
-  }
-
-  #page-container {
-    position: relative;
-    min-height: 100vh;
-  }
-  
-  #content-wrap {
-    padding-bottom: 0rem;    /* Footer height */
-  }
-  
-.block {
-  height: 410px;
+/*Shows the start section at the beggining of the game*/
+.begin-section {
   display: block;
 }
 
-.block.inactive {
+/*Hides the start section at the beggining of the game*/
+.begin-section.inactive {
   display:none;
 }
 
-  #footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 2.5rem;            /* Footer height */
-  }
+/*Shows the main title in the DOM*/
+.header-text {
+  display:block;
+}
 
-  .cards-f, .cards-s, .cards-c {
-    cursor: pointer;
-  }
+/*Hides the main title in the DOM*/
+.header-text.inactive {
+  display:none;
+}
+
+/*Shows the instructions in the dom*/
+.instructions {
+  display:block;
+}
+
+/*Hides the instructions in the DOM*/
+.instructions.inactive {
+  display:none;
+}
+/*Hides main game from DOM*/
+.main-game {
+  display: none;
+}
+
+/*Shows main game in DOM*/
+.main-game.active {
+  display:block;
+}
+
+/*Hides farm cards from DOM*/
+.farm-cards {
+  display: none;
+}
+
+/*Shows farm cards in the DOM*/
+.farm-cards.active {
+  justify-content: center;
+  display: grid; 
+  grid-template-columns: repeat(4, auto); 
+  grid-gap: 22px; 
+  width: 100%;
+}
+
+/*Hides space cards from DOM*/
+.space-cards {
+  display: none;
+}
+
+/*Shows space cards in the DOM*/
+.space-cards.active {
+  justify-content: center;
+  display: grid; 
+  grid-template-columns: repeat(4, auto); 
+  grid-gap: 22px; 
+  width: 100%;
+}
+
+/*Hides car cards from DOM*/
+.car-cards {
+  display: none;
+}
+
+/*Shows car cards in the DOM*/
+.car-cards.active {
+  justify-content: center;
+  display: grid; 
+  grid-template-columns: repeat(4, auto); 
+  grid-gap: 22px; 
+  width: 100%;
+}
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 0rem;    /* Footer height */
+}
+
+.block {
+height: 410px;
+display: block;
+}
+
+.block.inactive {
+display:none;
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem; /* Footer height */
+}
+/*make grid for farm cards*/
+.cards-f {
+  width: 100px;
+  height: 100px;
+ 
+}
+.cards-s {
+  width: 100px;
+  height: 100px;
+
+}
+.cards-c {
+  width: 100px;
+  height: 100px;
+ 
+}
+/* Cards */
+.cards-f, .cards-s, .cards-c {
+  cursor: pointer;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.cards-f:hover, .cards-s:hover, .cards-c:hover {
+  box-sizing: border-box;
+  box-shadow: inset 0px 0px 0px 3px black;
+}
