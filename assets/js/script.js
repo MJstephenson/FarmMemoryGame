@@ -9,7 +9,7 @@ $(".close-modal-btn").on("click", function() {
 });
 
 //Appends an "active class to .choose-game when the "start" button is pressed and hides the begin section from the DOM
-$("#start-button").on("click", function() {
+$("#start-btn").on("click", function() {
   $(".choose-game").addClass("active");
   $(".begin-section").addClass("inactive");
 });
