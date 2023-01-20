@@ -173,3 +173,21 @@ display:none;
   box-sizing: border-box;
   box-shadow: inset 0px 0px 0px 3px black;
 }
+/* flip cards hide/show */
+
+
+/* card transform */
+.image-1.active, .image-2.back {
+  transform: perspective(1000px) rotateY(180deg);
+  transform-style: preserve-3d;
+  opacity: 0;
+  transition-duration: 0.2s;
+}
+
+.image-2.active, .image-1 {
+  opacity: 1;
+  transform: rotateY(0deg);
+  transform-style: preserve-3d;
+  transition-duration: 0.2s;
+}
+
