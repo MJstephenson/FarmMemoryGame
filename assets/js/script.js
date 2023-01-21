@@ -111,30 +111,22 @@ function resetTimer() {
 
 // flip card section
 
-// let image1 = document.getElementByClass('image1');
-// let image2 = document.getElementByClass('image2');
+// Make cards flip (to a maximum of 2 cards)
+
+let flipped = 0; // This will allow the number of flipped cards to be recorded
+let currentCard; // This is the current card
+let flippedCards = []; // This array stores the 2 flipped cards
 
 $(".image-container").on("click", function () {
-  if ($(this).children('.front').hasClass('active')) {
-    $(this).children('.front').removeClass('active');
-    $(this).children('.back').removeClass('active');
-  } else {
+  if (flipped < 2) { //check if the number of flipped cards is <2
     $(this).children('.front').addClass('active');
     $(this).children('.back').addClass('active');
+    flippedCards.push(this); //add the card to the flipped cards array
+    flipped++; // gives the card in the array a value that increases by 1 so that if the number <2 the if code will execute >2 the else will execute
+  } else {
+    if (!flippedCards.includes(this)) { // checks to see if the flipped card is one of the flipped cards
+      $(this).children('.front').removeClass('active');
+      $(this).children('.back').removeClass('active');
+    }
   }
 });
-
-
-// document.getElementClass('image-container').addEventListener('click', function() {
-//     if (image1.style.display === 'block') {
-//       image1.classList.remove('active');
-//       image2.classList.add('active');
-//       image1.style.display = 'none';
-//       image2.style.display = 'block';
-//     } else {
-//       image2.classList.remove('active');
-//       image1.classList.add('active');
-//       image1.style.display = 'block';
-//       image2.style.display = 'none';
-//     }
-//   });
