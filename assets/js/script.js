@@ -48,9 +48,12 @@ $("#new-style-btn").on("click", function () {
   $(".choose-game").addClass("active");
   $(".main-game").removeClass("active"); //hide block for page layout
   $(".block.inactive").removeClass("inactive"); //hide block for page layout
-
-
   resetGameStyle()
+});
+
+//Reset Button
+$("#reset-btn").on("click", function () {
+  resetTimer()
 });
 
 //Add reset game style function to clear the prevous game when choosing a new style of game
