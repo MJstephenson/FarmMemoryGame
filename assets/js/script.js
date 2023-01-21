@@ -8,6 +8,7 @@ $(".close-modal-btn").on("click", function () {
   $(".popup-instruction-overlay, .popup-instruction-content").removeClass("active");
 });
 
+let cards = $('.image-container'); // select all the cards
 //Appends an "active class to .choose-game when the "start" button is pressed and hides the begin section from the DOM
 $("#start-btn").on("click", function () {
   $(".choose-game").addClass("active");
@@ -19,6 +20,7 @@ $("#farm-btn").on("click", function () {
   $(".header-text, .instructions").addClass("inactive");
   $(".choose-game").removeClass("active");
   $(".main-game, .farm-cards").addClass("active");
+  $(".game-type").text('Farm'); //Change game name
   $(".block").addClass("inactive"); //hide block for page layout
 });
 
@@ -27,6 +29,7 @@ $("#space-btn").on("click", function () {
   $(".header-text, .instructions").addClass("inactive");
   $(".choose-game").removeClass("active");
   $(".main-game, .space-cards").addClass("active");
+  $(".game-type").text('Space'); //Change game name
   $(".block").addClass("inactive"); //hide block for page layout
 });
 
@@ -35,6 +38,7 @@ $("#cars-btn").on("click", function () {
   $(".header-text, .instructions").addClass("inactive");
   $(".choose-game").removeClass("active");
   $(".main-game, .car-cards").addClass("active");
+  $(".game-type").text('Car'); //Change game name
   $(".block").addClass("inactive"); //hide block for page layout
 });
 
@@ -130,6 +134,7 @@ $(".image-container").on("click", function () {
     }
   }
 });
+
 
 // make all cards flip when shift+r is pressed and flip back when both pressed again
 $(document).on('keydown', function(e) {
