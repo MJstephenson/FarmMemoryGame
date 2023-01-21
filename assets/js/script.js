@@ -130,3 +130,11 @@ $(".image-container").on("click", function () {
     }
   }
 });
+
+// make all cards flip when shift+r is pressed and flip back when both pressed again
+$(document).on('keydown', function(e) {
+  if (e.shiftKey && e.keyCode === 82) { //check if shift + r is pressed
+    $('.image-container').children('.front').toggleClass('active');
+    $('.image-container').children('.back').toggleClass('active');
+  }
+});
