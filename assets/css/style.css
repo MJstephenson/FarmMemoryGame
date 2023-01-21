@@ -90,7 +90,8 @@
 .farm-cards.active {
   justify-content: center;
   display: grid; 
-  grid-template-columns: repeat(4, auto); 
+  grid-template-columns: repeat(4, 140px); 
+  grid-template-rows: repeat(4, 140px);
   grid-gap: 22px; 
   width: 100%;
 }
