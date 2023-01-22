@@ -57,7 +57,7 @@ $("#start-btn").on("click", function () {
     cards[i] = cards[j];
     cards[j] = temp;
   }
-  $('.farm-cards').append(cards); // append the shuffled cards to the DOM
+  $('.farm-cards', '.space-cards', '.car-cards').append(cards); // append the shuffled cards to the DOM
 });
 
 //Reset Button
@@ -71,7 +71,7 @@ $("#reset-btn").on("click", function () {
     cards[i] = cards[j];
     cards[j] = temp;
   }
-  $('.farm-cards').append(cards); // append the shuffled cards to the DOM
+  $('.farm-cards','.space-cards', '.car-cards').append(cards); // append the shuffled cards to the DOM
   $('.image-container').children('.front').removeClass('active');
   $('.image-container').children('.back').removeClass('active');
   flipped = 0
