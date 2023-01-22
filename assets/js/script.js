@@ -74,6 +74,7 @@ $("#reset-btn").on("click", function () {
   $('.farm-cards').append(cards); // append the shuffled cards to the DOM
   $('.image-container').children('.front').removeClass('active');
   $('.image-container').children('.back').removeClass('active');
+  flipped = 0
 });
 
 //Add reset game style function to clear the prevous game when choosing a new style of game
