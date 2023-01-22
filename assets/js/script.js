@@ -8,13 +8,6 @@ $(".close-modal-btn").on("click", function () {
   $(".popup-instruction-overlay, .popup-instruction-content").removeClass("active");
 });
 
-let cards = $('.image-container'); // select all the cards
-//Appends an "active class to .choose-game when the "start" button is pressed and hides the begin section from the DOM
-$("#start-btn").on("click", function () {
-  $(".choose-game").addClass("active");
-  $(".begin-section").addClass("inactive");
-});
-
 //On farm game button click, hide all Dom Elements, and only show main game section with farm cards only
 $("#farm-btn").on("click", function () {
   $(".header-text, .instructions").addClass("inactive");
@@ -51,9 +44,32 @@ $("#new-style-btn").on("click", function () {
   resetGameStyle()
 });
 
+let cards = $('.image-container'); // select all the cards
+//Appends an "active class to .choose-game when the "start" button is pressed and hides the begin section from the DOM
+$("#start-btn").on("click", function () {
+  $(".choose-game").addClass("active");
+  $(".begin-section").addClass("inactive");
+  for (let i = cards.length - 1; i > 0; i--) { //Make cards shuffle with Fisher-Yates shuffle algorithm
+    let j = Math.floor(Math.random() * (i + 1));
+    let temp = cards[i];
+    cards[i] = cards[j];
+    cards[j] = temp;
+  }
+  $('.farm-cards').append(cards);// append the shuffled cards to the DOM
+});
+
 //Reset Button
 $("#reset-btn").on("click", function () {
   resetTimer()
+    $(".choose-game").addClass("active");
+    $(".begin-section").addClass("inactive");
+    for (let i = cards.length - 1; i > 0; i--) { //Make cards shuffle with Fisher-Yates shuffle algorithm
+      let j = Math.floor(Math.random() * (i + 1));
+      let temp = cards[i];
+      cards[i] = cards[j];
+      cards[j] = temp;
+    }
+    $('.farm-cards').append(cards);// append the shuffled cards to the DOM
 });
 
 //Add reset game style function to clear the prevous game when choosing a new style of game
