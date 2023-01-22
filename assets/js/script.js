@@ -1,3 +1,5 @@
+let canFlip = false;
+
 //Appends an "active" class to .popup-instructions-overlay and .popup-instructions-content when the "instructions" button is clicked
 $(".instruct-btn").on("click", function () {
   $(".popup-instruction-overlay, .popup-instruction-content").addClass("active");
@@ -55,23 +57,23 @@ $("#start-btn").on("click", function () {
     cards[i] = cards[j];
     cards[j] = temp;
   }
-  $('.farm-cards').append(cards);// append the shuffled cards to the DOM
+  $('.farm-cards').append(cards); // append the shuffled cards to the DOM
 });
 
 //Reset Button
 $("#reset-btn").on("click", function () {
   resetTimer()
-    $(".choose-game").addClass("active");
-    $(".begin-section").addClass("inactive");
-    for (let i = cards.length - 1; i > 0; i--) { //Make cards shuffle with Fisher-Yates shuffle algorithm
-      let j = Math.floor(Math.random() * (i + 1));
-      let temp = cards[i];
-      cards[i] = cards[j];
-      cards[j] = temp;
-    }
-    $('.farm-cards').append(cards);// append the shuffled cards to the DOM
-    $('.image-container').children('.front').removeClass('active');
-    $('.image-container').children('.back').removeClass('active');
+  $(".choose-game").addClass("active");
+  $(".begin-section").addClass("inactive");
+  for (let i = cards.length - 1; i > 0; i--) { //Make cards shuffle with Fisher-Yates shuffle algorithm
+    let j = Math.floor(Math.random() * (i + 1));
+    let temp = cards[i];
+    cards[i] = cards[j];
+    cards[j] = temp;
+  }
+  $('.farm-cards').append(cards); // append the shuffled cards to the DOM
+  $('.image-container').children('.front').removeClass('active');
+  $('.image-container').children('.back').removeClass('active');
 });
 
 //Add reset game style function to clear the prevous game when choosing a new style of game
@@ -79,8 +81,7 @@ function resetGameStyle() {
   const cardsList = ['.farm-cards', '.space-cards', '.car-cards'].forEach(item => {
     const div = document.querySelector(item);
     div.classList.remove('active');
-  })
-
+  });
   //JQuery Version
   //const cardsList = ['.farm-cards', '.space-cards', '.car-cards'];
   //$(cardsList).each(function(item) {
@@ -104,6 +105,7 @@ function startGame() { //function to start the timer if a gameState is 0 (not ru
   if (gameState == 0) {
     startTimer();
     gameState = 1 //Adds the gameState to 1. This stops the startTimer function from repeating on each click and speeding the timer up
+    canFlip = true;
   }
 }
 //start timer function
@@ -143,22 +145,26 @@ let currentCard; // This is the current card
 let flippedCards = []; // This array stores the 2 flipped cards
 
 $(".image-container").on("click", function () {
-  if (flipped < 2) { //check if the number of flipped cards is <2
-    $(this).children('.front').addClass('active');
-    $(this).children('.back').addClass('active');
-    flippedCards.push(this); //add the card to the flipped cards array
-    flipped++; // gives the card in the array a value that increases by 1 so that if the number <2 the if code will execute >2 the else will execute
-  } else {
-    if (!flippedCards.includes(this)) { // checks to see if the flipped card is one of the flipped cards
-      $(this).children('.front').removeClass('active');
-      $(this).children('.back').removeClass('active');
+  if (canFlip) {
+    if (flipped < 2) { //check if the number of flipped cards is <2
+      $(this).children('.front').addClass('active');
+      $(this).children('.back').addClass('active');
+      flippedCards.push(this); //add the card to the flipped cards array
+      flipped++; // gives the card in the array a value that increases by 1 so that if the number <2 the if code will execute >2 the else will execute
+    } else {
+      if (!flippedCards.includes(this)) { // checks to see if the flipped card is one of the flipped cards
+        $(this).children('.front').removeClass('active');
+        $(this).children('.back').removeClass('active');
+      }
     }
   }
 });
 
 
+
+
 // make all cards flip when shift+r is pressed and flip back when both pressed again
-$(document).on('keydown', function(e) {
+$(document).on('keydown', function (e) {
   if (e.shiftKey && e.keyCode === 82) { //check if shift + r is pressed
     $('.image-container').children('.front').toggleClass('active');
     $('.image-container').children('.back').toggleClass('active');
