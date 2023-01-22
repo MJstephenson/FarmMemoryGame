@@ -75,6 +75,7 @@ $("#reset-btn").on("click", function () {
   $('.image-container').children('.front').removeClass('active');
   $('.image-container').children('.back').removeClass('active');
   flipped = 0
+  canFlip = false; //Make it so you cannot flip cards after pressing reset button
 });
 
 //Add reset game style function to clear the prevous game when choosing a new style of game
@@ -106,7 +107,7 @@ function startGame() { //function to start the timer if a gameState is 0 (not ru
   if (gameState == 0) {
     startTimer();
     gameState = 1 //Adds the gameState to 1. This stops the startTimer function from repeating on each click and speeding the timer up
-    canFlip = true;
+    canFlip = true; //Allows the cards to flip if the game is not running
   }
 }
 //start timer function
@@ -146,7 +147,7 @@ let currentCard; // This is the current card
 let flippedCards = []; // This array stores the 2 flipped cards
 
 $(".image-container").on("click", function () {
-  if (canFlip) {
+  if (canFlip) { //
     if (flipped < 2) { //check if the number of flipped cards is <2
       $(this).children('.front').addClass('active');
       $(this).children('.back').addClass('active');
