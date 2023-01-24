@@ -13,7 +13,7 @@ $(".close-modal-btn").on("click", function () {
 
 //On farm game button click, hide all Dom Elements, and only show main game section with farm cards only
 $("#farm-btn").on("click", function () {
-  gametype = 'farm-cards';
+  gameType = '.farm-cards';
   $(".header-text, .instructions").addClass("inactive");
   $(".choose-game").removeClass("active");
   $(".main-game, .farm-cards").addClass("active");
@@ -23,7 +23,7 @@ $("#farm-btn").on("click", function () {
 
 //On space game button click, hide all Dom Elements, and only show main game section with space cards only
 $("#space-btn").on("click", function () {
-  gametype = 'space-cards';
+  gameType = '.space-cards';
   $(".header-text, .instructions").addClass("inactive");
   $(".choose-game").removeClass("active");
   $(".main-game, .space-cards").addClass("active");
@@ -33,7 +33,7 @@ $("#space-btn").on("click", function () {
 
 //On car game button click, hide all Dom Elements, and only show main game section with car cards only
 $("#cars-btn").on("click", function () {
-  gametype = 'car-cards';
+  gameType = '.car-cards';
   $(".header-text, .instructions").addClass("inactive");
   $(".choose-game").removeClass("active");
   $(".main-game, .car-cards").addClass("active");
@@ -50,36 +50,36 @@ $("#new-style-btn").on("click", function () {
   resetGameStyle()
 });
 
-let cards = $('.image-container'); // select all the cards
+
 //Appends an "active class to .choose-game when the "start" button is pressed and hides the begin section from the DOM
 $("#start-btn").on("click", function () {
   $(".choose-game").addClass("active");
   $(".begin-section").addClass("inactive");
+  shuffleCards();
+ });
 
-  // for (let i = cards.length - 1; i > 0; i--) { //Make cards shuffle with Fisher-Yates shuffle algorithm
-  //   let j = Math.floor(Math.random() * (i + 1));
-  //   let temp = cards[i];
-  //   cards[i] = cards[j];
-  //   cards[j] = temp;
-  // }
-  // $('.farm-cards', '.space-cards', '.car-cards').append(cards); // append the shuffled cards to the DOM
-});
-
-//Reset Button
-$("#reset-btn").on("click", function () {
-  resetTimer()
-  $(".choose-game").addClass("active");
-  $(".begin-section").addClass("inactive");
+function shuffleCards() {
+  console.log("CARD SHUFFLE STARTED")
+  console.log(gameType);
+  let cards = $(gameType+' .image-container'); // select all cards from the game type
   for (let i = cards.length - 1; i > 0; i--) { //Make cards shuffle with Fisher-Yates shuffle algorithm
     let j = Math.floor(Math.random() * (i + 1));
     let temp = cards[i];
     cards[i] = cards[j];
     cards[j] = temp;
   }
-  $('.farm-cards','.space-cards', '.car-cards').append(cards); // append the shuffled cards to the DOM
+  $(gameType).append(cards);// append the shuffled cards back to the game type in the DOM
+}
+
+
+//Reset Button
+$("#reset-btn").on("click", function () {
+  resetTimer()
+  $(".begin-section").addClass("inactive");
   $('.image-container').children('.front').removeClass('active');
   $('.image-container').children('.back').removeClass('active');
-  flipped = 0
+  shuffleCards();
+  flipped = 0;
   canFlip = false; //Make it so you cannot flip cards after pressing reset button
 });
 
@@ -114,6 +114,8 @@ function startGame() { //function to start the timer if a gameState is 0 (not ru
     gameState = 1 //Adds the gameState to 1. This stops the startTimer function from repeating on each click and speeding the timer up
     canFlip = true; //Allows the cards to flip if the game is not running
   }
+
+  shuffleCards();
 }
 //start timer function
 function startTimer() {
