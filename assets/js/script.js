@@ -1,4 +1,5 @@
 let canFlip = false;
+let gameType = ''
 
 //Appends an "active" class to .popup-instructions-overlay and .popup-instructions-content when the "instructions" button is clicked
 $(".instruct-btn").on("click", function () {
@@ -12,6 +13,7 @@ $(".close-modal-btn").on("click", function () {
 
 //On farm game button click, hide all Dom Elements, and only show main game section with farm cards only
 $("#farm-btn").on("click", function () {
+  gametype = 'farm-cards';
   $(".header-text, .instructions").addClass("inactive");
   $(".choose-game").removeClass("active");
   $(".main-game, .farm-cards").addClass("active");
@@ -21,6 +23,7 @@ $("#farm-btn").on("click", function () {
 
 //On space game button click, hide all Dom Elements, and only show main game section with space cards only
 $("#space-btn").on("click", function () {
+  gametype = 'space-cards';
   $(".header-text, .instructions").addClass("inactive");
   $(".choose-game").removeClass("active");
   $(".main-game, .space-cards").addClass("active");
@@ -30,6 +33,7 @@ $("#space-btn").on("click", function () {
 
 //On car game button click, hide all Dom Elements, and only show main game section with car cards only
 $("#cars-btn").on("click", function () {
+  gametype = 'car-cards';
   $(".header-text, .instructions").addClass("inactive");
   $(".choose-game").removeClass("active");
   $(".main-game, .car-cards").addClass("active");
@@ -51,13 +55,14 @@ let cards = $('.image-container'); // select all the cards
 $("#start-btn").on("click", function () {
   $(".choose-game").addClass("active");
   $(".begin-section").addClass("inactive");
-  for (let i = cards.length - 1; i > 0; i--) { //Make cards shuffle with Fisher-Yates shuffle algorithm
-    let j = Math.floor(Math.random() * (i + 1));
-    let temp = cards[i];
-    cards[i] = cards[j];
-    cards[j] = temp;
-  }
-  $('.farm-cards', '.space-cards', '.car-cards').append(cards); // append the shuffled cards to the DOM
+
+  // for (let i = cards.length - 1; i > 0; i--) { //Make cards shuffle with Fisher-Yates shuffle algorithm
+  //   let j = Math.floor(Math.random() * (i + 1));
+  //   let temp = cards[i];
+  //   cards[i] = cards[j];
+  //   cards[j] = temp;
+  // }
+  // $('.farm-cards', '.space-cards', '.car-cards').append(cards); // append the shuffled cards to the DOM
 });
 
 //Reset Button
