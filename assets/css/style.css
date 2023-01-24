@@ -1,4 +1,6 @@
-
+body {
+  font-family: 'Short Stack', cursive, 'Arial', sans-serif; 
+}
 /*instructions popup styling */
 
 .popup-instruction-overlay {
