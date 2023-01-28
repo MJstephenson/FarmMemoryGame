@@ -173,7 +173,15 @@ $(".image-container").on("click", function () {
             flippedCards = []; // This will empty the flippedCards array
             flipped = 0; // This starts the flipped variable to 0
           }, 900); //sets the delay time
-        } 
+        } else {
+          if (flippedCards[0] === flippedCards[1]) {  // check if the images match
+            matchedCards.push(flippedCards[0], flippedCards[1]); //Push the flipped cards to the matching cards array so they cannot be used again
+            console.log(matchedCards)
+            flippedCards = []; // This will empty the flippedCards array
+            flipped = 0; // This starts the flipped variable to 0
+           
+        }
+      }
     }
   }
 }
