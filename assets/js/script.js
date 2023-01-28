@@ -153,31 +153,30 @@ let currentCard; // This is the current card
 let flippedCards = []; // This array stores the 2 flipped cards
 let canFlip = false;
 let gameType = ''
+let matchedCards = []
 
 $(".image-container").on("click", function () {
-  if (canFlip) { //
-    if (flipped < 2) { //check if the number of flipped cards is <2
+  if (canFlip) { //makes sure the cards can't flip after a reset until you press the start button
+    if (flipped <2) { //check if the number of flipped cards is <2
       $(this).children('.front').addClass('active'); //turns cards over to make the image visable
       $(this).children('.back').addClass('active');  ///turns the same card over to hide the front (top of the card)
-      flippedCards.push($(this.children[1].dataset.cardImage)); //add the card/max 2 to the flipped cards array with the data-card-image
+      flippedCards.push(this.children[1].dataset.cardImage); //add the card/max 2 to the flipped cards array with the data-card-image value
       flipped++; // gives the card in the array a value that increases by 1 so that if the number <2 the if code will execute >2 the else will execute
       console.log(this.children[1].dataset.cardImage)
-    }else {
-      if (flippedCards[0] === flippedCards[1]) { //if the cards match.....
-        canFlip = false; //stop the 2 cards from flipping
-        flipped = 0; // this will reset the number of flipped cards
-        flippedCards = []; // this will empty the cards array
-      } else {
-        flippedCards[0].children('.front').removeClass('active'); //flip cards in the array only to show the top of the card (card1)
-        flippedCards[0].children('.back').removeClass('active'); //flip cards in the array only to hide the back of the card (card1)
-        flippedCards[1].children('.front').removeClass('active'); //flip cards in the array only to show the top of the card (card2)
-        flippedCards[1].children('.back').removeClass('active'); //flip cards in the array only to hide the back of the card (card2)
-        canFlip = true; // enables flipping of cards
-        flippedCards = []; // empty the card array again
-        flipped = 0; // this will reset the number of flipped cards
-      }
+
+      if (flipped === 2) { // when 2 cards are flipped....
+        if (flippedCards[0] !== flippedCards[1]) { // check if the images do not match
+          console.log(flippedCards[0], flippedCards[1])
+          setTimeout(function() { // sets a delay
+            $('.image-container .front').removeClass('active'); // makes the front of the card show
+            $('.image-container .back').removeClass('active'); // hides the image
+            flippedCards = []; // This will empty the flippedCards array
+            flipped = 0; // This starts the flipped variable to 0
+          }, 900); //sets the delay time
+        } 
     }
   }
+}
 });
 
 
