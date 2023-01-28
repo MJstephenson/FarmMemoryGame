@@ -1,5 +1,4 @@
-let canFlip = false;
-let gameType = ''
+
 
 //Appends an "active" class to .popup-instructions-overlay and .popup-instructions-content when the "instructions" button is clicked
 $(".instruct-btn").on("click", function () {
@@ -152,18 +151,30 @@ function resetTimer() {
 let flipped = 0; // This will allow the number of flipped cards to be recorded
 let currentCard; // This is the current card
 let flippedCards = []; // This array stores the 2 flipped cards
+let canFlip = false;
+let gameType = ''
 
 $(".image-container").on("click", function () {
   if (canFlip) { //
     if (flipped < 2) { //check if the number of flipped cards is <2
-      $(this).children('.front').addClass('active');
-      $(this).children('.back').addClass('active');
-      flippedCards.push(this); //add the card to the flipped cards array
+      $(this).children('.front').addClass('active'); //turns cards over to make the image visable
+      $(this).children('.back').addClass('active');  ///turns the same card over to hide the front (top of the card)
+      flippedCards.push($(this.children[1].dataset.cardImage)); //add the card/max 2 to the flipped cards array with the data-card-image
       flipped++; // gives the card in the array a value that increases by 1 so that if the number <2 the if code will execute >2 the else will execute
-    } else {
-      if (!flippedCards.includes(this)) { // checks to see if the flipped card is one of the flipped cards
-        $(this).children('.front').removeClass('active');
-        $(this).children('.back').removeClass('active');
+      console.log(this.children[1].dataset.cardImage)
+    }else {
+      if (flippedCards[0] === flippedCards[1]) { //if the cards match.....
+        canFlip = false; //stop the 2 cards from flipping
+        flipped = 0; // this will reset the number of flipped cards
+        flippedCards = []; // this will empty the cards array
+      } else {
+        flippedCards[0].children('.front').removeClass('active'); //flip cards in the array only to show the top of the card (card1)
+        flippedCards[0].children('.back').removeClass('active'); //flip cards in the array only to hide the back of the card (card1)
+        flippedCards[1].children('.front').removeClass('active'); //flip cards in the array only to show the top of the card (card2)
+        flippedCards[1].children('.back').removeClass('active'); //flip cards in the array only to hide the back of the card (card2)
+        canFlip = true; // enables flipping of cards
+        flippedCards = []; // empty the card array again
+        flipped = 0; // this will reset the number of flipped cards
       }
     }
   }
