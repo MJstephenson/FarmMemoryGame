@@ -47,6 +47,8 @@ $("#new-style-btn").on("click", function () {
   $(".main-game").removeClass("active"); //hide block for page layout
   $(".block.inactive").removeClass("inactive"); //hide block for page layout
   resetGameStyle()
+  turnsCounter = 0;
+  $('#turns-counter').text(turnsCounter);
 });
 
 
@@ -79,6 +81,8 @@ $("#reset-btn").on("click", function () {
   $('.image-container').children('.back').removeClass('active');
   shuffleCards();
   flipped = 0;
+  turnsCounter = 0;
+  $('#turns-counter').text(turnsCounter);
   canFlip = false; //Make it so you cannot flip cards after pressing reset button
 });
 
