@@ -23,7 +23,28 @@
             <div class="background-img">
                 <header id="header" class="header-text text-center py-5 px-2 display-1">Kid's Memory Pair's Games
                 </header>
-
+                <section>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        Launch static backdrop modal
+                      </button>
+                      
+                      <!-- Modal -->
+                      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title text-center" id="staticBackdropLabel">Congratulations! You are a winner !!!!!!!</h5>
+                            </div>
+                            <div class="modal-body">
+                              You matched all the cards! Why not have another go and see if you can beat your best time and reduce your number of turns.
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Try again</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </section>
                 <!--start section-->
                 <section class="instructions text-center">
                     <h2 class="py-5 px-4">To find out how to play the game press the button below</h2>
@@ -397,7 +418,6 @@
                             <button type="button" id="reset-btn" class="btn btn-primary mx-3">Reset Game <i class="fa-solid fa-arrow-rotate-left"></i></button>
                         </p>
                     </div>
-
                 </section>
             </div>
             <footer class="text-center bg-light border">
