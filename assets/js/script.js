@@ -154,6 +154,7 @@ let flippedCards = []; // This array stores the 2 flipped cards
 let canFlip = false;
 let gameType = ''
 let matchedCards = []
+let turnsCounter = 0;
 
 $(".image-container").on("click", function () {
   if (canFlip) { //makes sure the cards can't flip after a reset until you press the start button
@@ -167,6 +168,8 @@ $(".image-container").on("click", function () {
       if (flipped === 2) { // when 2 cards are flipped....
         if (flippedCards[0] !== flippedCards[1]) { // check if the images do not match
           console.log(flippedCards[0], flippedCards[1])
+          turnsCounter++; //  Increases the turns taken counter when two cards have been flipped
+          $('#turns-counter').text(turnsCounter); // Updates the turns taken counter display
           setTimeout(function() { // sets a delay
             $('.image-container .front').removeClass('active'); // makes the front of the card show
             $('.image-container .back').removeClass('active'); // hides the image
@@ -179,7 +182,8 @@ $(".image-container").on("click", function () {
             console.log(matchedCards)
             flippedCards = []; // This will empty the flippedCards array
             flipped = 0; // This starts the flipped variable to 0
-           
+            turnsCounter++; // Increases the turns taken counter when two cards have been flipped
+            $('#turns-counter').text(turnsCounter); // Updates the turns taken counter display
         }
       }
     }
