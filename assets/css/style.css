@@ -1,6 +1,14 @@
 body {
   font-family: 'Short Stack', cursive, 'Arial', sans-serif; 
 }
+
+.background-img {
+  background-image: url();
+  background-color:;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
 /*instructions popup styling */
 
 .popup-instruction-overlay {
@@ -156,7 +164,7 @@ display:none;
 .cards-f {
   width: 140px;
   height: 140px;
- 
+ background-color: white;
  
 }
 .cards-s {
