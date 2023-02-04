@@ -166,11 +166,9 @@ let turnsCounter = 0;
 $(".image-container").on("click", function () {
   if (canFlip) { //makes sure the cards can't flip after a reset until you press the start button
     if (flipped <2) { //check if the number of flipped cards is <2
-      $(this).children('.front').addClass('active'); //turns cards over to make the image visable
-      $(this).children('.back').addClass('active');  ///turns the same card over to hide the front (top of the card)
-      flippedCards.push(this.children[1].dataset.cardImage); //add the card/max 2 to the flipped cards array with the data-card-image value
+      $(this).children('.cards-f').addClass('active'); //turns cards over to make the image visable
+      flippedCards.push(this); //add the card/max 2 to the flipped cards array with the data-card-image value
       flipped++; // gives the card in the array a value that increases by 1 so that if the number <2 the if code will execute >2 the else will execute
-      console.log(`This is dataset image value: ${this.children[1].dataset.cardImage}`)
 
       if (flipped === 2) { // when 2 cards are flipped....
         if (flippedCards[0] !== flippedCards[1]) { // check if the images do not match
