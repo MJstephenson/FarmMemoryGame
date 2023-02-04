@@ -81,6 +81,9 @@ $("#reset-btn").on("click", function () {
   $('.image-container').children('.back').removeClass('active');
   shuffleCards();
   flipped = 0;
+  $('.image-container').removeClass('matched');
+  matchedCards = [];
+  flippedCards = [];
   turnsCounter = 0;
   $('#turns-counter').text(turnsCounter);
   canFlip = false; //Make it so you cannot flip cards after pressing reset button
@@ -167,7 +170,7 @@ $(".image-container").on("click", function () {
       $(this).children('.back').addClass('active');  ///turns the same card over to hide the front (top of the card)
       flippedCards.push(this.children[1].dataset.cardImage); //add the card/max 2 to the flipped cards array with the data-card-image value
       flipped++; // gives the card in the array a value that increases by 1 so that if the number <2 the if code will execute >2 the else will execute
-      console.log(this.children[1].dataset.cardImage)
+      console.log(`This is dataset image value: ${this.children[1].dataset.cardImage}`)
 
       if (flipped === 2) { // when 2 cards are flipped....
         if (flippedCards[0] !== flippedCards[1]) { // check if the images do not match
@@ -175,27 +178,31 @@ $(".image-container").on("click", function () {
           turnsCounter++; //  Increases the turns taken counter when two cards have been flipped
           $('#turns-counter').text(turnsCounter); // Updates the turns taken counter display
           setTimeout(function() { // sets a delay
+
             $('.image-container .front').removeClass('active'); // makes the front of the card show
             $('.image-container .back').removeClass('active'); // hides the image
             flippedCards = []; // This will empty the flippedCards array
             flipped = 0; // This starts the flipped variable to 0
           }, 900); //sets the delay time
         } else {
-          if (flippedCards[0] === flippedCards[1]) {  // check if the images match
             matchedCards.push(flippedCards[0], flippedCards[1]); //Push the flipped cards to the matching cards array so they cannot be used again
-            console.log(matchedCards)
+            matchedCards.forEach(card=> {card.classList.add('matched')}); // Add a class of matched to matched cards
             flippedCards = []; // This will empty the flippedCards array
             flipped = 0; // This starts the flipped variable to 0
             turnsCounter++; // Increases the turns taken counter when two cards have been flipped
             $('#turns-counter').text(turnsCounter); // Updates the turns taken counter display
+          }
         }
       }
     }
   }
-}
 });
 
 
+// if (matchedCards.length === 16) {
+//   alert("you won!");
+//   resetGame();
+//}
 
 
 // make all cards flip when shift+r is pressed and flip back when both pressed again
