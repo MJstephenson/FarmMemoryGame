@@ -26,6 +26,7 @@ $("#space-btn").on("click", function () {
   $(".main-game, .space-cards").addClass("active");
   $(".game-type").text('Space'); //Change game name
   $(".block").addClass("inactive"); //hide block for page layout
+  $(".background-img").css("background-image", "url(../images/farmImages/sheep.png)");
 });
 
 //On car game button click, hide all Dom Elements, and only show main game section with car cards only
@@ -51,6 +52,7 @@ $("#new-style-btn").on("click", function () {
   $('.image-container').removeClass('matched');
   matchedCards = [];
   flippedCards = [];
+  canFlip = false;
 });
 
 
