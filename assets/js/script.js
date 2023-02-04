@@ -171,18 +171,16 @@ $(".image-container").on("click", function () {
       flipped++; // gives the card in the array a value that increases by 1 so that if the number <2 the if code will execute >2 the else will execute
 
       if (flipped === 2) { // when 2 cards are flipped....
-        if (flippedCards[0] !== flippedCards[1]) { // check if the images do not match
-          let firstFlippedCard = $(flippedCards[0]).children('.image-2')[0].dataset.cardImage; //select the dataset from the 1st flipped card
-          let secondFlippedCard = $(flippedCards[1]).children('.image-2')[0].dataset.cardImage //select the dataset from the 2nd flipped card
-          if (firstFlippedCard !== secondFlippedCard) {
+        let firstFlippedCard = $(flippedCards[0]).children('.image-2')[0].dataset.cardImage; //select the dataset from the 1st flipped card
+        let secondFlippedCard = $(flippedCards[1]).children('.image-2')[0].dataset.cardImage; //select the dataset from the 2nd flipped card
+        if (firstFlippedCard !== secondFlippedCard) {
           turnsCounter++; //  Increases the turns taken counter when two cards have been flipped
           $('#turns-counter').text(turnsCounter); // Updates the turns taken counter display
           setTimeout(function() { // sets a delay
-
-           
+            $('.image-container:not(.matched) > *').removeClass('active'); //Removes class active from matched cards so they dont flip back over
             flippedCards = []; // This will empty the flippedCards array
             flipped = 0; // This starts the flipped variable to 0
-          }, 900); //sets the delay time
+          }, 800); //sets the delay time
         } else {
             matchedCards.push(flippedCards[0], flippedCards[1]); //Push the flipped cards to the matching cards array so they cannot be used again
             matchedCards.forEach(card=> {card.classList.add('matched')}); // Add a class of matched to matched cards
@@ -190,7 +188,6 @@ $(".image-container").on("click", function () {
             flipped = 0; // This starts the flipped variable to 0
             turnsCounter++; // Increases the turns taken counter when two cards have been flipped
             $('#turns-counter').text(turnsCounter); // Updates the turns taken counter display
-          }
         }
       }
     }
