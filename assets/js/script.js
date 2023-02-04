@@ -1,5 +1,3 @@
-
-
 //Appends an "active" class to .popup-instructions-overlay and .popup-instructions-content when the "instructions" button is clicked
 $(".instruct-btn").on("click", function () {
   $(".popup-instruction-overlay, .popup-instruction-content").addClass("active");
@@ -48,7 +46,7 @@ $("#new-style-btn").on("click", function () {
   $(".block.inactive").removeClass("inactive"); //hide block for page layout
   resetGameStyle()
   turnsCounter = 0;
-  $('#turns-counter').text(turnsCounter);
+  $('.turns-counter').text(turnsCounter);
   flipped = 0;
   $('.image-container').removeClass('matched');
   matchedCards = [];
@@ -61,19 +59,19 @@ $("#start-btn").on("click", function () {
   $(".choose-game").addClass("active");
   $(".begin-section").addClass("inactive");
   shuffleCards();
- });
+});
 
 function shuffleCards() {
   console.log("CARD SHUFFLE STARTED")
   console.log(gameType);
-  let cards = $(gameType+' .image-container'); // select all cards from the game type
+  let cards = $(gameType + ' .image-container'); // select all cards from the game type
   for (let i = cards.length - 1; i > 0; i--) { //Make cards shuffle with Fisher-Yates shuffle algorithm
     let j = Math.floor(Math.random() * (i + 1));
     let temp = cards[i];
     cards[i] = cards[j];
     cards[j] = temp;
   }
-  $(gameType).append(cards);// append the shuffled cards back to the game type in the DOM
+  $(gameType).append(cards); // append the shuffled cards back to the game type in the DOM
 }
 
 
@@ -89,7 +87,7 @@ $("#reset-btn").on("click", function () {
   matchedCards = [];
   flippedCards = [];
   turnsCounter = 0;
-  $('#turns-counter').text(turnsCounter);
+  $('.turns-counter').text(turnsCounter);
   canFlip = false; //Make it so you cannot flip cards after pressing reset button
 });
 
@@ -141,7 +139,7 @@ function startTimer() {
     seconds = 0;
   }
 
-  document.querySelector('#timer').innerHTML = `${minutes}:${seconds}:${milliseconds}`;
+  document.querySelector('.timer').innerHTML = `${minutes}:${seconds}:${milliseconds}`;
   timer = setTimeout(startTimer, 10); //start timer after 10 milliseconds
 }
 
@@ -151,7 +149,7 @@ function resetTimer() {
   milliseconds = 0;
   seconds = 0;
   minutes = 0;
-  document.querySelector('#timer').innerHTML = `00:00:00`;
+  document.querySelector('.timer').innerHTML = `00:00:00`;
   gameState = 0 //on click of reset button sets the gameState to 0 (not running)
 }
 
@@ -169,7 +167,7 @@ let turnsCounter = 0;
 
 $(".image-container").on("click", function () {
   if (canFlip) { //makes sure the cards can't flip after a reset until you press the start button
-    if (flipped <2) { //check if the number of flipped cards is <2
+    if (flipped < 2) { //check if the number of flipped cards is <2
       $(this).children('.cards-f').addClass('active'); //turns cards over to make the image visable
       flippedCards.push(this); //add the card/max 2 to the flipped cards array with the data-card-image value
       flipped++; // gives the card in the array a value that increases by 1 so that if the number <2 the if code will execute >2 the else will execute
@@ -179,31 +177,35 @@ $(".image-container").on("click", function () {
         let secondFlippedCard = $(flippedCards[1]).children('.image-2')[0].dataset.cardImage; //select the dataset from the 2nd flipped card
         if (firstFlippedCard !== secondFlippedCard) {
           turnsCounter++; //  Increases the turns taken counter when two cards have been flipped
-          $('#turns-counter').text(turnsCounter); // Updates the turns taken counter display
-          setTimeout(function() { // sets a delay
+          $('.turns-counter').text(turnsCounter); // Updates the turns taken counter display
+          setTimeout(function () { // sets a delay
             $('.image-container:not(.matched) > *').removeClass('active'); //Removes class active from matched cards so they dont flip back over
             flippedCards = []; // This will empty the flippedCards array
             flipped = 0; // This starts the flipped variable to 0
           }, 800); //sets the delay time
         } else {
-            matchedCards.push(flippedCards[0], flippedCards[1]); //Push the flipped cards to the matching cards array so they cannot be used again
-            matchedCards.forEach(card=> {card.classList.add('matched')}); // Add a class of matched to matched cards
-            flippedCards = []; // This will empty the flippedCards array
-            flipped = 0; // This starts the flipped variable to 0
-            turnsCounter++; // Increases the turns taken counter when two cards have been flipped
-            $('#turns-counter').text(turnsCounter); // Updates the turns taken counter display
-            if (matchedCards.length === 2) {
-             winnerModal ()
-            }
+          matchedCards.push(flippedCards[0], flippedCards[1]); //Push the flipped cards to the matching cards array so they cannot be used again
+          matchedCards.forEach(card => {
+            card.classList.add('matched')
+          }); // Add a class of matched to matched cards
+          flippedCards = []; // This will empty the flippedCards array
+          flipped = 0; // This starts the flipped variable to 0
+          turnsCounter++; // Increases the turns taken counter when two cards have been flipped
+          $('.turns-counter').text(turnsCounter); // Updates the turns taken counter display
+          if (matchedCards.length === 16) {
+            winnerModal()
+          }
         }
       }
     }
   }
 });
 
-function winnerModal () {
+function winnerModal() {
   clearTimeout(timer);
   $('#staticBackdrop').modal('show');
+  document.querySelector('.endtime').innerHTML = `${minutes}:${seconds}:${milliseconds}`;
+
 }
 
 // make all cards flip when shift+r is pressed and flip back when both pressed again

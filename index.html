@@ -38,6 +38,10 @@
                             <div class="modal-body">
                               You matched all the cards! Why not have another go and see if you can beat your best time and reduce your number of turns.
                             </div>
+                            <div class="timer-turns-wrap d-flex justify-content-around align-center p-2">
+                                <p>Time taken: <span class="endtime">0</span></p>
+                                <p>Turns taken: <span class="turns-counter"> 0</span></p>
+                            </div>
                             <div class="modal-footer">
                               <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Try again</button>
                             </div>
@@ -114,8 +118,8 @@
                     <!-- Timer/turns taken -->
 
                     <div class="timer-turns-wrap d-flex justify-content-center align-center p-2">
-                        <div id="timer" class="pe-5">00:00:00</div>
-                        <p>Turns taken: <span id="turns-counter" class=""> 0</span></p>
+                        <div class="pe-5 timer">00:00:00</div>
+                        <p>Turns taken: <span class="turns-counter"> 0</span></p>
                     </div>
 
                     <!-- cards for farm game -->
