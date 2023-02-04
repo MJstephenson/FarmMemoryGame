@@ -49,6 +49,10 @@ $("#new-style-btn").on("click", function () {
   resetGameStyle()
   turnsCounter = 0;
   $('#turns-counter').text(turnsCounter);
+  flipped = 0;
+  $('.image-container').removeClass('matched');
+  matchedCards = [];
+  flippedCards = [];
 });
 
 
