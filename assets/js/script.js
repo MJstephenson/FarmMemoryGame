@@ -192,18 +192,19 @@ $(".image-container").on("click", function () {
             flipped = 0; // This starts the flipped variable to 0
             turnsCounter++; // Increases the turns taken counter when two cards have been flipped
             $('#turns-counter').text(turnsCounter); // Updates the turns taken counter display
+            if (matchedCards.length === 2) {
+             winnerModal ()
+            }
         }
       }
     }
   }
 });
 
-
-// if (matchedCards.length === 16) {
-//   alert("you won!");
-//   resetGame();
-//}
-
+function winnerModal () {
+  clearTimeout(timer);
+  $('#staticBackdrop').modal('show');
+}
 
 // make all cards flip when shift+r is pressed and flip back when both pressed again
 $(document).on('keydown', function (e) {

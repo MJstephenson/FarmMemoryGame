@@ -11,6 +11,29 @@ body {
 }
 /*instructions popup styling */
 
+.modal-content {
+  animation: bg-animation 2s infinite;
+}
+@-webkit-keyframes bg-animation {
+  
+  0% {
+    background-color: green;
+  }
+  100% {
+    background-color: yellow;
+  }
+}
+
+@keyframes bg-animation {
+
+  0% {
+    background-color: green;
+  }
+  100% {
+    background-color: yellow;
+  }
+}
+
 .popup-instruction-overlay {
   /*Hides instructions pop-up*/
   visibility: hidden;
