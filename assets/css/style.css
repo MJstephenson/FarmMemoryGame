@@ -1,15 +1,24 @@
 body {
   font-family: 'Short Stack', cursive, 'Arial', sans-serif; 
+  color: white;
+  text-shadow: 2px 2px 8px #000000;
 }
 
 .background-img {
-  background-image: url();
-  background-color:;
+  background-color: lightgray;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url("../images/backgrounds/woolbkgr.jpg");
+  height: 1450px;
+  width: 100vw;
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
+  background-size:cover; /* Resize the background image to cover the entire container */
 }
 /*instructions popup styling */
+
+.header-text {
+  padding-top: 390px;
+}
+
 
 .modal-content {
   animation: bg-animation 2s infinite;
@@ -17,20 +26,20 @@ body {
 @-webkit-keyframes bg-animation {
   
   0% {
-    background-color: green;
+    background-color: rgb(0, 0, 0);
   }
   100% {
-    background-color: yellow;
+    background-color: rgb(9, 230, 20);
   }
 }
 
 @keyframes bg-animation {
 
   0% {
-    background-color: green;
+    background-color: rgb(2, 2, 2);
   }
   100% {
-    background-color: yellow;
+    background-color: rgb(9, 230, 20);
   }
 }
 
@@ -38,12 +47,13 @@ body {
   /*Hides instructions pop-up*/
   visibility: hidden;
   position: absolute;
-  background: #b96d6d;
+  background: #9f15df;
+  background-image: linear-gradient(to bottom right, red , blue);
   border: 3px solid #666666;
   width: 95%;
   height: auto;
   left: 2.5%;
-  top:16%
+  top:8%
 }
 
 .popup-instruction-overlay.active {
