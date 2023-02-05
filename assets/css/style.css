@@ -81,7 +81,9 @@ body {
 }
 
 
-
+.m-background {
+  background-color: #793568;
+}
 
 .modal-content {
   animation: bg-animation 2s infinite;
