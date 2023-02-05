@@ -76,14 +76,11 @@ body {
   border-radius: 10px;
 }
 
-
-
 @keyframes glowing {
   0% { background-position: 0 0; }
   50% { background-position: 400% 0; }
   100% { background-position: 0 0; }
 }
-
 
 .modal-content {
   animation: bg-animation 2s infinite;
@@ -273,3 +270,14 @@ display:none;
   transition-duration: 0.2s;
 }
 
+/*-- Media Queries --*/
+
+@media (max-width: 730px) {
+  .farm-cards.active, .space-cards.active, .car-cards.active {
+    grid-template-columns: repeat(2, 140px); 
+    grid-template-rows: repeat(8, 140px);
+  }
+  .background-img {
+    height: 2200px;
+  }
+}
