@@ -66,6 +66,7 @@ $("#new-style-btn").on("click", function () {
 $("#start-btn").on("click", function () {
   $(".choose-game").addClass("active");
   $(".begin-section").addClass("inactive");
+  turnsCounter = 0;
   shuffleCards();
 });
 
@@ -227,8 +228,18 @@ function winnerModal() {
   clearTimeout(timer);
   $('#staticBackdrop').modal('show');
   document.querySelector('.endtime').innerHTML = `${minutes}:${seconds}:${milliseconds}`;
-
+  
+  let starRating = '';
+  if (turnsCounter >= 8 && turnsCounter <= 20) {
+    starRating = '⭐️⭐️⭐️';
+  } else if (turnsCounter >= 21 && turnsCounter <= 30) {
+    starRating = '⭐️⭐️';
+  } else if (turnsCounter > 31) {
+    starRating = '⭐️';
+  }
+  document.querySelector('.star-rating').innerHTML = starRating;
 }
+
 
 // make all cards flip when shift+r is pressed and flip back when both pressed again
 $(document).on('keydown', function (e) {
