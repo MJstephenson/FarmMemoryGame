@@ -76,6 +76,21 @@ function shuffleCards() {
   $(gameType).append(cards); // append the shuffled cards back to the game type in the DOM
 }
 
+// Winning modal close button
+$("#win-close").on("click", function () {
+  resetTimer()
+  $(".begin-section").addClass("inactive");
+  $('.image-container').children('.front').removeClass('active');
+  $('.image-container').children('.back').removeClass('active');
+  shuffleCards();
+  flipped = 0;
+  $('.image-container').removeClass('matched');
+  matchedCards = [];
+  flippedCards = [];
+  turnsCounter = 0;
+  $('.turns-counter').text(turnsCounter);
+  canFlip = false; //Make it so you cannot flip cards after pressing reset button
+});
 
 //Reset Button
 $("#reset-btn").on("click", function () {
