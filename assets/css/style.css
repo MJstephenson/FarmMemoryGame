@@ -1,12 +1,54 @@
-body {
+html, body {
   font-family: 'Short Stack', cursive, 'Arial', sans-serif; 
   color: white;
   text-shadow: 2px 2px 8px #000000;
+  scroll-behavior: smooth
 }
 
+/* background images for games */
 .background-img {
   background-color: lightgray;
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url("../images/backgrounds/woolbkgr.jpg");
+  height: 1450px;
+  width: 100vw;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size:cover; /* Resize the background image to cover the entire container */
+}
+
+.background-img.wool {
+  background-color: lightgray;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url("../images/backgrounds/woolbkgr.jpg");
+  height: 1450px;
+  width: 100vw;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size:cover; /* Resize the background image to cover the entire container */
+}
+
+.background-img.space {
+  background-color: lightgray;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url("../images/backgrounds/outerspace.jpg");
+  height: 1450px;
+  width: 100vw;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size:cover; /* Resize the background image to cover the entire container */
+}
+
+.background-img.fields {
+  background-color: lightgray;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url("../images/backgrounds/fields.jpg");
+  height: 1450px;
+  width: 100vw;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size:cover; /* Resize the background image to cover the entire container */
+}
+
+.background-img.racetrack {
+  background-color: lightgray;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url("../images/backgrounds/racetrack.jpg");
   height: 1450px;
   width: 100vw;
   background-position: center; /* Center the image */

@@ -1,8 +1,4 @@
-$(document).ready(function () {
-  $("#space-btn").click(function () {
-    $(".background-img").css("background-image", "url('../images/backgrounds/outerspace.jpeg')");
-  });
-});
+
 
 
 //Appends an "active" class to .popup-instructions-overlay and .popup-instructions-content when the "instructions" button is clicked
@@ -23,6 +19,7 @@ $("#farm-btn").on("click", function () {
   $(".main-game, .farm-cards").addClass("active");
   $(".game-type").text('Farm'); //Change game name
   $(".block").addClass("inactive"); //hide block for page layout
+  $(".background-img").addClass("fields");
 });
 
 //On space game button click, hide all Dom Elements, and only show main game section with space cards only
@@ -33,6 +30,7 @@ $("#space-btn").on("click", function () {
   $(".main-game, .space-cards").addClass("active");
   $(".game-type").text('Space'); //Change game name
   $(".block").addClass("inactive"); //hide block for page layout
+  $(".background-img").addClass("space");
 });
 
 //On car game button click, hide all Dom Elements, and only show main game section with car cards only
@@ -43,6 +41,7 @@ $("#cars-btn").on("click", function () {
   $(".main-game, .car-cards").addClass("active");
   $(".game-type").text('Car'); //Change game name
   $(".block").addClass("inactive"); //hide block for page layout
+  $(".background-img").addClass("racetrack");
 });
 
 //On new game style button click, hide all Dom Elements, and show header, instructions and choose style section
@@ -59,6 +58,9 @@ $("#new-style-btn").on("click", function () {
   matchedCards = [];
   flippedCards = [];
   canFlip = false;
+  $(".background-img").removeClass("racetrack space fields");
+  $(".background-img").addClass("wool");
+  window.scrollTo(0,0)
 });
 
 
