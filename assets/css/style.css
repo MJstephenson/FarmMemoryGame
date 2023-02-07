@@ -319,7 +319,7 @@ display:none;
     grid-template-columns: repeat(2, 140px); 
     grid-template-rows: repeat(8, 140px);
   }
-  .background-img {
+  .background-img, .background-img.fields, .background-img.racetrack, .background-img.space {
     height: 2200px;
   }
 }
