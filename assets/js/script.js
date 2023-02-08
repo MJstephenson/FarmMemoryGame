@@ -7,7 +7,7 @@ $("#farm-btn").on("click", function () {
   $(".game-type").text('Farm'); //Change game name
   $(".block").addClass("inactive"); //hide block for page layout
   $(".background-img").addClass("fields");
-  var audio = new Audio("../assets/sounds/rooster.mp3");
+  var audio = new Audio("assets/sounds/rooster.mp3");
   audio.play();
 });
 
@@ -20,7 +20,7 @@ $("#space-btn").on("click", function () {
   $(".game-type").text('Space'); //Change game name
   $(".block").addClass("inactive"); //hide block for page layout
   $(".background-img").addClass("space");
-  var sound = new Audio("../assets/sounds/blast.mp3");
+  var sound = new Audio("assets/sounds/blast.mp3");
   sound.play();
 });
 
@@ -33,7 +33,7 @@ $("#cars-btn").on("click", function () {
   $(".game-type").text('Car'); //Change game name
   $(".block").addClass("inactive"); //hide block for page layout
   $(".background-img").addClass("racetrack");
-  var sound = new Audio("../assets/sounds/enginerev.mp3");
+  var sound = new Audio("assets/sounds/enginerev.mp3");
   sound.play();
 });
 
@@ -54,7 +54,7 @@ $("#new-style-btn").on("click", function () {
   $(".background-img").removeClass("racetrack space fields");
   $(".background-img").addClass("wool");
   window.scrollTo(0,0)
-  var sound = new Audio("../assets/sounds/highpop.mp3");
+  var sound = new Audio("assets/sounds/highpop.mp3");
   sound.play();
 });
 
@@ -70,12 +70,12 @@ $("#start-btn").on("click", function () {
 });
 
 $(".instruct-btn").on("click", function () {
-  var audio = new Audio("../assets/sounds/pop.mp3");
+  var audio = new Audio("assets/sounds/pop.mp3");
   audio.play();
 });
 
 $(".close-btn").on("click", function () {
-  var audio = new Audio("../assets/sounds/highpop.mp3");
+  var audio = new Audio("assets/sounds/highpop.mp3");
   audio.play();
 });
 
@@ -106,7 +106,7 @@ $("#win-close").on("click", function () {
   turnsCounter = 0;
   $('.turns-counter').text(turnsCounter);
   canFlip = false; //Make it so you cannot flip cards after pressing reset button
-  var sound = new Audio("../assets/sounds/pop.mp3");
+  var sound = new Audio("assets/sounds/pop.mp3");
   sound.play();
 });
 
@@ -124,7 +124,7 @@ $("#reset-btn").on("click", function () {
   turnsCounter = 0;
   $('.turns-counter').text(turnsCounter);
   canFlip = false; //Make it so you cannot flip cards after pressing reset button
-  var sound = new Audio("../assets/sounds/reset.mp3");
+  var sound = new Audio("assets/sounds/reset.mp3");
   sound.play();
 });
 
@@ -160,7 +160,7 @@ function startGame() { //function to start the timer if a gameState is 0 (not ru
     gameState = 1; //Adds the gameState to 1. This stops the startTimer function from repeating on each click and speeding the timer up
     canFlip = true; //Allows the cards to flip if the game is not running
     setTimeout(function() {
-      var sound = new Audio("../assets/sounds/startgame.mp3");
+      var sound = new Audio("assets/sounds/startgame.mp3");
       sound.play();
     }, 300);
   }
@@ -228,7 +228,7 @@ $(".image-container").on("click", function () {
           matchedCards.push(flippedCards[0], flippedCards[1]); //Push the flipped cards to the matching cards array so they cannot be used again
           matchedCards.forEach(card => {
             card.classList.add('matched');
-            var sound = new Audio("../assets/sounds/match.mp3");
+            var sound = new Audio("assets/sounds/match.mp3");
             sound.play();
           }); // Add a class of matched to matched cards
           flippedCards = []; // This will empty the flippedCards array
@@ -259,7 +259,7 @@ function winnerModal() {
   }
   document.querySelector('.star-rating').innerHTML = starRating;
   setTimeout(function() {
-    var sound = new Audio("../assets/sounds/winner.mp3");
+    var sound = new Audio("assets/sounds/winner.mp3");
     sound.play();
   }, 2000);
 }
