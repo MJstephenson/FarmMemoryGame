@@ -65,7 +65,7 @@ $("#start-btn").on("click", function () {
   $(".begin-section").addClass("inactive");
   turnsCounter = 0;
   shuffleCards();
-  var audio = new Audio("../assets/sounds/pop.mp3");
+  var audio = new Audio("assets/sounds/pop.mp3");
   audio.play();
 });
 
