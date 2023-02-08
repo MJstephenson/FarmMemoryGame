@@ -1,16 +1,3 @@
-
-
-
-//Appends an "active" class to .popup-instructions-overlay and .popup-instructions-content when the "instructions" button is clicked
-$(".instruct-btn").on("click", function () {
-  $(".popup-instruction-overlay, .popup-instruction-content").addClass("active");
-});
-
-//Removes the "active" class to .popup instructions-overlay and .popup-instructions-content when the "Close" button is clicked 
-$(".close-modal-btn").on("click", function () {
-  $(".popup-instruction-overlay, .popup-instruction-content").removeClass("active");
-});
-
 //On farm game button click, hide all Dom Elements, and only show main game section with farm cards only
 $("#farm-btn").on("click", function () {
   gameType = '.farm-cards';
@@ -20,6 +7,8 @@ $("#farm-btn").on("click", function () {
   $(".game-type").text('Farm'); //Change game name
   $(".block").addClass("inactive"); //hide block for page layout
   $(".background-img").addClass("fields");
+  var audio = new Audio("../assets/sounds/rooster.mp3");
+  audio.play();
 });
 
 //On space game button click, hide all Dom Elements, and only show main game section with space cards only
@@ -31,6 +20,8 @@ $("#space-btn").on("click", function () {
   $(".game-type").text('Space'); //Change game name
   $(".block").addClass("inactive"); //hide block for page layout
   $(".background-img").addClass("space");
+  var sound = new Audio("../assets/sounds/blast.mp3");
+  sound.play();
 });
 
 //On car game button click, hide all Dom Elements, and only show main game section with car cards only
@@ -42,6 +33,8 @@ $("#cars-btn").on("click", function () {
   $(".game-type").text('Car'); //Change game name
   $(".block").addClass("inactive"); //hide block for page layout
   $(".background-img").addClass("racetrack");
+  var sound = new Audio("../assets/sounds/enginerev.mp3");
+  sound.play();
 });
 
 //On new game style button click, hide all Dom Elements, and show header, instructions and choose style section
@@ -61,6 +54,8 @@ $("#new-style-btn").on("click", function () {
   $(".background-img").removeClass("racetrack space fields");
   $(".background-img").addClass("wool");
   window.scrollTo(0,0)
+  var sound = new Audio("../assets/sounds/highpop.mp3");
+  sound.play();
 });
 
 
@@ -70,6 +65,18 @@ $("#start-btn").on("click", function () {
   $(".begin-section").addClass("inactive");
   turnsCounter = 0;
   shuffleCards();
+  var audio = new Audio("../assets/sounds/pop.mp3");
+  audio.play();
+});
+
+$(".instruct-btn").on("click", function () {
+  var audio = new Audio("../assets/sounds/pop.mp3");
+  audio.play();
+});
+
+$(".close-btn").on("click", function () {
+  var audio = new Audio("../assets/sounds/highpop.mp3");
+  audio.play();
 });
 
 function shuffleCards() {
@@ -99,6 +106,8 @@ $("#win-close").on("click", function () {
   turnsCounter = 0;
   $('.turns-counter').text(turnsCounter);
   canFlip = false; //Make it so you cannot flip cards after pressing reset button
+  var sound = new Audio("../assets/sounds/pop.mp3");
+  sound.play();
 });
 
 //Reset Button
@@ -115,6 +124,8 @@ $("#reset-btn").on("click", function () {
   turnsCounter = 0;
   $('.turns-counter').text(turnsCounter);
   canFlip = false; //Make it so you cannot flip cards after pressing reset button
+  var sound = new Audio("../assets/sounds/reset.mp3");
+  sound.play();
 });
 
 //Add reset game style function to clear the prevous game when choosing a new style of game
@@ -122,6 +133,7 @@ function resetGameStyle() {
   const cardsList = ['.farm-cards', '.space-cards', '.car-cards'].forEach(item => {
     const div = document.querySelector(item);
     div.classList.remove('active');
+    
   });
   //JQuery Version
   //const cardsList = ['.farm-cards', '.space-cards', '.car-cards'];
@@ -147,6 +159,10 @@ function startGame() { //function to start the timer if a gameState is 0 (not ru
     startTimer();
     gameState = 1; //Adds the gameState to 1. This stops the startTimer function from repeating on each click and speeding the timer up
     canFlip = true; //Allows the cards to flip if the game is not running
+    setTimeout(function() {
+      var sound = new Audio("../assets/sounds/startgame.mp3");
+      sound.play();
+    }, 300);
   }
 
   shuffleCards();
@@ -212,6 +228,8 @@ $(".image-container").on("click", function () {
           matchedCards.push(flippedCards[0], flippedCards[1]); //Push the flipped cards to the matching cards array so they cannot be used again
           matchedCards.forEach(card => {
             card.classList.add('matched');
+            var sound = new Audio("../assets/sounds/match.mp3");
+            sound.play();
           }); // Add a class of matched to matched cards
           flippedCards = []; // This will empty the flippedCards array
           flipped = 0; // This starts the flipped variable to 0
@@ -240,8 +258,11 @@ function winnerModal() {
     starRating = '⭐️';
   }
   document.querySelector('.star-rating').innerHTML = starRating;
+  setTimeout(function() {
+    var sound = new Audio("../assets/sounds/winner.mp3");
+    sound.play();
+  }, 2000);
 }
-
 
 // make all cards flip when shift+r is pressed and flip back when both pressed again
 $(document).on('keydown', function (e) {
