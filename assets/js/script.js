@@ -206,6 +206,8 @@ let gameType = '';
 let matchedCards = [];
 let turnsCounter = 0;
 let lastClicked;
+let soundPlaying = false;
+
 
 $(".image-container").on("click", function () {
   if (canFlip) { //makes sure the cards can't flip after a reset until you press the start button
@@ -234,8 +236,7 @@ $(".image-container").on("click", function () {
           matchedCards.push(flippedCards[0], flippedCards[1]); //Push the flipped cards to the matching cards array so they cannot be used again
           matchedCards.forEach(card => {
             card.classList.add('matched');
-            var sound = new Audio("assets/sounds/match.mp3");
-            sound.play();
+            playMatchedSound();
           }); // Add a class of matched to matched cards
           flippedCards = []; // This will empty the flippedCards array
           flipped = 0; // This starts the flipped variable to 0
@@ -269,6 +270,17 @@ function winnerModal() {
     var sound = new Audio("assets/sounds/winner.mp3");
     sound.play();
   }, 2000);
+}
+
+function playMatchedSound() {
+  if (!soundPlaying) {
+    var sound = new Audio("assets/sounds/match.mp3");
+    sound.play();
+    soundPlaying = true;
+    sound.addEventListener("ended", function () {
+      soundPlaying = false;
+    });
+  }
 }
 
 // make all cards flip when shift+r is pressed and flip back when both pressed again
