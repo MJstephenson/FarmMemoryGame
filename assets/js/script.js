@@ -205,10 +205,15 @@ let canFlip = false;
 let gameType = '';
 let matchedCards = [];
 let turnsCounter = 0;
+let lastClicked;
 
 $(".image-container").on("click", function () {
   if (canFlip) { //makes sure the cards can't flip after a reset until you press the start button
     if (flipped < 2) { //check if the number of flipped cards is <2
+      if (this === lastClicked) { //makes sure that the same card cannot be clicked again
+        return;
+      }
+      lastClicked = this;
       $(this).children('.cards-f').addClass('active'); //turns cards over to make the image visable
       flippedCards.push(this); //add the card/max 2 to the flipped cards array with the data-card-image value
       flipped++; // gives the card in the array a value that increases by 1 so that if the number <2 the if code will execute >2 the else will execute
@@ -223,6 +228,7 @@ $(".image-container").on("click", function () {
             $('.image-container:not(.matched) > *').removeClass('active'); //Removes class active from matched cards so they dont flip back over
             flippedCards = []; // This will empty the flippedCards array
             flipped = 0; // This starts the flipped variable to 0
+            lastClicked = null; //allows the game logic to continue
           }, 800); //sets the delay time
         } else {
           matchedCards.push(flippedCards[0], flippedCards[1]); //Push the flipped cards to the matching cards array so they cannot be used again
@@ -235,6 +241,7 @@ $(".image-container").on("click", function () {
           flipped = 0; // This starts the flipped variable to 0
           turnsCounter++; // Increases the turns taken counter when two cards have been flipped
           $('.turns-counter').text(turnsCounter); // Updates the turns taken counter display
+          lastClicked = null; //allows the game logic to continue
           if (matchedCards.length === 16) {
             winnerModal();
           }
