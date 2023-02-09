@@ -53,7 +53,7 @@ $("#new-style-btn").on("click", function () {
   canFlip = false;
   $(".background-img").removeClass("racetrack space fields");
   $(".background-img").addClass("wool");
-  window.scrollTo(0,0)
+  window.scrollTo(0,0);
   var sound = new Audio("assets/sounds/highpop.mp3");
   sound.play();
 });
@@ -127,6 +127,7 @@ $("#reset-btn").on("click", function () {
   var sound = new Audio("assets/sounds/reset.mp3");
   sound.play();
 });
+
 
 //Add reset game style function to clear the prevous game when choosing a new style of game
 function resetGameStyle() {
