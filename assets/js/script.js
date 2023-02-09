@@ -269,7 +269,7 @@ function winnerModal() {
   setTimeout(function() {
     var sound = new Audio("assets/sounds/winner.mp3");
     sound.play();
-  }, 2000);
+  }, 2500);
 }
 
 function playMatchedSound() {
