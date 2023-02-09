@@ -124,7 +124,7 @@ html, body {
   100% { background-position: 0 0; }
 }
 
-.modal-content {
+.bg-win {
   animation: bg-animation 2s infinite;
 }
 @-webkit-keyframes bg-animation {
