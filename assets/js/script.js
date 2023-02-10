@@ -132,7 +132,6 @@ $("#reset-btn").on("click", function () {
 //Add reset game style function to clear the prevous game when choosing a new style of game
 function resetGameStyle() {
   const cardsList = ['.farm-cards', '.space-cards', '.car-cards'].forEach(item => {
-    void cardsList;
     const div = document.querySelector(item);
     div.classList.remove('active');
     
