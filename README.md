@@ -1,16 +1,10 @@
-# KIDS MEMORY GAMES
+# KIDS MEMORY GAMES PROJECT
 
 This project is a card memory game that consits of three game styles, farm, space and cars. I chose these three themes as my little boy has a interest in all of them and I thought it would be fun to give him a choice when he played it. It would also be a good way to help with his memory skills and making 3 games would test my knowledge of using the DOM and what I have learnt from the Javascript modules in the code Institute course I am currently studying.
 
 Consider adding a mockup image using the "Am I Responsive" website.
 Here's your deployed site as an example:
 https://ui.dev/amiresponsive?url=https://mjstephenson.github.io/KidsMemoryGame
-
-Screenshots for the README and testing should not be inside of `assets/` or `static/` image folders.
-(reminder: `assets/` and `static/` are for files used on the live site, not documentation)
-Consider adding a new folder called `documentation`, and add the amiresponsive screenshot inside of that folder.
-To add the image into your README, use this format:
-(assuming you have a new folder called `documentation` with an image called "mockup.png")
 
 ![screenshot](documentation/mockup.png)
 
@@ -74,31 +68,34 @@ Example:
 
 ## User Stories
 
-In this section, list all of your user stories for the project.
-
 ### New Site Users
 
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
+- As a new site user, I would like to read the game instructions, so that I can understand the game and what features it has.
+- As a new site user, I would like to be able to choose a game style, so that I can play a game that suits my mood.
+- As a new site user, I would like to be able to start a game from the game screen, so that I can begin a game of my chosen style.
+- As a new site user, I would like to see a timer start when I start the game, so that I can see how fast I can complete it.
+- As a new site user, I would like to see how many turns I have made as I play the game, so that I can keep track of this.
+- As a new site user, I would like to be able to reset the game, timer and turns, so that I can start a new game on the same game style.
+- As a new site user, I would like to be able to choose a new game style after or during playing a game, so that I can try another style.
+- As a new site user, I would like to be shown my time and turns taken when I match all the cards in a game, so that I can see how well I have done.
+- As a new site user, I would like to be given feedback based on how well I have done in the game, so that I can see how well I am doing.
+- As a new site user, I would like to see a difference in the game styles that relate to their style, so that I feel I am playing a different game.
+- As a new site user, I would like to hear a sound played when I match a card, so that I can audibly recognise this.
+- As a new site user, I would like to hear sounds on button clicks, so that I can audibly recognise that they have been clicked.
+- As a new site user, I would like to hear a sound related to the game when i choose a style, so that I can audibly recognise what game I am playing.
+- As a new site user, I would like to hear a sound when I press the start button on a game, so that I know the game has started.
+- As a new site user, I would like to hear a sound when I win the game, so that I can celebrate my win.
+- As a new site user, I would like to be able to play the game on a variety of mobile devices, so that I can play on the go.
+- As a new site user, I would like to play the game on different browsers, so that I can not worry about what browser I am using.
 
 ### Returning Site Users
 
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
+- As a returning site user, I would like the game to play exactly the same as the last time I played it, so that I can improve my technique .
+- As a returning site user, I would like to be able to play the game on a variety of different devices, so that I can play when I want.
 
 ### Site Admin
 
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
+- As a site administrator, I should be able to flip all the cards to assist with matching cards & winning the game, so that I can test the app and develop new features quickly.
 
 ## Wireframes
 
@@ -188,24 +185,13 @@ Feel free to delete any unused items below as necessary.
 - [CSS :root variables](https://www.w3schools.com/css/css3_variables.asp) used for reusable styles throughout the site.
 - [CSS Flexbox](https://www.w3schools.com/css/css3_flexbox.asp) and/or [CSS Grid](https://www.w3schools.com/css/css_grid.asp) used for an enhanced responsive layout.
 - [Bootstrap](https://getbootstrap.com) used as the front-end CSS framework for modern responsiveness and pre-built components.
-- [Materialize](https://materializecss.com) used as the front-end CSS framework for modern responsiveness and pre-built components.
 - [JavaScript](https://www.javascript.com) used for user interaction on the site.
-- [Python](https://www.python.org) used as the back-end programming language.
 - [Git](https://git-scm.com) used for version control. (`git add`, `git commit`, `git push`)
 - [GitHub](https://github.com) used for secure online code storage.
 - [GitHub Pages](https://pages.github.com) used for hosting the deployed front-end site.
 - [Gitpod](https://gitpod.io) used as a cloud-based IDE for development.
 - [Markdown Builder by Tim Nelson](https://traveltimn.github.io/readme-builder) used to help generate the Markdown files.
-- [Flask](https://flask.palletsprojects.com) used as the Python framework for the site.
-- [Django](https://www.djangoproject.com) used as the Python framework for the site.
-- [MongoDB](https://www.mongodb.com) used as the non-relational database management with Flask.
-- [SQLAlchemy](https://www.sqlalchemy.org) used as the relational database management with Flask.
-- [PostgreSQL](https://www.postgresql.org) used as the relational database management.
-- [ElephantSQL](https://www.elephantsql.com) used as the Postgres database.
-- [Heroku](https://www.heroku.com) used for hosting the deployed back-end site.
-- [Cloudinary](https://cloudinary.com) used for online static file storage.
-- [Stripe](https://stripe.com) used for online secure payments of ecommerce products/services.
-- [AWS S3](https://aws.amazon.com/s3) used for online static file storage.
+-
 
 ## Testing
 
