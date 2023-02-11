@@ -1,4 +1,4 @@
-# KIDSMEMORYGAME
+# KIDS MEMORY GAMES
 
 This project is a card memory game that consits of three game styles, farm, space and cars. I chose these three themes as my little boy has a interest in all of them and I thought it would be fun to give him a choice when he played it. It would also be a good way to help with his memory skills and making 3 games would test my knowledge of using the DOM and what I have learnt from the Javascript modules in the code Institute course I am currently studying.
 
@@ -109,31 +109,21 @@ Instructions on how to do Markdown `tables` start on line #213 on this site: htt
 To follow best practice, wireframes were developed for mobile, tablet, and desktop sizes.
 I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wireframes.
 
-### Home Page Wireframes
-
-| Size | Screenshot |
-| --- | --- |
-| Mobile | ![screenshot](documentation/wireframes/mobile-home.png) |
-| Tablet | ![screenshot](documentation/wireframes/tablet-home.png) |
-| Desktop | ![screenshot](documentation/wireframes/desktop-home.png) |
-
-### About Page Wireframes
-
-| Size | Screenshot |
-| --- | --- |
-| Mobile | ![screenshot](documentation/wireframes/mobile-about.png) |
-| Tablet | ![screenshot](documentation/wireframes/tablet-about.png) |
-| Desktop | ![screenshot](documentation/wireframes/desktop-about.png) |
-
-### Contact Page Wireframes
-
-| Size | Screenshot |
-| --- | --- |
-| Mobile | ![screenshot](documentation/wireframes/mobile-contact.png) |
-| Tablet | ![screenshot](documentation/wireframes/tablet-contact.png) |
-| Desktop | ![screenshot](documentation/wireframes/desktop-contact.png) |
-
-Repeat for any addition wireframe pages you have.
+<details><summary>Game Start</summary>
+<img src="docs/wireframes/startPage.png">
+</details>
+<details><summary>Instructions</summary>
+<img src="docs/wireframes/instructions.png">
+</details>
+<details><summary>Game Style</summary>
+<img src="docs/wireframes/chooseGame.png">
+</details>
+<details><summary>Game Page</summary>
+<img src="docs/wireframes/gamePage.png">
+</details>
+<details><summary>Winner Modal</summary>
+<img src="docs/wireframes/winnerModal.png">
+</details>
 
 ## Features
 
