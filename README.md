@@ -14,57 +14,28 @@ https://pandao.github.io/editor.md/en.html
 
 ## UX
 
-In this section, you will briefly explain your design processes.
-
 ### Colour Scheme
 
-Explain your colours and the colour scheme.
+- `#ffffff` used for primary text. This gives a strong contract between the text and all 4 backrounds used on the app.
+- `#793568` used for button colour as this felt neutral and a good colour choice for all game styles. Matching the landing page backround image this makes the colours feel connected. I used code from [dev.to](https://dev.to/webdeasy/top-20-css-buttons-animations-f41) by [Kocsten](https://codepen.io/kocsten) for the button animation.
+- `#6c757d` used for the instructions modal.
+- `#05630a` used for winning modal to stand out from the softer colours used on the app to grab attention.
+- `#000000` used for winning modal for a contrast colour for the winner modal animation.
 
-- `#000000` used for primary text.
-- `#E84610` used for primary highlights.
-- `#4A4A4F` used for secondary text.
-- `#009FE3` used for secondary highlights.
 
-Consider adding a link and screenshot for your colour scheme using "coolors".
-https://coolors.co/generate
+- text-shadow: 2px 2px 8px #000000; box-shadow: 2px 2px 8px #000000; was used to make the text, buttons and cards pop and lift off the backgrounds.
 
-When you add a colour to the palette, the URL is dynamically updated, making it easier for you to return back to your colour palette later if needed.
+I used [coolors.co](https://coolors.co/793568-6c757d-ffffff-000000-09e614) to generate my colour palette.
 
-Example:
-
-I used [coolors.co](https://coolors.co/e84610-009fe3-4a4a4f-445261-d63649-e6ecf0-000000) to generate my colour palette.
-
-![screenshot](documentation/coolors.png)
-
-If you've used CSS `:root` variables, consider also including a code snippet here!
-
-I've used CSS `:root` variables to easily update the global colour scheme by changing only one value, instead of everywhere in the CSS file.
-
-```css
-:root {
-    /* P = Primary | S = Secondary */
-    --p-text: #000000;
-    --p-highlight: #E84610;
-    --s-text: #4A4A4F;
-    --s-highlight: #009FE3;
-    --white: #FFFFFF;
-    --black: #000000;
-}
-```
+![screenshot](docs/readme/colours.png)
 
 ### Typography
 
-Explain any fonts and icon libraries used, like Google Fonts and/or Font Awesome.
+I used Short Stack for the app font as it is a low contrast semi-geometric typeface inspired by childish written letters. It is sturdy, and clear but also whimsical and fun.
 
-Consider adding a link to each font used, and the Font Awesome site if used (or similar icon library).
+- [Short Stack](https://fonts.google.com/specimen/Short+Stack) was used for all of the text throughout the app.
 
-Example:
-
-- [Montserrat](https://fonts.google.com/specimen/Montserrat) was used for the primary headers and titles.
-
-- [Lato](https://fonts.google.com/specimen/Lato) was used for all other secondary text.
-
-- [Font Awesome](https://fontawesome.com) icons were used throughout the site, such as the social media icons in the footer.
+- [Font Awesome](https://fontawesome.com) icons were used on the site buttons and the github icon in the footer.
 
 ## User Stories
 
