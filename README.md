@@ -9,8 +9,14 @@ I have built a card memory game that consits of three game styles, farm, space a
 
 ### Colour Scheme
 
+I used colours that compliment the backgrounds and are fun for kids at the same time.
+
 - `#ffffff` used for primary text. This gives a strong contract between the text and all 4 backrounds used on the app.
-- `#793568` used for button colour as this felt neutral and a good colour choice for all game styles. Matching the landing page backround image this makes the colours feel connected. I used code from [dev.to](https://dev.to/webdeasy/top-20-css-buttons-animations-f41) by [Kocsten](https://codepen.io/kocsten) for the button animation.
+- `#793568` used for button colour as this felt neutral and a good colour choice for all game styles. Matching the landing page backround image this makes the colours feel connected. I used code from [dev.to](https://dev.to/webdeasy/top-20-css-buttons-animations-f41) by [Kocsten](https://codepen.io/kocsten) for the button animation. 
+
+![screenshot](docs/features/btnAnimation.png)
+![screenshot](docs/features/btnPurple.png)
+
 - `#6c757d` used for the instructions modal.
 - `#05630a` used for winning modal to stand out from the softer colours used on the app to grab attention.
 - `#000000` used for winning modal for a contrast colour for the winner modal animation.
@@ -63,10 +69,6 @@ I used Short Stack for the app font as it is a low contrast semi-geometric typef
 
 ## Wireframes
 
-In this section, display your wireframe screenshots using a Markdown `table`.
-
-Instructions on how to do Markdown `tables` start on line #213 on this site: https://pandao.github.io/editor.md/en.html
-
 To follow best practice, wireframes were developed for mobile, tablet, and desktop sizes.
 I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wireframes.
 
@@ -101,27 +103,95 @@ IMPORTANT: Remember to always include a screenshot of each individual feature!
 
 ### Existing Features
 
-- **Feature #1**
+- **Start Button**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - Start button to get to the choose game section of the game, plays a 'pop' sound. Adds the choose game section to the DOM and hides the start button section. 
 
-![screenshot](documentation/feature01.png)
+![screenshot](docs/features/startBtn.png)
 
-- **Feature #2**
+- **Instructions**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - Instructions button with single 'pop' sound played on click that opens the bootstrap instructions modal. Modal close button plays another single 'pop' sound on click and closes the modal.
 
-![screenshot](documentation/feature02.png)
+![screenshot](docs/features/instructions.png)
+![screenshot](docs/features/instructionsBtn.png)
 
-- **Feature #3**
+- **3 Game Style Buttons**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - 3 Buttons that allow the user to select a game style which play a 'pop' sound on click and takes the user to that style of game.
+Clicking the farm, space or car game button manipulates the DOM and hides the game header (main title), instructions section and choose game section. It then shows the game style title (**The appropriate game style name for the game you are playing is displayed**) adds the game grid (**Including the specific game cards for the chosen game style**). The game start button, timer, turns counter, reset button and new game style button are all now visible and the backround is changed to the appropriate background image.  
 
-![screenshot](documentation/feature03.png)
+![screenshot](docs/features/3Buttons.png)
 
-Repeat as necessary for as many features as your site contains.
+![screenshot](docs/features/farmGame.png)
+![screenshot](docs/features/spaceGame.png)
+![screenshot](docs/features/carGame.png)
 
-Hint: the more, the merrier!
+- **Main Game Start Button**
+
+    - Start button that begins the game and plays a 'start the game already' vocal sound on click. This shuffles the cards, starts the timer, allows used turns to be appended to the turns counter and allows the cards to now flip when clicked. (**Cards cannot be flipped on click until this button is pressed**)
+
+![screenshot](docs/features/mainStartBtn.png)
+
+- **Reset Game Button**
+
+    - Reset Game button plays a 'horn' sound on click. This flips all the cards back to their original position, resets the timer to 00:00:00, resets the turns counter to 0, shuffles the cards and **does not** allow any more cards to be flipped on click until the start button is clicked.
+
+![screenshot](docs/features/resetBtn.png)
+
+- **New Game Style Button**
+
+    - New game style button plays a 'pop' sound on click and returns the user to . This shuffles the cards, resets the timer to 00:00:00, resets the turns counter to 0 and flips all the cards back to their original position. The background is reverted back to the main game background, the DOM is manipulated again to hide all of the game contents and now shows the main title header, instruction button and the three game buttons once more.
+    (**Importantly this also clears the previous game style otherwise the game grids would not disapear and the game grids would stack ontop of each other as you switched between game styles**)
+
+![screenshot](docs/features/newGameBtn.png)
+
+- **Game Timer #7**
+
+    - Game timer. Starts when the Start Game button is pressed. Shows the time taken in minutes, seconds and milliseconds. Resets to 0 when the reset game, new game style or close winning modal buttons are pressed.
+
+![screenshot](docs/features/timer0.png)![screenshot](docs/features/timer1.png)
+
+- **Turns Taken #8**
+
+    - Turns Taken Counter. Increments by 1 everyime 2 cards are flipped irrelevent if the 2 cards match or not.
+
+![screenshot](docs/features/turns0.png) ![screenshot](docs/features/turns5.png)
+
+- **Match Found Sound #9**
+
+    - 'Match Found' sound plays when a 2 cards are flipped and match.
+
+![screenshot](docs/features/match.png)
+
+- **Flip all Cards on Keypress**
+
+    - Pressing 'shift' + 'r' keys on the keyboard flips all the cards to reveal their locations. Used as a developer tool or as a possible Easter Egg for the user in a future version.
+
+![screenshot](docs/features/noFlip.png) ![screenshot](docs/features/flipped.png) 
+
+- **Winning Modal**
+
+    - When playing a game and 8 pairs of cards are matched the game ends and a winning modal opens with a black and green backround which toggles between the two colours. A 'winning tune' is playeded and text congratulates the user.
+    The modal show the time taken from starting the game to winning, the number of turns taken and the star rating. 8 > 20 turns taken = ⭐️⭐️⭐️, 21-30 turns = ⭐️⭐️, 31-40 turns = ⭐️ and 40 > = no stars.
+
+![screenshot](docs/features/winModal.png)
+
+
+- **Modal Close Button**
+
+    - Modal close button when clicked plays a 'pop' sound. This the resets the timer to 00:00:00, resets turns taken counter to 0, flips all the cards back to their original position. Also importantly it stops the user from flipping any cards until the start button is clicked again. 
+
+![screenshot](docs/features/modalCloseBtn.png)
+
+
+
+
+ - **Footer icon with link**
+
+    - Footer icon with link to my github repos 
+
+![screenshot](docs/features/footerIcon.png)
 
 ### Future Features
 
@@ -131,11 +201,15 @@ It's always great to have plans for future improvements!
 Consider adding any helpful links or notes to help remind you in the future, if you revisit the project in a couple years.
 
 - Cool new feature #1
-    - Any additional notes about this feature.
+    - High Score Table that keeps your times, turns and star rating locally. 
 - Cool new feature #2
-    - Any additional notes about this feature.
+    - Different sized game grids to increase/decrease game difficulty.
 - Cool new feature #3
-    - Any additional notes about this feature.
+    - Random card generator to add images from all games to create a brand new one.
+- Cool new feature #4
+    - Animations on the card backgrounds whilst playing the game.  
+- Cool new feature #5
+    - A sound toggle to turn the sound on and off.  
 
 ## Tools & Technologies Used
 
@@ -150,12 +224,13 @@ Feel free to delete any unused items below as necessary.
 - [CSS Flexbox](https://www.w3schools.com/css/css3_flexbox.asp) and/or [CSS Grid](https://www.w3schools.com/css/css_grid.asp) used for an enhanced responsive layout.
 - [Bootstrap](https://getbootstrap.com) used as the front-end CSS framework for modern responsiveness and pre-built components.
 - [JavaScript](https://www.javascript.com) used for user interaction on the site.
+- [JQuery](https://jquery.com/) used for getting access to a feature-rich JavaScript library.
 - [Git](https://git-scm.com) used for version control. (`git add`, `git commit`, `git push`)
 - [GitHub](https://github.com) used for secure online code storage.
 - [GitHub Pages](https://pages.github.com) used for hosting the deployed front-end site.
 - [Gitpod](https://gitpod.io) used as a cloud-based IDE for development.
 - [Markdown Builder by Tim Nelson](https://traveltimn.github.io/readme-builder) used to help generate the Markdown files.
--
+
 
 ## Testing
 
@@ -256,14 +331,13 @@ by sending yourself the following command: `!freemedia`.
 | [Audio Micro](https://www.audiomicro.com/free-sound-effects) | game page | audio | free audio files to generate the game sounds |
 | [Videvo](https://www.videvo.net/) | home page | video | background video on the hero section |
 | [TinyPNG](https://tinypng.com) | entire site | image | tool for image compression |
+| [Unsplash](https://unsplash.com/photos/7fjVzKzjni4) | main background image | image | used as the core game image
+| [pngegg](https://www.pngegg.com/en/png-ppeza) | car cards background | image | used car cards
 
 ### Acknowledgements
 
-Use this space to provide attribution to any supports that helped, encouraged, or supported you throughout the development stages of this project.
-A few examples have been provided below to give you some ideas.
-
-- I would like to thank my Code Institute mentor, [John/Jane Doe](https://github.com/username) for their support throughout the development of this project.
+- I would like to thank my Code Institute mentor, [Tim](https://github.com/username) for their support throughout the development of this project.
 - I would like to thank the [Code Institute](https://codeinstitute.net) tutor team for their assistance with troubleshooting and debugging some project issues.
 - I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com) for the moral support; it kept me going during periods of self doubt and imposter syndrome.
-- I would like to thank my spouse/partner (John/Jane), for believing in me, and allowing me to make this transition into software development.
-- I would like to thank my employer, for supporting me in my career development change towards becoming a software developer.
+- I would like to thank my spouse/partner (Lucy), for believing in me, and allowing me to make this transition into software development.
+
