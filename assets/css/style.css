@@ -328,4 +328,7 @@ display:none;
   .background-img, .background-img.fields, .background-img.racetrack, .background-img.space {
     height: 2200px;
   }
+  .header-text {
+    padding-top: 100px;
+  }
 }
