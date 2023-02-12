@@ -146,19 +146,19 @@ Clicking the farm, space or car game button manipulates the DOM and hides the ga
 
 ![screenshot](docs/features/newGameBtn.png)
 
-- **Game Timer #7**
+- **Game Timer**
 
     - Game timer. Starts when the Start Game button is pressed. Shows the time taken in minutes, seconds and milliseconds. Resets to 0 when the reset game, new game style or close winning modal buttons are pressed.
 
 ![screenshot](docs/features/timer0.png)![screenshot](docs/features/timer1.png)
 
-- **Turns Taken #8**
+- **Turns Taken**
 
     - Turns Taken Counter. Increments by 1 everyime 2 cards are flipped irrelevent if the 2 cards match or not.
 
 ![screenshot](docs/features/turns0.png) ![screenshot](docs/features/turns5.png)
 
-- **Match Found Sound #9**
+- **Match Found Sound**
 
     - 'Match Found' sound plays when a 2 cards are flipped and match.
 
@@ -185,8 +185,6 @@ Clicking the farm, space or car game button manipulates the DOM and hides the ga
 ![screenshot](docs/features/modalCloseBtn.png)
 
 
-
-
  - **Footer icon with link**
 
     - Footer icon with link to my github repos 
@@ -195,10 +193,7 @@ Clicking the farm, space or car game button manipulates the DOM and hides the ga
 
 ### Future Features
 
-Do you have additional ideas that you'd like to include on your project in the future?
-Fantastic! List them here!
-It's always great to have plans for future improvements!
-Consider adding any helpful links or notes to help remind you in the future, if you revisit the project in a couple years.
+These are ideas I have not had the time to implement on this project but if I come back to this project would like implement.
 
 - Cool new feature #1
     - High Score Table that keeps your times, turns and star rating locally. 
@@ -213,15 +208,10 @@ Consider adding any helpful links or notes to help remind you in the future, if 
 
 ## Tools & Technologies Used
 
-In this section, you should explain the various tools and technologies used to develop the project.
-Make sure to put a link (where applicable) to the source, and explain what each was used for.
-Some examples have been provided, but this is just a sample only, your project might've used others.
-Feel free to delete any unused items below as necessary.
 
 - [HTML](https://en.wikipedia.org/wiki/HTML) used for the main site content.
 - [CSS](https://en.wikipedia.org/wiki/CSS) used for the main site design and layout.
-- [CSS :root variables](https://www.w3schools.com/css/css3_variables.asp) used for reusable styles throughout the site.
-- [CSS Flexbox](https://www.w3schools.com/css/css3_flexbox.asp) and/or [CSS Grid](https://www.w3schools.com/css/css_grid.asp) used for an enhanced responsive layout.
+- [CSS Grid](https://www.w3schools.com/css/css_grid.asp) used for an enhanced responsive layout.
 - [Bootstrap](https://getbootstrap.com) used as the front-end CSS framework for modern responsiveness and pre-built components.
 - [JavaScript](https://www.javascript.com) used for user interaction on the site.
 - [JQuery](https://jquery.com/) used for getting access to a feature-rich JavaScript library.
@@ -280,20 +270,11 @@ You can fork this repository by using the following steps:
 
 ### Local VS Deployment
 
-Use this space to discuss any differences between the local version you've developed, and the live deployment site on GitHub Pages.
+These appear to be identical and work in the same manner.
 
 ## Credits
 
-In this section you need to reference where you got your content, media, and extra help from.
-It is common practice to use code from other repositories and tutorials,
-however, it is important to be very specific about these sources to avoid plagiarism.
-
 ### Content
-
-Use this space to provide attribution links to any borrowed code snippets, elements, or resources.
-A few examples have been provided below to give you some ideas.
-
-Ideally, you should provide an actual link to every resource used, not just a generic link to the main site!
 
 | Source | Location | Notes |
 | --- | --- | --- |
@@ -301,38 +282,73 @@ Ideally, you should provide an actual link to every resource used, not just a ge
 | [Chris Beams](https://chris.beams.io/posts/git-commit) | version control | "How to Write a Git Commit Message" |
 | [W3Schools](https://www.w3schools.com/howto/howto_js_topnav_responsive.asp) | entire site | responsive HTML/CSS/JS navbar |
 | [W3Schools](https://www.w3schools.com/howto/howto_css_modals.asp) | contact page | interactive pop-up (modal) |
-| [W3Schools](https://www.w3schools.com/css/css3_variables.asp) | entire site | how to use CSS :root variables |
+| [W3Schools](https://www.w3schools.com/jsref/jsref_foreach.asp) | forEach() page | how to use Javascript Array forEach() |
+| [W3Schools](https://www.w3schools.com/cssref/css_selectors.php) | CSS selector reference | use of * |
 | [Flexbox Froggy](https://flexboxfroggy.com/) | entire site | modern responsive layouts |
 | [Grid Garden](https://cssgridgarden.com) | entire site | modern responsive layouts |
 | [StackOverflow](https://stackoverflow.com/a/2450976) | quiz page | Fisher-Yates/Knuth shuffle in JS |
-| [YouTube](https://www.youtube.com/watch?v=YL1F4dCUlLc) | leaderboard | using `localStorage()` in JS for high scores |
+| [Stackoverflow](https://stackoverflow.com/questions/9419263/how-to-play-audio) | how to play audio | How to use javascript code to use an Mp3 |
+| [Bootstrap](https://getbootstrap.com/docs/5.0/components/modal/) | modals | how to use a vertically centered modal |
+| [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/API/clearInterval) | reset timer | how to clear timer |
+| [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/Child_combinator) | examples on page | Child combinator > explained |
+| [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector) | examples on page | Document.querySelector() explained |
+| [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR) | examples on page | Logical Or operator explained |
+| [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this) | examples on page | .this explained |
+| [EDUCBA](https://www.educba.com/jquery-keycode/) | JQuery keycodes | keycode page | find the keycodes for keyboard keys |
+| [Geeksforgeeks](https://www.geeksforgeeks.org/shuffle-a-given-array-using-fisher-yates-shuffle-algorithm/) | shuffle examples | ideas for card shuffle |
+| [Jquery](https://api.jquery.com/hasclass/) | .has() page | describes the use of has class |
+| [Jquery](https://api.jquery.com/not/#not-selector) | .not() class page | describes the use of has class |
+| [Jquery](https://api.jquery.com/category/manipulation/) | page with links | Methods to manipulate the DOM |
+| [SmashingMagazine](https://www.smashingmagazine.com/2009/08/taming-advanced-css-selectors/) | section 2 | how to use the Child selector > |
+| [Dev](https://dev.to/shantanu_jana/create-a-simple-stopwatch-using-javascript-3eoo) | this page | how to build a stopwatch timer |
+| [Tutorials Teacher](https://www.tutorialsteacher.com/javascript/javascript-function) | this page | Javascript functions explained |
 
 
 ### Media
 
-Use this space to provide attribution links to any images, videos, or audio files borrowed from online.
-A few examples have been provided below to give you some ideas.
-
-If you're the owner (or a close acquaintance) of all media files, then make sure to specify this.
-Let the assessors know that you have explicit rights to use the media files within your project.
-
-Ideally, you should provide an actual link to every media file used, not just a generic link to the main site!
-The list below is by no means exhaustive. Within the Code Institute Slack community, you can find more "free media" links
-by sending yourself the following command: `!freemedia`.
-
 | Source | Location | Type | Notes |
 | --- | --- | --- | --- |
-| [Pexels](https://www.pexels.com) | entire site | image | favicon on all pages |
-| [Lorem Picsum](https://picsum.photos) | home page | image | hero image background |
-| [Unsplash](https://unsplash.com) | product page | image | sample of fake products |
-| [Pixabay](https://pixabay.com) | gallery page | image | group of photos for gallery |
-| [Wallhere](https://wallhere.com) | footer | image | background wallpaper image in the footer |
-| [This Person Does Not Exist](https://thispersondoesnotexist.com) | testimonials | image | headshots of fake testimonial images |
-| [Audio Micro](https://www.audiomicro.com/free-sound-effects) | game page | audio | free audio files to generate the game sounds |
-| [Videvo](https://www.videvo.net/) | home page | video | background video on the hero section |
 | [TinyPNG](https://tinypng.com) | entire site | image | tool for image compression |
-| [Unsplash](https://unsplash.com/photos/7fjVzKzjni4) | main background image | image | used as the core game image
-| [pngegg](https://www.pngegg.com/en/png-ppeza) | car cards background | image | used car cards
+| [Unsplash](https://unsplash.com/photos/7fjVzKzjni4) | main background image | image | used as the core game image |
+| [Vecteezy](https://www.vecteezy.com/photo/10634846-racetrack-highway-speed) | car game main screen background | image | Car game background image |
+| [Vecteezy](https://www.vecteezy.com/vector-art/1340619-farm-scene-in-nature-with-house) | farm game main screen background | image | Car game background image |
+| [Vecteezy](https://unsplash.com/photos/qtRF_RxCAo0) | Space game main screen background | image | Space game background image |
+| [Vecteezy](https://www.vecteezy.com/png/13182982-farm-watercolor-cartoon-cute) | farm cards unflipped | image | Farm sign |
+| [Vecteezy](https://www.vecteezy.com/png/10864643-man-farmer-holding-basket-of-potatoes-agricultural-cartoon-character-illustrations) | farm cards | image | Farmer image for farm cards |
+| [Vecteezy](https://www.vecteezy.com/png/11216040-cartoon-cute-chicken) | farm cards | image | Chicken image for farm cards |
+| [Vecteezy](https://www.vecteezy.com/png/11212823-cartoon-cute-sheep) | farm cards | image | Sheep image for farm cards |
+| [Vecteezy](https://www.vecteezy.com/png/11213347-cartoon-cute-cow) | farm cards | image | Cow image for farm cards |
+| [Vecteezy](https://www.vecteezy.com/png/10136388-pig-watercolor-cartoon-animal) | farm cards | image | Pig image for farm cards |
+| [Vecteezy](https://www.vecteezy.com/png/11904784-cartoon-cute-barn-in-farm) | farm cards | image | Barn image for farm cards |
+| [Vecteezy](https://www.vecteezy.com/png/11212822-cartoon-cute-goose) | farm cards | image | Goose image for farm cards |
+| [Vecteezy](https://www.vecteezy.com/png/11212822-cartoon-cute-goose) | farm cards | image | Scarecrow image for farm cards |
+| [pngegg](https://www.pngegg.com/en/png-ppeza) | car cards unflipped | image | 2 cars together |
+| [Vecteezy](https://www.vecteezy.com/png/9398852-fuel-gauge-clipart-design-illustration) | car cards | image | Fuel guage image for car cards |
+| [Vecteezy](https://www.vecteezy.com/png/8822058-3d-rendering-illustration-of-a-lowpoly-car) | car cards | image | orange car image for car cards |
+| [Vecteezy](https://www.vecteezy.com/png/8822055-3d-rendering-illustration-of-a-lowpoly-car) | car cards | image | blue car image for car cards |
+| [Vecteezy](https://www.vecteezy.com/png/8822047-3d-rendering-illustration-of-a-lowpoly-car) | car cards | image | green car image for car cards |
+| [Vecteezy](https://www.vecteezy.com/png/8822052-3d-rendering-illustration-of-a-lowpoly-car) | car cards | image | pink car image for car cards |
+| [Vecteezy](https://www.vecteezy.com/png/13362604-car-steering-wheel) | car cards | image | steering wheel image for car cards |
+| [Vecteezy](https://www.vecteezy.com/png/9342686-car-shift-clipart-design-illustration) | car cards | image | gear knob image for car cards |
+| [Vecteezy](https://www.vecteezy.com/png/9342686-car-shift-clipart-design-illustration) | car cards | image | gear knob image for car cards |
+| [Vecteezy](https://www.vecteezy.com/png/9311547-astronaut-space-drift-astronomy-3d-illustration) | space cards unflipped | image | spaceman in suit |
+| [Vecteezy](https://www.vecteezy.com/png/10833673-3d-earth-planet-illustration) | space cards | image | earth image for space cards |
+| [Vecteezy](https://www.vecteezy.com/png/8480455-rocket-launching-business-start-up-concept-illustration-for-business-idea-concept-background) | space cards | image | purple rocket image for space cards |
+| [Vecteezy](https://www.vecteezy.com/png/10833673-3d-earth-planet-illustration) | space cards | image | earth image for space cards |
+| [Vecteezy](https://www.vecteezy.com/png/10833587-3d-uranus-planet-illustration) | space cards | image | blue planet image for space cards |
+| [Vecteezy](https://www.vecteezy.com/png/9342727-rocket-spaceship-clipart-design-illustration) | space cards | image | white rocket image for space cards |
+| [Vecteezy](https://www.vecteezy.com/png/16778857-planet-galaxy-space) | space cards | image | brown planet image for space cards |
+| [Vecteezy](https://www.vecteezy.com/png/10833674-3d-sun-planet-illustration) | space cards | image | sun image for space cards |
+| [Vecteezy](https://www.vecteezy.com/png/9391780-ufo-spaceship-concept-clipart-design-illustration) | space cards | image | pink ufo image for space cards |
+| [Vecteezy](https://www.vecteezy.com/png/10154528-cartoon-cute-monster-icon-sign-design) | space cards | image | gray alien image for space cards |
+| [Myinstants](https://www.myinstants.com/en/instant/pop/) | button click | sound | for start game landing page, instruction, game style buttons |
+| [Myinstants](https://www.myinstants.com/en/instant/pop-sfx-75405/) | button click | sound | for close modal buttons |
+| [Myinstants](https://www.myinstants.com/en/instant/rooster-alarm/) | button click | sound | for farm game button |
+| [Myinstants](https://www.myinstants.com/en/instant/laser-shot-tie-80249/) | button click | sound | for space game button |
+| [Myinstants](https://www.myinstants.com/en/instant/engine-revv-19869/) | button click | sound | for car game button |
+| [Myinstants](https://www.myinstants.com/en/instant/start-the-game-already-aoc/) | button click | sound | for main game start button |
+| [Myinstants](https://www.myinstants.com/en/instant/match-found-vava-48478/) | button click | sound | for match found button |
+| [Myinstants](https://www.myinstants.com/en/instant/winners-92695/) | button click | sound | for match found button |
 
 ### Acknowledgements
 
