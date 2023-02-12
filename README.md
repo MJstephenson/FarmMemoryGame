@@ -1,6 +1,6 @@
 # KIDS MEMORY GAMES PROJECT
 
-![screenshot](docs/readme/responsive.png) ![screenshot](docs/readme/responsiveGames.png)
+![screenshot](docs/readme/responsive.png) ![screenshot](docs/readme/games.png)
 
 This is my first javascript project. I decieded to make the game from scratch rather than following a tutorial or a you-tube.com video so that I could gain as much knowledge about the javascript language and learn as I coded.  
 I have built a card memory game that consits of three game styles, farm, space and cars. I chose these three themes as my little boy has a interest in all of them and I thought it would be fun to give him a choice when he played it. It would also be a good way to help with his memory skills and making 3 games would test my knowledge of using the DOM and what I have learnt from the Javascript modules in the code Institute course I am currently studying.
