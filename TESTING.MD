@@ -2,18 +2,7 @@
 
 Return back to the [README.md](README.md) file.
 
-In this section, you need to convince the assessors that you have conducted enough testing to legitimately believe that the site works well.
-Essentially, in this part, you should go over all of your project's features, and ensure that they all work as intended,
-with the project providing an easy and straightforward way for the users to achieve their goals.
-
 ## Code Validation
-
-Use the space to discuss code validation for any of your own code files (where applicable).
-You are not required to validate external libraries/frameworks, such as imported Bootstrap, Materialize, Font Awesome, etc.
-
-**IMPORTANT**: You must provide a screenshot for each file you validate.
-
-**PRO TIP**: Always validate the live site pages, not your local code. There could be subtle/hidden differences.
 
 ### HTML
 
@@ -61,54 +50,56 @@ I tested for game wins, sounds, all features, button clicks etc. There appears t
 
 ## Responsiveness
 
-Use this space to discuss testing the live/deployed site on various device sizes.
+I've tested my deployed project on multiple devices to check for responsiveness issues throughout all parts of the game.
 
-The minimum requirement is for the following 3 tests:
-- Mobile
-- Tablet
-- Desktop
-
-**IMPORTANT**: You must provide screenshots of the tested responsiveness, to "prove" that you've actually tested them.
-
-
-If you have tested the project on your actual mobile phone or tablet, consider also including screenshots of these as well.
-It showcases a higher level of manual tests, and can be seen as a positive inclusion!
-
-Sample responsiveness testing documentation:
-
-I've tested my deployed project on multiple devices to check for responsiveness issues.
+# Landing Page 
 
 | Device | Screenshot | Notes |
 | --- | --- | --- |
-| Mobile (DevTools) | ![screenshot](documentation/responsive-mobile.png) | Works as expected |
-| Tablet (DevTools) | ![screenshot](documentation/responsive-tablet.png) | Works as expected |
-| Desktop | ![screenshot](documentation/responsive-desktop.png) | Works as expected |
-| XL Monitor | ![screenshot](documentation/responsive-xl.png) | Scaling starts to have minor issues |
-| 4K Monitor | ![screenshot](documentation/responsive-4k.png) | Noticeable scaling issues |
-| Google Pixel 7 Pro | ![screenshot](documentation/responsive-pixel.png) | Works as expected |
-| iPhone 14 | ![screenshot](documentation/responsive-iphone.png) | Works as expected |
-| x | x | repeat for any other tested sizes |
+| Mobile (DevTools) 375px | ![screenshot](docs/responsiveness/mobile/mobileLanding.png) | Works as expected |
+| Tablet (DevTools) 768px |![screenshot](docs/responsiveness/tablet/ipadLanding.png) | Works as expected |
+| Desktop 1140px| ![screenshot](docs/responsiveness/desktop/desktopLanding.png) | Works as expected |
+| XL Monitor 2000px| ![screenshot](docs/responsiveness/xl-monitor/xllanding.png) | Works as expected |
+
+ # Instructions 
+
+| Device | Screenshot | Notes |
+| --- | --- | --- |
+| Mobile (DevTools) 375px| ![screenshot](docs/responsiveness/mobile/instructMobile.png) | Works as expected |
+| Tablet (DevTools) 768px | ![screenshot](docs/responsiveness/tablet/instructTablet.png) | Works as expected |
+| Desktop 1140px| ![screenshot](docs/responsiveness/desktop/instructDesktop.png) | Works as expected |
+| XL Monitor 2000px| ![screenshot](docs/responsiveness/xl-monitor/instructxl.png) | Works as expected |
+
+# Choose game Style
+
+| Device | Screenshot | Notes |
+| --- | --- | --- |
+| Mobile (DevTools) 375px | ![screenshot](docs/responsiveness/mobile/mobile3.png) | Works as expected |
+| Tablet (DevTools) 768px| ![screenshot](docs/responsiveness/tablet/tablet3.png) | Works as expected |
+| Desktop 1140px| ![screenshot](docs/responsiveness/desktop/desktop3.png) | Works as expected |
+| XL Monitor 2000px| ![screenshot](docs/responsiveness/xl-monitor/large3.png) | Works as expected |
+
+# Game Page - All games work the same for responsiveness with a different background image and card images so only 1 game style is shown 
+
+| Device | Screenshot | Notes |
+| --- | --- | --- |
+| Mobile (DevTools) 375px| ![screenshot](docs/responsiveness/mobile/gamephone.png) | Works as expected |
+| Tablet (DevTools) 768px| ![screenshot](docs/responsiveness/tablet/gameTablet.png) | Works as expected |
+| Desktop 1140px| ![screenshot](docs/responsiveness/desktop/game.png) | Works as expected |
+| XL Monitor 2000px| ![screenshot](docs/responsiveness/xl-monitor/gamexl.png) | Works as expected |
+
+# Win 
+
+| Device | Screenshot | Notes |
+| --- | --- | --- |
+| Mobile (DevTools) 375px| ![screenshot](docs/responsiveness/mobile/winPhone.png) | Works as expected |
+| Tablet (DevTools) 768px| ![screenshot](docs/responsiveness/tablet/winTablet.png) | Works as expected |
+| Desktop 1140px| ![screenshot](docs/responsiveness/desktop/winDesktop.png) | Works as expected |
+| XL Monitor 2000px| ![screenshot](docs/responsiveness/xl-monitor/winxl.png) | Works as expected |
 
 ## Lighthouse Audit
 
 ![screenshot](docs/validation/lighthouse.png)
-
-
-**IMPORTANT**: You must provide screenshots of the results, to "prove" that you've actually tested them.
-
-Sample Lighthouse testing documentation:
-
-I've tested my deployed project using the Lighthouse Audit tool to check for any major issues.
-
-| Page | Size | Screenshot | Notes |
-| --- | --- | --- | --- |
-| Home | Mobile | ![screenshot](documentation/lighthouse-home-mobile.png) | Some minor warnings |
-| Home | Desktop | ![screenshot](documentation/lighthouse-home-desktop.png) | Few warnings |
-| About | Mobile | ![screenshot](documentation/lighthouse-about-mobile.png) | Some minor warnings |
-| About | Desktop | ![screenshot](documentation/lighthouse-about-desktop.png) | Few warnings |
-| Gallery | Mobile | ![screenshot](documentation/lighthouse-gallery-mobile.png) | Slow response time due to large images |
-| Gallery | Desktop | ![screenshot](documentation/lighthouse-gallery-desktop.png) | Slow response time due to large images |
-| x | x | x | repeat for any other tested pages/sizes |
 
 ## Defensive Programming
 
