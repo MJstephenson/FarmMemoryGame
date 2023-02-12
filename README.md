@@ -177,19 +177,22 @@ Clicking the farm, space or car game button manipulates the DOM and hides the ga
 
 ![screenshot](docs/features/winModal.png)
 
-
 - **Modal Close Button**
 
     - Modal close button when clicked plays a 'pop' sound. This the resets the timer to 00:00:00, resets turns taken counter to 0, flips all the cards back to their original position. Also importantly it stops the user from flipping any cards until the start button is clicked again. 
 
 ![screenshot](docs/features/modalCloseBtn.png)
 
-
  - **Footer icon with link**
 
     - Footer icon with link to my github repos 
 
 ![screenshot](docs/features/footerIcon.png)
+
+ - **Card flip animation on click**
+
+    - Cards appear to flip when clicked with an animation and stay turned ober for 0.8 seconds if they dont match
+
 
 ### Future Features
 
