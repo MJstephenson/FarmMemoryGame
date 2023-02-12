@@ -114,50 +114,53 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 
 Defensive programming was manually tested with the below user acceptance testing:
 
-| Page | User Action | Expected Result | Pass/Fail | Comments |
+| Stage of Game | User Action | Expected Result | Pass/Fail | Comments |
 | --- | --- | --- | --- | --- |
-| Home Page | | | | |
-| | Click on Logo | Redirection to Home page | Pass | |
-| | Click on Home link in navbar | Redirection to Home page | Pass | |
-| Gallery Page | | | | |
-| | Click on Gallery link in navbar | Redirection to Gallery page | Pass | |
-| | Load gallery images | All images load as expected | Pass | |
-| Contact Page | | | | |
-| | Click on Contact link in navbar | Redirection to Contact page | Pass | |
-| | Enter first/last name | Field will accept freeform text | Pass | |
-| | Enter valid email address | Field will only accept email address format | Pass | |
-| | Enter message in textarea | Field will accept freeform text | Pass | |
-| | Click the Submit button | Redirects user to form-dump | Pass | User must click 'Back' button to return |
-| Sign Up | | | | |
-| | Click on Sign Up button | Redirection to Sign Up page | Pass | |
-| | Enter valid email address | Field will only accept email address format | Pass | |
-| | Enter valid password (twice) | Field will only accept password format | Pass | |
-| | Click on Sign Up button | Asks user to confirm email page | Pass | Email sent to user |
-| | Confirm email | Redirects user to blank Sign In page | Pass | |
-| Log In | | | | |
-| | Click on the Login link | Redirection to Login page | Pass | |
-| | Enter valid email address | Field will only accept email address format | Pass | |
-| | Enter valid password | Field will only accept password format | Pass | |
-| | Click Login button | Redirects user to home page | Pass | |
-| Log Out | | | | |
-| | Click Logout button | Redirects user to logout page | Pass | Confirms logout first |
-| | Click Confirm Logout button | Redirects user to home page | Pass | |
-| Profile | | | | |
-| | Click on Profile button | User will be redirected to the Profile page | Pass | |
-| | Click on the Edit button | User will be redirected to the edit profile page | Pass | |
-| | Click on the My Orders link | User will be redirected to the My Orders page | Pass | |
-| | Brute forcing the URL to get to another user's profile | User should be given an error | Pass | Redirects user back to own profile |
-
-Repeat for all other tests, as applicable to your own site.
-The aforementioned tests are just an example of a few different project scenarios.
+| Landing Page | | | | |
+| | Click on instructions button | Modal opens, pop sound plays | Pass | |
+| | Click on close button in modal | Closes modal, pop sound plays | Pass | |
+| | Click on start button | Hides start button, shows game styles buttons, pop sound plays | Pass | |
+| Select a Game Style Farm button| | | | |
+| | Click Farm Game button | Main title header is hidden, game style buttons are hidden, Farm game title shows with text, game grid shows with farm cards showing image 1 (card back with farm sign) start game button, reset button and new game style appear. Backround image changes to farm background. Cockrel noise is played.  | Pass | |
+| Select a Game Style Space button| | | | |
+| | Click Space Game button | Main title header is hidden, game style buttons are hidden, Space game title shows with text, game grid shows with space cards showing image 1 (card back with spaceman) start game button, reset button and new game style appear. Backround image changes to space background. Laser noise is played.  | Pass | |
+| Select a Game Style Cars button| | | | |
+| | Click Cars Game button | Main title header is hidden, game style buttons are hidden, Cars game title shows with text, game grid shows with car cards showing image 1 (card back with 2 cars ) start game button, reset button and new game style appear. Backround image changes to road background. engine noise is played.  | Pass | |
+| | Click Space Game button | Main title header is hidden, game style buttons are hidden, space game title shows with text, game grid shows with spaceman cards showing image 1 (card back with spaceman) start game button, reset button and new game style appear. Backround image changes to space background. Laser noise is played. | Pass | |
+| | Click Car Game button | Main title header is hidden, game style buttons are hidden, car game title shows with text, game grid shows with car cards showing image 1 (card back with 2 cars) start game button, reset button and new game style appear. Backround image changes to road background. Car engine noise is played.  | Pass | |
+| Main Farm/space/Car Game before the start button is clicked| | | | |
+| | Click on cards | nothing happens | Pass | |
+| | Timer is 00:00:00 | clicking it has no effect | Pass | |
+| | Turns counter is 0 | clicking it has no effect | Pass | |
+| | Reset button is clicked | Horn sound plays, no other effect to game (cards will shuffle but this is not visible) | Pass | |
+| Start button clicked to start the game then reset button| | | | |
+| | Click start button | Timer starts counting up correctly, sound is played | Pass | |
+| | Click reset button | Timer resets to 00:00:00, user cant click and flip cards, sound is played | Pass | |
+| Start button clicked to start the game and the cards are clicked| | | | |
+| | Click Start game button | Timer starts, sound plays | Pass | |
+| | Click on a card | Card animation flips card to an image 2  | Pass | |
+| | Click the same card | Nothing happens | Pass | |
+| | Click another card | Card animation flips card to an image 2, if cards dont match they stay flipped for a second then both flip back over with animation, turns counter records one turn | Pass | |
+| | Click another card or a card that had been flipped previously | Card animation flips card to an image 2, | Pass | |
+| | Click another card or a card that had been flipped previously | Card animation flips card to an image 2, if cards match they stay flipped. A matched sound plays and the turns counter records another turn | Pass | |
+| | Click the matched cards | Nothing happens | Pass | |
+| | Click another card | Card animation flips card to an image 2, | Pass | |
+| | Click another card | Card animation flips card to an image 2, if cards match they stay flipped. A matched sound plays and the turns counter records another turn | Pass. | If they dont match they both flip back over. The already matched cards still both show image 2 and dont change. Clicking on these do nothing | |
+| Winner modal shows when 8 pairs are found| | | | |
+| | When 8 pairs of images are matched | Win Modal shows, sound is played, modal backround animation runs, shows time taken , number of turns and star rating based on number of turns | Pass | |
+| | 20 turns or less | 3 stars show in modal | Pass | |
+| | 21 - 30 turns | 2 stars show in modal | Pass | |
+| | 30 - 40 turns | 1 stars shows in modal | Pass | |
+| | click outside of modal | nothing happens | Pass | |
+| | click close modal button | modal disapears, timer resets, turns counter resets, pop sound plays, user cant flip any cards until start button is pressed again | Pass | |
+Click reset button at any stage in any game | | | | |
+| | Click reset button | resets timer, flips all cards, resets turn counter to 0, plays horn sound shuffles cards  | Pass | |
+| Dev tool | | | | |
+| | Press shift + r keys.| Flips all cards in grid as expected, even when some cards have been selected and matched already | Pass | |
+| New Game style button clicked from all styles of game at a random time in the game
+| | Click new game style button | Game title header, start button, timer, turns counter game grid, reset button, game style button are hidden. Timer and moves counter are reset. Cards shuffle. Sound is played. Main title header is shown, instructions button and 3 game style buttons. The backround reverts ti the main game background showing the wool balls.  | Pass | |
 
 ## User Story Testing
-
-Testing user stories is actually quite simple, once you've already got the stories defined on your README.
-
-Most of your project's **features** should already align with the **user stories**,
-so this should as simple as creating a table with the user story, matching with the re-used screenshot
-from the respective feature.
 
 ### New Site Users
 | User Story | Screenshot | Comment
