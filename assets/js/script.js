@@ -1,3 +1,5 @@
+/* jshint esversion:11 jquery:true */
+
 //On farm game button click, hide all Dom Elements, and only show main game section with farm cards only
 $("#farm-btn").on("click", function () {
   gameType = '.farm-cards';
