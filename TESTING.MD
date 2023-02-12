@@ -159,29 +159,41 @@ Most of your project's **features** should already align with the **user stories
 so this should as simple as creating a table with the user story, matching with the re-used screenshot
 from the respective feature.
 
-| User Story | Screenshot |
-| --- | --- |
-| As a new site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature01.png) |
-| As a new site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature02.png) |
-| As a new site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature03.png) |
-| As a returning site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature04.png) |
-| As a returning site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature05.png) |
-| As a returning site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature06.png) |
-| As a site administrator, I should be able to ____________, so that I can ____________. | ![screenshot](documentation/feature07.png) |
-| As a site administrator, I should be able to ____________, so that I can ____________. | ![screenshot](documentation/feature08.png) |
-| As a site administrator, I should be able to ____________, so that I can ____________. | ![screenshot](documentation/feature09.png) |
-| repeat for all remaining user stories | x |
+### New Site Users
+| User Story | Screenshot | Comment
+| --- | --- |--- |
+| As a new site user, I would like to read the game instructions, so that I can understand the game and what features it has. | ![screenshot](docs/features/instructions.png)![screenshot](docs/features/instructionsBtn.png)|
+| As a new site user, I would like to be able to start a game from the game screen, so that I can begin a game of my chosen style. | ![screenshot](docs/features/startBtn.png) |
+| As a new site user, I would like to be able to choose a game style, so that I can play a game that suits my mood. | ![screenshot](docs/features/3Buttons.png) |
+| As a new site user, I would like to see a timer start when I start the game, so that I can see how fast I can complete it. | ![screenshot](docs/features/timer0.png) ![screenshot](docs/features/timer1.png)|
+| As a new site user, I would like to see how many turns I have made as I play the game, so that I can keep track of this. | ![screenshot](docs/features/turns0.png)  ![screenshot](docs/features/turns5.png) |
+| As a new site user, I would like to be able to reset the game, timer and turns, so that I can start a new game on the same game style. | ![screenshot](docs/features/resetBtn.png) |
+| As a new site user, I would like to be able to choose a new game style after or during playing a game, so that I can try another style. | ![screenshot](docs/features/newGameBtn.png) |
+| As a new site user, I would like to be shown my time and turns taken when I match all the cards in a game, so that I can see how well I have done. | ![screenshot](docs/features/winModal.png) |
+| As a new site user, I would like to be given feedback based on how well I have done in the game, so that I can see how well I am doing. | ![screenshot](docs/features/starsTimeTurns.png) |
+| As a new site user, I would like to see a difference in the game styles that relate to their style, so that I feel I am playing a different game. | ![screenshot](docs/features/carGame.png) ![screenshot](docs/features/farmGame.png)![screenshot](docs/features/spaceGame.png)|
+| As a new site user, I would like to hear a sound played when I match a card, so that I can audibly recognise this. | ![screenshot](docs/features/match.png) | 'Its a Match' sound is played. |
+| As a new site user, I would like to hear sounds on button clicks, so that I can audibly recognise that they have been clicked. | ![screenshot](docs/features/instructionsBtn.png)![screenshot](docs/features/3Buttons.png) ![screenshot](docs/features/mainStartBtn.png) ![screenshot](docs/features/newGameBtn.png) ![screenshot](docs/features/modalCloseBtn.png) ![screenshot](docs/features/resetBtn.png)![screenshot](docs/features/startBtn.png)| All buttons play a sound |
+| As a new site user, I would like to hear a sound related to the game when i choose a style, so that I can audibly recognise what game I am playing. | ![screenshot](docs/features/3Buttons.png) | Buttons play a specific sound related to the game style |
+| As a new site user, I would like to hear a sound when I press the start button on a game, so that I know the game has started. | ![screenshot](docs/features/mainStartBtn.png) | Plays a 'Start the game already' sound |
+| As a new site user, I would like to hear a sound when I win the game, so that I can celebrate my win. | ![screenshot](docs/features/winModal.png) | Tune plays as game is won |
+| As a new site user, I would like to be able to play the game on a variety of mobile devices, so that I can play on the go. | Works accross devices .See device responsiveness testing |
+| As a new site user, I would like to play the game on different browsers, so that I can not worry about what browser I am using. | Tested on 3 browsers. See browser compatability|
+| As a returning site user, I would like the game to play exactly the same as the last time I played it, so that I can improve my technique. | It works the same when a user returns |
+| As a returning site user, I would like to be able to play the game on a variety of different devices, so that I can play when I want. | Tested on a variety of devices. See device testing |
+| As a site administrator, I should be able to flip all the cards to assist with matching cards & winning the game, so that I can test the app and develop new features quickly. | ![screenshot](docs/features/flipped.png) | Flip all cards by pressing shift + r keys|
 
 ## Bugs
 
-It's very important to document any bugs you've discovered while developing the project.
-Make sure to include any necessary steps you've implemented to fix the bug(s) as well.
-
-For JavaScript and Python applications, it's best to screenshot the errors to include them as well.
+cards would not match
+timer kept doubling
+click on a card when matched to win game
+game stacked ontop of one another
+Sound does not play
 
 **PRO TIP**: screenshots of bugs are extremely helpful, and go a long way!
 
-- JS Uncaught ReferenceError: `foobar` is undefined/not defined
+- Timer kept doubling in speed when the start game button 
 
     ![screenshot](documentation/bug01.png)
 
