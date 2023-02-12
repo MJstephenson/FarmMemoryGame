@@ -213,7 +213,7 @@ let soundPlaying = false;
 $(".image-container").on("click", function () {
   if (canFlip) { //makes sure the cards can't flip after a reset until you press the start button
     if (flipped < 2) { //check if the number of flipped cards is <2
-      if (this === lastClicked) { //makes sure that the same card cannot be clicked again
+      if (this === lastClicked || $(this).hasClass('matched')) { //makes sure that the same card cannot be clicked again / and if matched cannot be repeatedly clicked to win the game
         return;
       }
       lastClicked = this;
