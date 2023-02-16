@@ -133,16 +133,10 @@ $("#reset-btn").on("click", function () {
 
 //Add reset game style function to clear the prevous game when choosing a new style of game
 function resetGameStyle() {
-  const cardsList = ['.farm-cards', '.space-cards', '.car-cards'].forEach(item => {
-    const div = document.querySelector(item);
-    div.classList.remove('active');
-    
-  });
- 
-  //const cardsList = ['.farm-cards', '.space-cards', '.car-cards'];
-  //$(cardsList).each(function(item) {
-  // $(cardsList[item]).removeClass('active');
-  //})
+  const cardsList = ['.farm-cards', '.space-cards', '.car-cards'];
+  $(cardsList).each(function(item) {
+   $(cardsList[item]).removeClass('active');
+  })
 }
 
 //Add timer
