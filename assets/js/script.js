@@ -1,4 +1,4 @@
-/* jshint esversion:11 jquery:true */
+/* jshint esversion:11, jquery:true */
 
 //On farm game button click, hide all Dom Elements, and only show main game section with farm cards only
 $("#farm-btn").on("click", function () {
@@ -84,8 +84,6 @@ $(".close-btn").on("click", function () {
 });
 
 function shuffleCards() {
-  console.log("CARD SHUFFLE STARTED");
-  console.log(gameType);
   let cards = $(gameType + ' .image-container'); // select all cards from the game type
   for (let i = cards.length - 1; i > 0; i--) { //Make cards shuffle with Fisher-Yates shuffle algorithm
     let j = Math.floor(Math.random() * (i + 1));
@@ -140,7 +138,7 @@ function resetGameStyle() {
     div.classList.remove('active');
     
   });
-  //JQuery Version
+ 
   //const cardsList = ['.farm-cards', '.space-cards', '.car-cards'];
   //$(cardsList).each(function(item) {
   // $(cardsList[item]).removeClass('active');
