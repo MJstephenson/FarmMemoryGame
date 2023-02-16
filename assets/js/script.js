@@ -11,6 +11,7 @@ $("#farm-btn").on("click", function () {
   $(".background-img").addClass("fields");
   var audio = new Audio("assets/sounds/rooster.mp3");
   audio.play();
+  shuffleCards();
 });
 
 //On space game button click, hide all Dom Elements, and only show main game section with space cards only
@@ -23,6 +24,7 @@ $("#space-btn").on("click", function () {
   $(".block").addClass("inactive"); //hide block for page layout
   $(".background-img").addClass("space");
   var sound = new Audio("assets/sounds/blast.mp3");
+  shuffleCards();
   sound.play();
 });
 
@@ -36,6 +38,7 @@ $("#cars-btn").on("click", function () {
   $(".block").addClass("inactive"); //hide block for page layout
   $(".background-img").addClass("racetrack");
   var sound = new Audio("assets/sounds/enginerev.mp3");
+  shuffleCards();
   sound.play();
 });
 
@@ -66,7 +69,6 @@ $("#start-btn").on("click", function () {
   $(".choose-game").addClass("active");
   $(".begin-section").addClass("inactive");
   turnsCounter = 0;
-  shuffleCards();
   var audio = new Audio("assets/sounds/pop.mp3");
   audio.play();
 });
@@ -167,8 +169,6 @@ function startGame() { //function to start the timer if a gameState is 0 (not ru
       sound.play();
     }, 300);
   }
-
-  shuffleCards();
 }
 //start timer function
 function startTimer() {
