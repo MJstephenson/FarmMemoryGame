@@ -172,7 +172,7 @@ function startGame() { //function to start the timer if a gameState is 0 (not ru
 function startTimer() {
   milliseconds++;
 
-  if (milliseconds >= 100) {
+  if (milliseconds >= 60) {
     seconds++;
     milliseconds = 0;
   }
