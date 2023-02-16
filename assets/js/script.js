@@ -9,7 +9,7 @@ $("#farm-btn").on("click", function () {
   $(".game-type").text('Farm'); //Change game name
   $(".block").addClass("inactive"); //hide block for page layout
   $(".background-img").addClass("fields");
-  var audio = new Audio("assets/sounds/rooster.mp3");
+  let audio = new Audio("assets/sounds/rooster.mp3");
   audio.play();
   shuffleCards();
 });
@@ -23,7 +23,7 @@ $("#space-btn").on("click", function () {
   $(".game-type").text('Space'); //Change game name
   $(".block").addClass("inactive"); //hide block for page layout
   $(".background-img").addClass("space");
-  var sound = new Audio("assets/sounds/blast.mp3");
+  let sound = new Audio("assets/sounds/blast.mp3");
   shuffleCards();
   sound.play();
 });
@@ -37,7 +37,7 @@ $("#cars-btn").on("click", function () {
   $(".game-type").text('Car'); //Change game name
   $(".block").addClass("inactive"); //hide block for page layout
   $(".background-img").addClass("racetrack");
-  var sound = new Audio("assets/sounds/enginerev.mp3");
+  let sound = new Audio("assets/sounds/enginerev.mp3");
   shuffleCards();
   sound.play();
 });
@@ -59,7 +59,7 @@ $("#new-style-btn").on("click", function () {
   $(".background-img").removeClass("racetrack space fields");
   $(".background-img").addClass("wool");
   window.scrollTo(0,0);
-  var sound = new Audio("assets/sounds/highpop.mp3");
+  let sound = new Audio("assets/sounds/highpop.mp3");
   sound.play();
 });
 
@@ -69,17 +69,17 @@ $("#start-btn").on("click", function () {
   $(".choose-game").addClass("active");
   $(".begin-section").addClass("inactive");
   turnsCounter = 0;
-  var audio = new Audio("assets/sounds/pop.mp3");
+  let audio = new Audio("assets/sounds/pop.mp3");
   audio.play();
 });
 
 $(".instruct-btn").on("click", function () {
-  var audio = new Audio("assets/sounds/pop.mp3");
+  let audio = new Audio("assets/sounds/pop.mp3");
   audio.play();
 });
 
 $(".close-btn").on("click", function () {
-  var audio = new Audio("assets/sounds/highpop.mp3");
+  let audio = new Audio("assets/sounds/highpop.mp3");
   audio.play();
 });
 
@@ -108,7 +108,7 @@ $("#win-close").on("click", function () {
   turnsCounter = 0;
   $('.turns-counter').text(turnsCounter);
   canFlip = false; //Make it so you cannot flip cards after pressing reset button
-  var sound = new Audio("assets/sounds/pop.mp3");
+  let sound = new Audio("assets/sounds/pop.mp3");
   sound.play();
 });
 
@@ -126,7 +126,7 @@ $("#reset-btn").on("click", function () {
   turnsCounter = 0;
   $('.turns-counter').text(turnsCounter);
   canFlip = false; //Make it so you cannot flip cards after pressing reset button
-  var sound = new Audio("assets/sounds/reset.mp3");
+  let sound = new Audio("assets/sounds/reset.mp3");
   sound.play();
 });
 
@@ -163,7 +163,7 @@ function startGame() { //function to start the timer if a gameState is 0 (not ru
     gameState = 1; //Adds the gameState to 1. This stops the startTimer function from repeating on each click and speeding the timer up
     canFlip = true; //Allows the cards to flip if the game is not running
     setTimeout(function() {
-      var sound = new Audio("assets/sounds/startgame.mp3");
+      let sound = new Audio("assets/sounds/startgame.mp3");
       sound.play();
     }, 300);
   }
@@ -268,14 +268,14 @@ function winnerModal() {
   }
   document.querySelector('.star-rating').innerHTML = starRating;
   setTimeout(function() {
-    var sound = new Audio("assets/sounds/winner.mp3");
+    let sound = new Audio("assets/sounds/winner.mp3");
     sound.play();
   }, 2500);
 }
 
 function playMatchedSound() {
   if (!soundPlaying) {
-    var sound = new Audio("assets/sounds/match.mp3");
+    let sound = new Audio("assets/sounds/match.mp3");
     sound.play();
     soundPlaying = true;
     sound.addEventListener("ended", function () {
