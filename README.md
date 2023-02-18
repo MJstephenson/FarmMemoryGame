@@ -211,7 +211,6 @@ These are ideas I have not had the time to implement on this project but if I co
 - [GitHub](https://github.com) used for secure online code storage.
 - [GitHub Pages](https://pages.github.com) used for hosting the deployed front-end site.
 - [Gitpod](https://gitpod.io) used as a cloud-based IDE for development.
-- [Markdown Builder by Tim Nelson](https://traveltimn.github.io/readme-builder) used to help generate the Markdown files.
 
 
 ## Testing
@@ -344,7 +343,7 @@ These appear to be identical and work in the same manner.
 
 ### Acknowledgements
 
-- I would like to thank my Code Institute mentor, [Tim](https://github.com/username) for their support throughout the development of this project.
+- I would like to thank my Code Institute mentor, Tim for his support throughout the development of this project.
 - I would like to thank the [Code Institute](https://codeinstitute.net) tutor team for their assistance with troubleshooting and debugging some project issues.
 - I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com) for the moral support; it kept me going during periods of self doubt and imposter syndrome.
 - I would like to thank my spouse/partner (Lucy), for believing in me, and allowing me to make this transition into software development.
