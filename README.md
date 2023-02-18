@@ -73,19 +73,19 @@ To follow best practice, wireframes were developed for mobile, tablet, and deskt
 I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wireframes.
 
 <details><summary>Game Start</summary>
-<img src="docs/wireframes/startPage.png">
+<img src="docs/wireframes/start-page.png">
 </details>
 <details><summary>Instructions</summary>
 <img src="docs/wireframes/instructions.png">
 </details>
 <details><summary>Game Style</summary>
-<img src="docs/wireframes/chooseGame.png">
+<img src="docs/wireframes/choose-game.png">
 </details>
 <details><summary>Game Page</summary>
-<img src="docs/wireframes/gamePage.png">
+<img src="docs/wireframes/game-page.png">
 </details>
 <details><summary>Winner Modal</summary>
-<img src="docs/wireframes/winnerModal.png">
+<img src="docs/wireframes/winner-modal.png">
 </details>
 
 ## Features
