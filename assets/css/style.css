@@ -8,7 +8,7 @@ html, body {
 /* background images for games */
 .background-img {
   background-color: lightgray;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url("../images/backgrounds/woolbkgr.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url("../images/backgrounds/wool-bkgr.jpg");
   height: 1450px;
   width: 100vw;
   background-position: center; /* Center the image */
@@ -18,7 +18,7 @@ html, body {
 
 .background-img.wool {
   background-color: lightgray;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url("../images/backgrounds/woolbkgr.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url("../images/backgrounds/wool-bkgr.jpg");
   height: 1450px;
   width: 100vw;
   background-position: center; /* Center the image */
@@ -28,7 +28,7 @@ html, body {
 
 .background-img.space {
   background-color: lightgray;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url("../images/backgrounds/outerspace.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url("../images/backgrounds/outer-space.jpg");
   height: 1450px;
   width: 100vw;
   background-position: center; /* Center the image */

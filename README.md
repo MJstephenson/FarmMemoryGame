@@ -14,8 +14,8 @@ I used colours that compliment the backgrounds and are fun for kids at the same 
 - `#ffffff` used for primary text. This gives a strong contract between the text and all 4 backrounds used on the app.
 - `#793568` used for button colour as this felt neutral and a good colour choice for all game styles. Matching the landing page backround image this makes the colours feel connected. I used code from [dev.to](https://dev.to/webdeasy/top-20-css-buttons-animations-f41) by [Kocsten](https://codepen.io/kocsten) for the button animation. 
 
-![screenshot](docs/features/btnAnimation.png)
-![screenshot](docs/features/btnPurple.png)
+![screenshot](docs/features/btn-animation.png)
+![screenshot](docs/features/btn-purple.png)
 
 - `#6c757d` used for the instructions modal.
 - `#05630a` used for winning modal to stand out from the softer colours used on the app to grab attention.
@@ -96,7 +96,7 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 
     - Start button to get to the choose game section of the game, plays a 'pop' sound. Adds the choose game section to the DOM and hides the start button section. 
 
-![screenshot](docs/features/startBtn.png)
+![screenshot](docs/features/start-btn.png)
 
 - **Instructions**
 
@@ -110,42 +110,42 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
     - 3 Buttons that allow the user to select a game style which play a 'pop' sound on click and takes the user to that style of game.
 Clicking the farm, space or car game button manipulates the DOM and hides the game header (main title), instructions section and choose game section. It then shows the game style title (**The appropriate game style name for the game you are playing is displayed**) adds the game grid (**Including the specific game cards for the chosen game style**). The game start button, timer, turns counter, reset button and new game style button are all now visible and the backround is changed to the appropriate background image.  
 
-![screenshot](docs/features/3Buttons.png)
+![screenshot](docs/features/3-buttons.png)
 
-![screenshot](docs/features/farmGame.png)
-![screenshot](docs/features/spaceGame.png)
-![screenshot](docs/features/carGame.png)
+![screenshot](docs/features/farm-game.png)
+![screenshot](docs/features/space-game.png)
+![screenshot](docs/features/car-game.png)
 
 - **Main Game Start Button**
 
     - Start button that begins the game and plays a 'start the game already' vocal sound on click. This shuffles the cards, starts the timer, allows used turns to be appended to the turns counter and allows the cards to now flip when clicked. (**Cards cannot be flipped on click until this button is pressed**)
 
-![screenshot](docs/features/mainStartBtn.png)
+![screenshot](docs/features/main-start-btn.png)
 
 - **Reset Game Button**
 
     - Reset Game button plays a 'horn' sound on click. This flips all the cards back to their original position, resets the timer to 00:00:00, resets the turns counter to 0, shuffles the cards and **does not** allow any more cards to be flipped on click until the start button is clicked.
 
-![screenshot](docs/features/resetBtn.png)
+![screenshot](docs/features/reset-btn.png)
 
 - **New Game Style Button**
 
     - New game style button plays a 'pop' sound on click and returns the user to . This shuffles the cards, resets the timer to 00:00:00, resets the turns counter to 0 and flips all the cards back to their original position. The background is reverted back to the main game background, the DOM is manipulated again to hide all of the game contents and now shows the main title header, instruction button and the three game buttons once more.
     (**Importantly this also clears the previous game style otherwise the game grids would not disapear and the game grids would stack ontop of each other as you switched between game styles**)
 
-![screenshot](docs/features/newGameBtn.png)
+![screenshot](docs/features/new-game-btn.png)
 
 - **Game Timer**
 
     - Game timer. Starts when the Start Game button is pressed. Shows the time taken in minutes, seconds and milliseconds. Resets to 0 when the reset game, new game style or close winning modal buttons are pressed.
 
-![screenshot](docs/features/timer0.png)![screenshot](docs/features/timer1.png)
+![screenshot](docs/features/timer-0.png)![screenshot](docs/features/timer-1.png)
 
 - **Turns Taken**
 
     - Turns Taken Counter. Increments by 1 everyime 2 cards are flipped irrelevent if the 2 cards match or not.
 
-![screenshot](docs/features/turns0.png) ![screenshot](docs/features/turns5.png)
+![screenshot](docs/features/turns-0.png) ![screenshot](docs/features/turns-5.png)
 
 - **Match Found Sound**
 
@@ -157,26 +157,26 @@ Clicking the farm, space or car game button manipulates the DOM and hides the ga
 
     - Pressing 'shift' + 'r' keys on the keyboard flips all the cards to reveal their locations. Used as a developer tool or as a possible Easter Egg for the user in a future version.
 
-![screenshot](docs/features/noFlip.png) ![screenshot](docs/features/flipped.png) 
+![screenshot](docs/features/no-flip.png) ![screenshot](docs/features/flipped.png) 
 
 - **Winning Modal**
 
     - When playing a game and 8 pairs of cards are matched the game ends and a winning modal opens with a black and green backround which toggles between the two colours. A 'winning tune' is playeded and text congratulates the user.
     The modal show the time taken from starting the game to winning, the number of turns taken and the star rating. 8 > 20 turns taken = ⭐️⭐️⭐️, 21-30 turns = ⭐️⭐️, 31-40 turns = ⭐️ and 40 > = no stars.
 
-![screenshot](docs/features/winModal.png)
+![screenshot](docs/features/win-modal.png)
 
 - **Modal Close Button**
 
     - Modal close button when clicked plays a 'pop' sound. This the resets the timer to 00:00:00, resets turns taken counter to 0, flips all the cards back to their original position. Also importantly it stops the user from flipping any cards until the start button is clicked again. 
 
-![screenshot](docs/features/modalCloseBtn.png)
+![screenshot](docs/features/modal-close-btn.png)
 
  - **Footer icon with link**
 
     - Footer icon with link to my github repos 
 
-![screenshot](docs/features/footerIcon.png)
+![screenshot](docs/features/footer-icon.png)
 
  - **Card flip animation on click**
 

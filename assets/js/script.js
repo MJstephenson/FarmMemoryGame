@@ -37,7 +37,7 @@ $("#cars-btn").on("click", function () {
   $(".game-type").text('Car'); //Change game name
   $(".block").addClass("inactive"); //hide block for page layout
   $(".background-img").addClass("racetrack");
-  let sound = new Audio("assets/sounds/enginerev.mp3");
+  let sound = new Audio("assets/sounds/engine-rev.mp3");
   shuffleCards();
   sound.play();
 });
@@ -59,7 +59,7 @@ $("#new-style-btn").on("click", function () {
   $(".background-img").removeClass("racetrack space fields");
   $(".background-img").addClass("wool");
   window.scrollTo(0,0);
-  let sound = new Audio("assets/sounds/highpop.mp3");
+  let sound = new Audio("assets/sounds/high-pop.mp3");
   sound.play();
 });
 
@@ -79,7 +79,7 @@ $(".instruct-btn").on("click", function () {
 });
 
 $(".close-btn").on("click", function () {
-  let audio = new Audio("assets/sounds/highpop.mp3");
+  let audio = new Audio("assets/sounds/high-pop.mp3");
   audio.play();
 });
 
@@ -157,7 +157,7 @@ function startGame() { //function to start the timer if a gameState is 0 (not ru
     gameState = 1; //Adds the gameState to 1. This stops the startTimer function from repeating on each click and speeding the timer up
     canFlip = true; //Allows the cards to flip if the game is not running
     setTimeout(function() {
-      let sound = new Audio("assets/sounds/startgame.mp3");
+      let sound = new Audio("assets/sounds/start-game.mp3");
       sound.play();
     }, 300);
   }
