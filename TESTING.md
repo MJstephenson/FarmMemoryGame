@@ -52,7 +52,7 @@ I tested for game wins, sounds, all features, button clicks etc. There appears t
 
 I've tested my deployed project on multiple devices to check for responsiveness issues throughout all parts of the game.
 
-# Landing Page 
+## Landing Page 
 
 | Device | Screenshot | Notes |
 | --- | --- | --- |
@@ -61,7 +61,7 @@ I've tested my deployed project on multiple devices to check for responsiveness 
 | Desktop 1140px| ![screenshot](docs/responsiveness/desktop/desktop-landing.png) | Works as expected |
 | XL Monitor 2000px| ![screenshot](docs/responsiveness/xl-monitor/xl-landing.png) | Works as expected |
 
- # Instructions 
+ ## Instructions 
 
 | Device | Screenshot | Notes |
 | --- | --- | --- |
@@ -70,7 +70,7 @@ I've tested my deployed project on multiple devices to check for responsiveness 
 | Desktop 1140px| ![screenshot](docs/responsiveness/desktop/instruct-desktop.png) | Works as expected |
 | XL Monitor 2000px| ![screenshot](docs/responsiveness/xl-monitor/instruct-xl.png) | Works as expected |
 
-# Choose game Style
+## Choose game Style
 
 | Device | Screenshot | Notes |
 | --- | --- | --- |
@@ -79,7 +79,7 @@ I've tested my deployed project on multiple devices to check for responsiveness 
 | Desktop 1140px| ![screenshot](docs/responsiveness/desktop/desktop-3.png) | Works as expected |
 | XL Monitor 2000px| ![screenshot](docs/responsiveness/xl-monitor/large-3.png) | Works as expected |
 
-# Game Page - All games work the same for responsiveness with a different background image and card images so only 1 game style is shown 
+## Game Page - All games work the same for responsiveness with a different background image and card images so only 1 game style is shown 
 
 | Device | Screenshot | Notes |
 | --- | --- | --- |
@@ -88,7 +88,7 @@ I've tested my deployed project on multiple devices to check for responsiveness 
 | Desktop 1140px| ![screenshot](docs/responsiveness/desktop/game.png) | Works as expected |
 | XL Monitor 2000px| ![screenshot](docs/responsiveness/xl-monitor/game-xl.png) | Works as expected |
 
-# Win 
+## Win 
 
 | Device | Screenshot | Notes |
 | --- | --- | --- |
@@ -144,8 +144,10 @@ Defensive programming was manually tested with the below user acceptance testing
 | | 30 - 40 turns | 1 stars shows in modal | Pass | |
 | | click outside of modal | nothing happens | Pass | |
 | | click close modal button | modal disapears, timer resets, turns counter resets, pop sound plays, user cant flip any cards until start button is pressed again | Pass | |
-Click reset button at any stage in any game | | | | |
+Click reset button at any stage in any game whilst playing | | | | |
 | | Click reset button | resets timer, flips all cards, resets turn counter to 0, plays horn sound shuffles cards  | Pass | |
+Click start button at any stage in any game whilst playing | | | | |
+| | Click start button | nothing happens | Pass | |
 | Dev tool | | | | |
 | | Press shift + r keys.| Flips all cards in grid as expected, even when some cards have been selected and matched already | Pass | |
 | New Game style button clicked from all styles of game at a random time in the game

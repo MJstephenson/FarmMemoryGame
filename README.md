@@ -183,7 +183,7 @@ Clicking the farm, space or car game button manipulates the DOM and hides the ga
     - Cards appear to flip when clicked with an animation and stay turned ober for 0.8 seconds if they dont match
 
 
-### Future Features
+## Future Features
 
 These are ideas I have not had the time to implement on this project but if I come back to this project would like implement.
 
