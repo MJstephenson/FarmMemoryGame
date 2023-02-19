@@ -63,7 +63,6 @@ $("#new-style-btn").on("click", function () {
   sound.play();
 });
 
-
 //Appends an "active class to .choose-game when the "start" button is pressed and hides the begin section from the DOM
 $("#start-btn").on("click", function () {
   $(".choose-game").addClass("active");
@@ -130,13 +129,12 @@ $("#reset-btn").on("click", function () {
   sound.play();
 });
 
-
 //Add reset game style function to clear the prevous game when choosing a new style of game
 function resetGameStyle() {
   const cardsList = ['.farm-cards', '.space-cards', '.car-cards'];
   $(cardsList).each(function(item) {
    $(cardsList[item]).removeClass('active');
-  })
+  });
 }
 
 //Add timer
@@ -149,7 +147,6 @@ let gameState = 0;
 document.querySelector('.start-btn').addEventListener('click', startGame); //start timer on start button click
 document.querySelector('#new-style-btn').addEventListener('click', resetTimer); //reset timer on new game style button click
 document.querySelector('#reset-btn').addEventListener('click', resetTimer); //reset timer on reset button click
-
 
 function startGame() { //function to start the timer if a gameState is 0 (not running).
   if (gameState == 0) {
@@ -193,7 +190,6 @@ function resetTimer() {
 // flip card section
 
 // Make cards flip (to a maximum of 2 cards)
-
 let flipped = 0; // This will allow the number of flipped cards to be recorded
 let flippedCards = []; // This array stores the 2 flipped cards
 let canFlip = false;
@@ -202,7 +198,6 @@ let matchedCards = [];
 let turnsCounter = 0;
 let lastClicked;
 let soundPlaying = false;
-
 
 $(".image-container").on("click", function () {
   if (canFlip) { //makes sure the cards can't flip after a reset until you press the start button

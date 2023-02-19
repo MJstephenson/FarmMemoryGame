@@ -55,12 +55,10 @@ html, body {
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size:cover; /* Resize the background image to cover the entire container */
 }
-/*instructions popup styling */
 
 .header-text {
   padding-top: 390px;
 }
-
 
 .glow-on-hover {
   width: 220px;
@@ -146,7 +144,6 @@ html, body {
     background-color: rgb(9, 230, 20);
   }
 }
-
 
 /*game start and selectors*/
 
@@ -272,7 +269,8 @@ display:none;
 .cards-f {
   width: 140px;
   height: 140px;
- background-color: white;
+  background-color: rgb(247, 240, 240);
+  padding:10px;
  
 }
 .cards-s {
@@ -289,14 +287,10 @@ display:none;
 .cards-f, .cards-s, .cards-c {
   cursor: pointer;
   box-shadow: 2px 2px 8px #000000;
+  object-fit: scale-down;
 }
-.cards-f:hover, .cards-s:hover, .cards-c:hover, .back:hover {
-  box-sizing: border-box;
-  box-shadow: inset 0px 0px 0px 3px black;
-}
+
 /* flip cards hide/show */
-
-
 /* card transform */
 .image-1.active, .image-2.back {
   transform: perspective(1000px) rotateY(180deg);
