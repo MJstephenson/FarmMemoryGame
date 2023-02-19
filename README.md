@@ -225,6 +225,8 @@ These are ideas I have not had the time to implement on this project but if I co
 - [GitHub](https://github.com) used for secure online code storage.
 - [GitHub Pages](https://pages.github.com) used for hosting the deployed front-end site.
 - [Gitpod](https://gitpod.io) used as a cloud-based IDE for development.
+- [Cloudconvert](https://cloudconvert.com) used to convert images to .webp
+
 
 
 ## Testing
