@@ -146,6 +146,8 @@ Defensive programming was manually tested with the below user acceptance testing
 | | click close modal button | modal disapears, timer resets, turns counter resets, pop sound plays, user cant flip any cards until start button is pressed again | Pass | |
 Click reset button at any stage in any game whilst playing | | | | |
 | | Click reset button | resets timer, flips all cards, resets turn counter to 0, plays horn sound shuffles cards  | Pass | |
+Click sound button at any stage in any game whilst playing | | | | |
+| | Click sound button before or at any stage in game | turns sounds on/off and displays relevent text for user to explain what happens on next click | Pass | |
 Click start button at any stage in any game whilst playing | | | | |
 | | Click start button | nothing happens | Pass | |
 | Dev tool | | | | |
@@ -198,7 +200,7 @@ Game Grids
 Sound
 - Match sound kept doubling up when a match was found to create an echo of the sound as you progressed through the game.
 
-    - To fix this, I wrote some code that would test to see if the sound was playing and would not play the matched sound if it was. This is slightly imperfect as sometimes if you get a match quickly one after the other it wont play the matched sound, but I thought that this was better than having the echo.
+    - To fix this, I wrote some code that would test to see if the sound was playing and would not play the matched sound if it was. This is slightly imperfect as sometimes if you get a match quickly one after the other it wont play the matched sound, but I thought that this was better than having the echo. (Edit) I worked out that this bug was occuring as the code was playing the matched sound for every match in the matchedcards array. So if 4 pairs were in the array and you got another match it would stack 5 match sounds ontop of each other increasing the violume and distorting the sound with an echo. Rather than use my code below which caused the new bug as described, i simply removed this and called for the function outside of the part of code that had the matchedCards array thus only playing the sound once per matched pair.
 
     ![screenshot](docs/bugs/match-sound.png)
 

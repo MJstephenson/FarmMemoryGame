@@ -182,6 +182,22 @@ Clicking the farm, space or car game button manipulates the DOM and hides the ga
 
     - Cards appear to flip when clicked with an animation and stay turned ober for 0.8 seconds if they dont match
 
+## Additional Features and Style Improvements
+
+This section represents some minor changes to the game that have been made as there was still enough time at the end of the project to instigate them.
+
+ - **Sound on/off button**
+
+    - Game loads with sound off. The button allows the sounds to play when clicked and changes its text to represent what will happen on next click
+
+![screenshot](docs/features/sound-btn-onload.png)![screenshot](docs/features/sound-btn-on.png)![screenshot](docs/features/sound-btn-off.png)
+
+ - **Resized game grid images**
+
+    - Some of the images in the game grid were stretched so they have been scales and a gap has been made around them so that they do not touch the edge of the cards.
+
+![screenshot](docs/features/farm-images-improvement.png)![screenshot](docs/features/space-images-improvement.png)![screenshot](docs/features/car-images-improvement.png)
+
 
 ## Future Features
 
@@ -195,8 +211,6 @@ These are ideas I have not had the time to implement on this project but if I co
     - Random card generator to add images from all games to create a brand new one.
 - Cool new feature #4
     - Animations on the card backgrounds whilst playing the game.  
-- Cool new feature #5
-    - A sound toggle to turn the sound on and off.  
 
 ## Tools & Technologies Used
 
