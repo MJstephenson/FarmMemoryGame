@@ -5,6 +5,7 @@ let canPlaySound = false; //determine if a sound can be played
 // on toggle sound on/off button click
 $("#toggle-sound").on("click", function () {
   canPlaySound = !canPlaySound;
+  $("#toggle-sound").text(canPlaySound ? "Turn Sound Off" : "Turn Sound On");
 });
 
 function playSound(audioURL) { //new function, that accepts an audio url, when called, you pass in the audioUrl
