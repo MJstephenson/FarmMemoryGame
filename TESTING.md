@@ -9,7 +9,7 @@ Return back to the [README.md](README.md) file.
 I have used the recommended [HTML W3C Validator](https://validator.w3.org) to validate all of my HTML files.
 - https://validator.w3.org/nu/?doc=https%3A%2F%2Fmjstephenson.github.io%2FKidsMemoryGame%2F
 
-![screenshot](docs/validation/html-test.png)
+![screenshot](docs/validation/html-test.webp)
 
 
 ### CSS
@@ -18,18 +18,18 @@ I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-val
 
 - https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2FMJstephenson.github.io%2FKidsMemoryGame
 
-![screenshot](docs/validation/css-test.png)
+![screenshot](docs/validation/css-test.webp)
 
 The validator shows a warning for a Unrecognized at-rule @-webkit-keyframes. Accorning to
 https://stackoverflow.com/questions/22018509/at-rule-webkit-keyframes-is-not-implemented but are not within the W3C specification and they are browser specific, so you will always have something like this when running W3C validation. The same goes for any browser specific css hacks.
 
-![screenshot](docs/validation/warning.png)
+![screenshot](docs/validation/warning.webp)
 
 ### JavaScript
 
 I have used the recommended [JShint Validator](https://jshint.com) to validate all  my JS file.
 
-![screenshot](docs/validation/jshint-test.png)
+![screenshot](docs/validation/jshint-test.webp)
 
 
 ## Browser Compatibility
@@ -43,9 +43,9 @@ I tested for game wins, sounds, all features, button clicks etc. There appears t
 
 | Browser | Screenshot | Notes |
 | --- | --- | --- |
-| Chrome | ![screenshot](docs/browser-tests/Chrome/chrome-landing.png) | Works as expected |
-| Firefox | ![screenshot](docs/browser-tests/Firefox/firefox-landing.png) | Works as expected |
-| Opera | ![screenshot](docs/browser-tests/Opera/opera-landing.png) | Works as expected |
+| Chrome | ![screenshot](docs/browser-tests/Chrome/chrome-landing.webp) | Works as expected |
+| Firefox | ![screenshot](docs/browser-tests/Firefox/firefox-landing.webp) | Works as expected |
+| Opera | ![screenshot](docs/browser-tests/Opera/opera-landing.webp) | Works as expected |
 
 
 ## Responsiveness
@@ -56,50 +56,50 @@ I've tested my deployed project on multiple devices to check for responsiveness 
 
 | Device | Screenshot | Notes |
 | --- | --- | --- |
-| Mobile (DevTools) 375px | ![screenshot](docs/responsiveness/mobile/mobile-landing.png) | Works as expected |
-| Tablet (DevTools) 768px |![screenshot](docs/responsiveness/tablet/ipad-landing.png) | Works as expected |
-| Desktop 1140px| ![screenshot](docs/responsiveness/desktop/desktop-landing.png) | Works as expected |
-| XL Monitor 2000px| ![screenshot](docs/responsiveness/xl-monitor/xl-landing.png) | Works as expected |
+| Mobile (DevTools) 375px | ![screenshot](docs/responsiveness/mobile/mobile-landing.webp) | Works as expected |
+| Tablet (DevTools) 768px |![screenshot](docs/responsiveness/tablet/ipad-landing.webp) | Works as expected |
+| Desktop 1140px| ![screenshot](docs/responsiveness/desktop/desktop-landing.webp) | Works as expected |
+| XL Monitor 2000px| ![screenshot](docs/responsiveness/xl-monitor/xl-landing.webp) | Works as expected |
 
  ## Instructions 
 
 | Device | Screenshot | Notes |
 | --- | --- | --- |
-| Mobile (DevTools) 375px| ![screenshot](docs/responsiveness/mobile/instruct-mobile.png) | Works as expected |
-| Tablet (DevTools) 768px | ![screenshot](docs/responsiveness/tablet/instruct-tablet.png) | Works as expected |
-| Desktop 1140px| ![screenshot](docs/responsiveness/desktop/instruct-desktop.png) | Works as expected |
-| XL Monitor 2000px| ![screenshot](docs/responsiveness/xl-monitor/instruct-xl.png) | Works as expected |
+| Mobile (DevTools) 375px| ![screenshot](docs/responsiveness/mobile/instruct-mobile.webp) | Works as expected |
+| Tablet (DevTools) 768px | ![screenshot](docs/responsiveness/tablet/instruct-tablet.webp) | Works as expected |
+| Desktop 1140px| ![screenshot](docs/responsiveness/desktop/instruct-desktop.webp) | Works as expected |
+| XL Monitor 2000px| ![screenshot](docs/responsiveness/xl-monitor/instruct-xl.webp) | Works as expected |
 
 ## Choose game Style
 
 | Device | Screenshot | Notes |
 | --- | --- | --- |
-| Mobile (DevTools) 375px | ![screenshot](docs/responsiveness/mobile/mobile-3.png) | Works as expected |
-| Tablet (DevTools) 768px| ![screenshot](docs/responsiveness/tablet/tablet-3.png) | Works as expected |
-| Desktop 1140px| ![screenshot](docs/responsiveness/desktop/desktop-3.png) | Works as expected |
-| XL Monitor 2000px| ![screenshot](docs/responsiveness/xl-monitor/large-3.png) | Works as expected |
+| Mobile (DevTools) 375px | ![screenshot](docs/responsiveness/mobile/mobile-3.webp) | Works as expected |
+| Tablet (DevTools) 768px| ![screenshot](docs/responsiveness/tablet/tablet-3.webp) | Works as expected |
+| Desktop 1140px| ![screenshot](docs/responsiveness/desktop/desktop-3.webp) | Works as expected |
+| XL Monitor 2000px| ![screenshot](docs/responsiveness/xl-monitor/large-3.webp) | Works as expected |
 
 ## Game Page - All games work the same for responsiveness with a different background image and card images so only 1 game style is shown 
 
 | Device | Screenshot | Notes |
 | --- | --- | --- |
-| Mobile (DevTools) 375px| ![screenshot](docs/responsiveness/mobile/game-phone.png) | Works as expected |
-| Tablet (DevTools) 768px| ![screenshot](docs/responsiveness/tablet/game-tablet.png) | Works as expected |
-| Desktop 1140px| ![screenshot](docs/responsiveness/desktop/game.png) | Works as expected |
-| XL Monitor 2000px| ![screenshot](docs/responsiveness/xl-monitor/game-xl.png) | Works as expected |
+| Mobile (DevTools) 375px| ![screenshot](docs/responsiveness/mobile/game-phone.webp) | Works as expected |
+| Tablet (DevTools) 768px| ![screenshot](docs/responsiveness/tablet/game-tablet.webp) | Works as expected |
+| Desktop 1140px| ![screenshot](docs/responsiveness/desktop/game.webp) | Works as expected |
+| XL Monitor 2000px| ![screenshot](docs/responsiveness/xl-monitor/game-xl.webp) | Works as expected |
 
 ## Win 
 
 | Device | Screenshot | Notes |
 | --- | --- | --- |
-| Mobile (DevTools) 375px| ![screenshot](docs/responsiveness/mobile/win-phone.png) | Works as expected |
-| Tablet (DevTools) 768px| ![screenshot](docs/responsiveness/tablet/win-tablet.png) | Works as expected |
-| Desktop 1140px| ![screenshot](docs/responsiveness/desktop/win-desktop.png) | Works as expected |
-| XL Monitor 2000px| ![screenshot](docs/responsiveness/xl-monitor/win-xl.png) | Works as expected |
+| Mobile (DevTools) 375px| ![screenshot](docs/responsiveness/mobile/win-phone.webp) | Works as expected |
+| Tablet (DevTools) 768px| ![screenshot](docs/responsiveness/tablet/win-tablet.webp) | Works as expected |
+| Desktop 1140px| ![screenshot](docs/responsiveness/desktop/win-desktop.webp) | Works as expected |
+| XL Monitor 2000px| ![screenshot](docs/responsiveness/xl-monitor/win-xl.webp) | Works as expected |
 
 ## Lighthouse Audit
 
-![screenshot](docs/validation/lighthouse.png)
+![screenshot](docs/validation/lighthouse.webp)
 
 ## Defensive Programming
 
@@ -160,40 +160,40 @@ Click start button at any stage in any game whilst playing | | | | |
 ### New Site Users
 | User Story | Screenshot | Comment
 | --- | --- |--- |
-| As a new site user, I would like to read the game instructions, so that I can understand the game and what features it has. | ![screenshot](docs/features/instructions.png)![screenshot](docs/features/instructionsBtn.png)|
-| As a new site user, I would like to be able to start a game from the game screen, so that I can begin a game of my chosen style. | ![screenshot](docs/features/start-btn.png) |
-| As a new site user, I would like to be able to choose a game style, so that I can play a game that suits my mood. | ![screenshot](docs/features/3-buttons.png) |
-| As a new site user, I would like to see a timer start when I start the game, so that I can see how fast I can complete it. | ![screenshot](docs/features/timer-0.png) ![screenshot](docs/features/timer-1.png)|
-| As a new site user, I would like to see how many turns I have made as I play the game, so that I can keep track of this. | ![screenshot](docs/features/turns-0.png)  ![screenshot](docs/features/turns-5.png) |
-| As a new site user, I would like to be able to reset the game, timer and turns, so that I can start a new game on the same game style. | ![screenshot](docs/features/reset-btn.png) |
-| As a new site user, I would like to be able to choose a new game style after or during playing a game, so that I can try another style. | ![screenshot](docs/features/new-game-btn.png) |
-| As a new site user, I would like to be shown my time and turns taken when I match all the cards in a game, so that I can see how well I have done. | ![screenshot](docs/features/win-modal.png) |
-| As a new site user, I would like to be given feedback based on how well I have done in the game, so that I can see how well I am doing. | ![screenshot](docs/features/stars-time-turns.png) |
-| As a new site user, I would like to see a difference in the game styles that relate to their style, so that I feel I am playing a different game. | ![screenshot](docs/features/car-game.png) ![screenshot](docs/features/farm-game.png)![screenshot](docs/features/space-game.png)|
-| As a new site user, I would like to hear a sound played when I match a card, so that I can audibly recognise this. | ![screenshot](docs/features/match.png) | 'Its a Match' sound is played. |
-| As a new site user, I would like to hear sounds on button clicks, so that I can audibly recognise that they have been clicked. | ![screenshot](docs/features/instructionsBtn.png)![screenshot](docs/features/3-buttons.png) ![screenshot](docs/features/main-start-btn.png) ![screenshot](docs/features/new-game-btn.png) ![screenshot](docs/features/modal-close-btn.png) ![screenshot](docs/features/reset-btn.png)![screenshot](docs/features/start-btn.png)| All buttons play a sound |
-| As a new site user, I would like to hear a sound related to the game when i choose a style, so that I can audibly recognise what game I am playing. | ![screenshot](docs/features/3-buttons.png) | Buttons play a specific sound related to the game style |
-| As a new site user, I would like to hear a sound when I press the start button on a game, so that I know the game has started. | ![screenshot](docs/features/main-start-btn.png) | Plays a 'Start the game already' sound |
-| As a new site user, I would like to hear a sound when I win the game, so that I can celebrate my win. | ![screenshot](docs/features/win-modal.png) | Tune plays as game is won |
+| As a new site user, I would like to read the game instructions, so that I can understand the game and what features it has. | ![screenshot](docs/features/instructions.webp)![screenshot](docs/features/instructionsBtn.webp)|
+| As a new site user, I would like to be able to start a game from the game screen, so that I can begin a game of my chosen style. | ![screenshot](docs/features/start-btn.webp) |
+| As a new site user, I would like to be able to choose a game style, so that I can play a game that suits my mood. | ![screenshot](docs/features/3-buttons.webp) |
+| As a new site user, I would like to see a timer start when I start the game, so that I can see how fast I can complete it. | ![screenshot](docs/features/timer-0.webp) ![screenshot](docs/features/timer-1.webp)|
+| As a new site user, I would like to see how many turns I have made as I play the game, so that I can keep track of this. | ![screenshot](docs/features/turns-0.webp)  ![screenshot](docs/features/turns-5.webp) |
+| As a new site user, I would like to be able to reset the game, timer and turns, so that I can start a new game on the same game style. | ![screenshot](docs/features/reset-btn.webp) |
+| As a new site user, I would like to be able to choose a new game style after or during playing a game, so that I can try another style. | ![screenshot](docs/features/new-game-btn.webp) |
+| As a new site user, I would like to be shown my time and turns taken when I match all the cards in a game, so that I can see how well I have done. | ![screenshot](docs/features/win-modal.webp) |
+| As a new site user, I would like to be given feedback based on how well I have done in the game, so that I can see how well I am doing. | ![screenshot](docs/features/stars-time-turns.webp) |
+| As a new site user, I would like to see a difference in the game styles that relate to their style, so that I feel I am playing a different game. | ![screenshot](docs/features/car-game.webp) ![screenshot](docs/features/farm-game.webp)![screenshot](docs/features/space-game.webp)|
+| As a new site user, I would like to hear a sound played when I match a card, so that I can audibly recognise this. | ![screenshot](docs/features/match.webp) | 'Its a Match' sound is played. |
+| As a new site user, I would like to hear sounds on button clicks, so that I can audibly recognise that they have been clicked. | ![screenshot](docs/features/instructionsBtn.webp)![screenshot](docs/features/3-buttons.webp) ![screenshot](docs/features/main-start-btn.webp) ![screenshot](docs/features/new-game-btn.webp) ![screenshot](docs/features/modal-close-btn.webp) ![screenshot](docs/features/reset-btn.webp)![screenshot](docs/features/start-btn.webp)| All buttons play a sound |
+| As a new site user, I would like to hear a sound related to the game when i choose a style, so that I can audibly recognise what game I am playing. | ![screenshot](docs/features/3-buttons.webp) | Buttons play a specific sound related to the game style |
+| As a new site user, I would like to hear a sound when I press the start button on a game, so that I know the game has started. | ![screenshot](docs/features/main-start-btn.webp) | Plays a 'Start the game already' sound |
+| As a new site user, I would like to hear a sound when I win the game, so that I can celebrate my win. | ![screenshot](docs/features/win-modal.webp) | Tune plays as game is won |
 | As a new site user, I would like to be able to play the game on a variety of mobile devices, so that I can play on the go. | Works accross devices .See device responsiveness testing |
 | As a new site user, I would like to play the game on different browsers, so that I can not worry about what browser I am using. | Tested on 3 browsers. See browser compatability|
 | As a returning site user, I would like the game to play exactly the same as the last time I played it, so that I can improve my technique. | It works the same when a user returns |
 | As a returning site user, I would like to be able to play the game on a variety of different devices, so that I can play when I want. | Tested on a variety of devices. See device testing |
-| As a site administrator, I should be able to flip all the cards to assist with matching cards & winning the game, so that I can test the app and develop new features quickly. | ![screenshot](docs/features/flipped.png) | Flip all cards by pressing shift + r keys|
+| As a site administrator, I should be able to flip all the cards to assist with matching cards & winning the game, so that I can test the app and develop new features quickly. | ![screenshot](docs/features/flipped.webp) | Flip all cards by pressing shift + r keys|
 
 ## Bugs
 
 Timer
 - Timer kept doubling in speed when the start game button was clicked to start a new game. The timer would also start from where it previously left off from the previous game even though when the reset button was clicked it set it to 00:00:00.
 
-    ![screenshot](docs/bugs/timer-bug.png)
+    ![screenshot](docs/bugs/timer-bug.webp)
 
     - To fix this, I created a gamestate in the code 0 or 1 which I could use set whether a game was running or not and used timer = null to reset the timer to zero so that the timer worked correctly.
 
 Game Grids
 - Game grids stacked ontop of each other when playing a game and then choosing another game style, then another game style.
 
-    ![screenshot](docs/bugs/stack-bug.png) ![screenshot](docs/bugs/stack-bug-fix.png)
+    ![screenshot](docs/bugs/stack-bug.webp) ![screenshot](docs/bugs/stack-bug-fix.webp)
 
     - To fix this, I wrote some code that removed the previous game grid from the DOM by removing its active class.
 
@@ -202,17 +202,17 @@ Sound
 
     - To fix this, I wrote some code that would test to see if the sound was playing and would not play the matched sound if it was. This is slightly imperfect as sometimes if you get a match quickly one after the other it wont play the matched sound, but I thought that this was better than having the echo. (Edit) I worked out that this bug was occuring as the code was playing the matched sound for every match in the matchedcards array. So if 4 pairs were in the array and you got another match it would stack 5 match sounds ontop of each other increasing the violume and distorting the sound with an echo. Rather than use my code below which caused the new bug as described, i simply removed this and called for the function outside of the part of code that had the matchedCards array thus only playing the sound once per matched pair.
 
-    ![screenshot](docs/bugs/match-sound.png)
+    ![screenshot](docs/bugs/match-sound.webp)
 
 False Win
 - If you got a matching pair of cards and then clicked on them again and again (rather than searching for another pair) matched cards would continue to be addded to the matched cards array until there was 16 and the game ended unfortunately. I first attacked this by writing new code that targeted the card that was last clicked and stoppping it from being clickable once it was matched. I then realised I had to do it on both so added to the code and/or the cards have class matched so that a matching cards cannot be clicked again.
 
-    ![screenshot](docs/bugs/bad-win.png)
+    ![screenshot](docs/bugs/bad-win.webp)
 
 Bad Flip
 - When 2 cards were matched, and you selected another 2 - all 4 cards were flipped back over.
 
-    ![screenshot](docs/bugs/remove-class.png)
+    ![screenshot](docs/bugs/remove-class.webp)
 
     - To fix this, I added a matched class to the cards if there was a match (the match is checked from the image-2 dataset) and then added them to the matched array and at the same time removed their active class so that they would not be flipped back over.
 

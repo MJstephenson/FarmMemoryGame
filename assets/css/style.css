@@ -8,7 +8,7 @@ html, body {
 /* background images for games */
 .background-img {
   background-color: lightgray;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url("../images/backgrounds/wool-bkgr.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url("../images/backgrounds/wool-bkgr.webp");
   height: 1450px;
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
@@ -17,7 +17,7 @@ html, body {
 
 .background-img.wool {
   background-color: lightgray;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url("../images/backgrounds/wool-bkgr.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url("../images/backgrounds/wool-bkgr.webp");
   height: 1450px;
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
@@ -26,7 +26,7 @@ html, body {
 
 .background-img.space {
   background-color: lightgray;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url("../images/backgrounds/outer-space.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url("../images/backgrounds/outer-space.webp");
   height: 1450px;
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
@@ -35,7 +35,7 @@ html, body {
 
 .background-img.fields {
   background-color: lightgray;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url("../images/backgrounds/fields.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url("../images/backgrounds/fields.webp");
   height: 1450px;
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
@@ -44,7 +44,7 @@ html, body {
 
 .background-img.racetrack {
   background-color: lightgray;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url("../images/backgrounds/racetrack.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url("../images/backgrounds/racetrack.webp");
   height: 1450px;
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
