@@ -1,5 +1,19 @@
 /* jshint esversion:11, jquery:true */
 
+let canPlaySound = false; //determine if we can play a sound
+
+// on toggle sound on/off button click
+$("#toggle-sound").on("click", function () {
+  canPlaySound = !canPlaySound;
+});
+
+function playSound(audioURL) { //new function, that accepts an audio url, when called, you pass in the audioUrl
+  if (canPlaySound === true) { //if statement, that only runs if the canPlaySoiund variable is true
+    const audio = new Audio(audioURL);
+    audio.play();
+  }
+}
+
 //On farm game button click, hide all Dom Elements, and only show main game section with farm cards only
 $("#farm-btn").on("click", function () {
   gameType = '.farm-cards';
@@ -9,8 +23,7 @@ $("#farm-btn").on("click", function () {
   $(".game-type").text('Farm'); //Change game name
   $(".block").addClass("inactive"); //hide block for page layout
   $(".background-img").addClass("fields");
-  let audio = new Audio("assets/sounds/rooster.mp3");
-  audio.play();
+  playSound("assets/sounds/rooster.mp3");
   shuffleCards();
 });
 
@@ -23,9 +36,8 @@ $("#space-btn").on("click", function () {
   $(".game-type").text('Space'); //Change game name
   $(".block").addClass("inactive"); //hide block for page layout
   $(".background-img").addClass("space");
-  let sound = new Audio("assets/sounds/blast.mp3");
+  playSound("assets/sounds/blast.mp3");
   shuffleCards();
-  sound.play();
 });
 
 //On car game button click, hide all Dom Elements, and only show main game section with car cards only
@@ -37,9 +49,9 @@ $("#cars-btn").on("click", function () {
   $(".game-type").text('Car'); //Change game name
   $(".block").addClass("inactive"); //hide block for page layout
   $(".background-img").addClass("racetrack");
-  let sound = new Audio("assets/sounds/engine-rev.mp3");
+  playSound("assets/sounds/engine-rev.mp3");
   shuffleCards();
-  sound.play();
+  
 });
 
 //On new game style button click, hide all Dom Elements, and show header, instructions and choose style section
@@ -59,8 +71,7 @@ $("#new-style-btn").on("click", function () {
   $(".background-img").removeClass("racetrack space fields");
   $(".background-img").addClass("wool");
   window.scrollTo(0,0);
-  let sound = new Audio("assets/sounds/high-pop.mp3");
-  sound.play();
+  playSound("assets/sounds/high-pop.mp3");
 });
 
 //Appends an "active class to .choose-game when the "start" button is pressed and hides the begin section from the DOM
@@ -68,18 +79,15 @@ $("#start-btn").on("click", function () {
   $(".choose-game").addClass("active");
   $(".begin-section").addClass("inactive");
   turnsCounter = 0;
-  let audio = new Audio("assets/sounds/pop.mp3");
-  audio.play();
+  playSound("assets/sounds/pop.mp3");
 });
 
 $(".instruct-btn").on("click", function () {
-  let audio = new Audio("assets/sounds/pop.mp3");
-  audio.play();
+  playSound("assets/sounds/pop.mp3");
 });
 
 $(".close-btn").on("click", function () {
-  let audio = new Audio("assets/sounds/high-pop.mp3");
-  audio.play();
+  playSound("assets/sounds/high-pop.mp3");
 });
 
 function shuffleCards() {
@@ -107,8 +115,7 @@ $("#win-close").on("click", function () {
   turnsCounter = 0;
   $('.turns-counter').text(turnsCounter);
   canFlip = false; //Make it so you cannot flip cards after pressing reset button
-  let sound = new Audio("assets/sounds/pop.mp3");
-  sound.play();
+  playSound ("assets/sounds/pop.mp3");
 });
 
 //Reset Button
@@ -125,8 +132,7 @@ $("#reset-btn").on("click", function () {
   turnsCounter = 0;
   $('.turns-counter').text(turnsCounter);
   canFlip = false; //Make it so you cannot flip cards after pressing reset button
-  let sound = new Audio("assets/sounds/reset.mp3");
-  sound.play();
+  playSound("assets/sounds/reset.mp3");
 });
 
 //Add reset game style function to clear the prevous game when choosing a new style of game
@@ -154,8 +160,7 @@ function startGame() { //function to start the timer if a gameState is 0 (not ru
     gameState = 1; //Adds the gameState to 1. This stops the startTimer function from repeating on each click and speeding the timer up
     canFlip = true; //Allows the cards to flip if the game is not running
     setTimeout(function() {
-      let sound = new Audio("assets/sounds/start-game.mp3");
-      sound.play();
+     playSound("assets/sounds/start-game.mp3");
     }, 300);
   }
 }
@@ -257,15 +262,13 @@ function winnerModal() {
   }
   document.querySelector('.star-rating').innerHTML = starRating;
   setTimeout(function() {
-    let sound = new Audio("assets/sounds/winner.mp3");
-    sound.play();
+    playSound("assets/sounds/winner.mp3");
   }, 2500);
 }
 
 function playMatchedSound() {
   if (!soundPlaying) {
-    let sound = new Audio("assets/sounds/match.mp3");
-    sound.play();
+    playSound("assets/sounds/match.mp3");
     soundPlaying = true;
     sound.addEventListener("ended", function () {
       soundPlaying = false;
