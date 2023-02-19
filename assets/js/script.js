@@ -1,6 +1,6 @@
 /* jshint esversion:11, jquery:true */
 
-let canPlaySound = false; //determine if we can play a sound
+let canPlaySound = false; //determine if a sound can be played
 
 // on toggle sound on/off button click
 $("#toggle-sound").on("click", function () {
@@ -9,7 +9,7 @@ $("#toggle-sound").on("click", function () {
 
 function playSound(audioURL) { //new function, that accepts an audio url, when called, you pass in the audioUrl
   if (canPlaySound === true) { //if statement, that only runs if the canPlaySoiund variable is true
-    const audio = new Audio(audioURL);
+    const audio = new Audio(audioURL); //Adds the url to the audio to be played
     audio.play();
   }
 }
