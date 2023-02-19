@@ -10,7 +10,6 @@ html, body {
   background-color: lightgray;
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url("../images/backgrounds/wool-bkgr.jpg");
   height: 1450px;
-  width: 100vw;
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size:cover; /* Resize the background image to cover the entire container */
@@ -20,7 +19,6 @@ html, body {
   background-color: lightgray;
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url("../images/backgrounds/wool-bkgr.jpg");
   height: 1450px;
-  width: 100vw;
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size:cover; /* Resize the background image to cover the entire container */
@@ -30,7 +28,6 @@ html, body {
   background-color: lightgray;
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url("../images/backgrounds/outer-space.jpg");
   height: 1450px;
-  width: 100vw;
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size:cover; /* Resize the background image to cover the entire container */
@@ -40,7 +37,6 @@ html, body {
   background-color: lightgray;
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url("../images/backgrounds/fields.jpg");
   height: 1450px;
-  width: 100vw;
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size:cover; /* Resize the background image to cover the entire container */
@@ -50,7 +46,6 @@ html, body {
   background-color: lightgray;
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url("../images/backgrounds/racetrack.jpg");
   height: 1450px;
-  width: 100vw;
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size:cover; /* Resize the background image to cover the entire container */
