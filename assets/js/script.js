@@ -232,13 +232,13 @@ $(".image-container").on("click", function () {
           matchedCards.push(flippedCards[0], flippedCards[1]); //Push the flipped cards to the matching cards array so they cannot be used again
           matchedCards.forEach(card => {
             card.classList.add('matched');
-            playMatchedSound();
           }); // Add a class of matched to matched cards
           flippedCards = []; // This will empty the flippedCards array
           flipped = 0; // This starts the flipped variable to 0
           turnsCounter++; // Increases the turns taken counter when two cards have been flipped
           $('.turns-counter').text(turnsCounter); // Updates the turns taken counter display
           lastClicked = null; //allows the game logic to continue
+          playSound("assets/sounds/match.mp3");
           if (matchedCards.length === 16) {
             winnerModal();
           }
@@ -267,15 +267,6 @@ function winnerModal() {
   }, 2500);
 }
 
-function playMatchedSound() {
-  if (!soundPlaying) {
-    playSound("assets/sounds/match.mp3");
-    soundPlaying = true;
-    sound.addEventListener("ended", function () {
-      soundPlaying = false;
-    });
-  }
-}
 
 // make all cards flip when shift+r is pressed and flip back when both pressed again
 $(document).on('keydown', function (e) {
