@@ -2,14 +2,14 @@
 
 let canPlaySound = false; //determine if a sound can be played
 
-// on toggle sound on/off button click
+// toggle sound on/off button click
 $("#toggle-sound").on("click", function () {
   canPlaySound = !canPlaySound;
-  $("#toggle-sound").text(canPlaySound ? "Turn Sound Off" : "Turn Sound On");
+  $("#toggle-sound").text(canPlaySound ? "Turn Sound Off" : "Turn Sound On");// button text change
 });
 
 function playSound(audioURL) { //new function, that accepts an audio url, when called, you pass in the audioUrl
-  if (canPlaySound === true) { //if statement, that only runs if the canPlaySoiund variable is true
+  if (canPlaySound === true) { //if statement, that only runs if the canPlaySouund variable is true
     const audio = new Audio(audioURL); //Adds the url to the audio to be played
     audio.play();
   }
@@ -203,7 +203,6 @@ let gameType = '';
 let matchedCards = [];
 let turnsCounter = 0;
 let lastClicked;
-let soundPlaying = false;
 
 $(".image-container").on("click", function () {
   if (canFlip) { //makes sure the cards can't flip after a reset until you press the start button
@@ -238,7 +237,7 @@ $(".image-container").on("click", function () {
           turnsCounter++; // Increases the turns taken counter when two cards have been flipped
           $('.turns-counter').text(turnsCounter); // Updates the turns taken counter display
           lastClicked = null; //allows the game logic to continue
-          playSound("assets/sounds/match.mp3");
+          playSound ("assets/sounds/match.mp3");
           if (matchedCards.length === 16) {
             winnerModal();
           }
