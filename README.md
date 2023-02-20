@@ -356,6 +356,7 @@ These appear to be identical and work in the same manner.
 | [Myinstants](https://www.myinstants.com/en/instant/start-the-game-already-aoc/) | button click | sound | for main game start button |
 | [Myinstants](https://www.myinstants.com/en/instant/match-found-vava-48478/) | button click | sound | for match found button |
 | [Myinstants](https://www.myinstants.com/en/instant/winners-92695/) | button click | sound | for match found button |
+| [Iconspedia](https://www.iconspedia.com/icon/joystick-467-.html) | Favicon | Favicon | Joystick icon for favicon |
 
 ### Acknowledgements
 
