@@ -52,7 +52,7 @@ html, body {
 }
 
 .header-text {
-  padding-top: 390px;
+  padding-top: 340px;
 }
 
 .glow-on-hover {
@@ -318,6 +318,6 @@ display:none;
     height: 2200px;
   }
   .header-text {
-    padding-top: 100px;
+    padding-top: 80px;
   }
 }
