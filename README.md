@@ -287,13 +287,10 @@ These appear to be identical and work in the same manner.
 | --- | --- | --- |
 | [Markdown Builder by Tim Nelson](https://traveltimn.github.io/readme-builder) | README and TESTING | tool to help generate the Markdown files |
 | [Chris Beams](https://chris.beams.io/posts/git-commit) | version control | "How to Write a Git Commit Message" |
-| [W3Schools](https://www.w3schools.com/howto/howto_js_topnav_responsive.asp) | entire site | responsive HTML/CSS/JS navbar |
-| [W3Schools](https://www.w3schools.com/howto/howto_css_modals.asp) | contact page | interactive pop-up (modal) |
+| [Bootstrap](https://getbootstrap.com/docs/5.0/components/modal/) | contact page | interactive pop-up (modal) |
 | [W3Schools](https://www.w3schools.com/jsref/jsref_foreach.asp) | forEach() page | how to use Javascript Array forEach() |
 | [W3Schools](https://www.w3schools.com/cssref/css_selectors.php) | CSS selector reference | use of * |
-| [Flexbox Froggy](https://flexboxfroggy.com/) | entire site | modern responsive layouts |
-| [Grid Garden](https://cssgridgarden.com) | entire site | modern responsive layouts |
-| [StackOverflow](https://stackoverflow.com/a/2450976) | quiz page | Fisher-Yates/Knuth shuffle in JS |
+| [StackOverflow](https://stackoverflow.com/a/2450976) | main page | Fisher-Yates/Knuth shuffle in JS |
 | [Stackoverflow](https://stackoverflow.com/questions/9419263/how-to-play-audio) | how to play audio | How to use javascript code to use an Mp3 |
 | [Bootstrap](https://getbootstrap.com/docs/5.0/components/modal/) | modals | how to use a vertically centered modal |
 | [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/API/clearInterval) | reset timer | how to clear timer |
