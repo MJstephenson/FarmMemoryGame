@@ -92,15 +92,16 @@ $(".close-btn").on("click", function () {
 });
 
 function shuffleCards() {
-  let cards = $(gameType + ' .image-container'); // select all cards from the game type
-  for (let i = cards.length - 1; i > 0; i--) { //Make cards shuffle with Fisher-Yates shuffle algorithm
+  let cards = $(gameType + ' .image-container').toArray(); // select all cards from the game type and convert to array
+  for (let i = cards.length - 1; i > 0; i--) {
     let j = Math.floor(Math.random() * (i + 1));
     let temp = cards[i];
     cards[i] = cards[j];
     cards[j] = temp;
   }
-  $(gameType).append(cards); // append the shuffled cards back to the game type in the DOM
-}
+  $(gameType).append(cards); // append the shuffled cards back to the DOM
+} 
+
 
 // Winning modal close button
 $("#win-close").on("click", function () {
