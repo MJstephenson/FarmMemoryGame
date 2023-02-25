@@ -285,7 +285,6 @@ These appear to be identical and work in the same manner.
 
 | Source | Location | Notes |
 | --- | --- | --- |
-| [Markdown Builder by Tim Nelson](https://traveltimn.github.io/readme-builder) | README and TESTING | tool to help generate the Markdown files |
 | [Chris Beams](https://chris.beams.io/posts/git-commit) | version control | "How to Write a Git Commit Message" |
 | [Bootstrap](https://getbootstrap.com/docs/5.0/components/modal/) | contact page | interactive pop-up (modal) |
 | [W3Schools](https://www.w3schools.com/jsref/jsref_foreach.asp) | forEach() page | how to use Javascript Array forEach() |
