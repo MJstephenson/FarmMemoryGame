@@ -1,4 +1,4 @@
-/* jshint esversion:11, jquery:true */
+'jshint esversion:11, jquery:true';
 
 let canPlaySound = false; //determine if a sound can be played
 
@@ -52,7 +52,6 @@ $("#cars-btn").on("click", function () {
   $(".background-img").addClass("racetrack");
   playSound("assets/sounds/engine-rev.mp3");
   shuffleCards();
-  
 });
 
 //On new game style button click, hide all Dom Elements, and show header, instructions and choose style section
