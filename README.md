@@ -203,13 +203,13 @@ This section represents some minor changes to the game that have been made as th
 
 These are ideas I have not had the time to implement on this project but if I come back to this project would like implement.
 
-- Cool new feature #1
+- Cool new feature 1
     - High Score Table that keeps your times, turns and star rating locally. 
-- Cool new feature #2
+- Cool new feature 2
     - Different sized game grids to increase/decrease game difficulty.
-- Cool new feature #3
+- Cool new feature 3
     - Random card generator to add images from all games to create a brand new one.
-- Cool new feature #4
+- Cool new feature 4
     - Animations on the card backgrounds whilst playing the game.  
 
 ## Tools & Technologies Used
