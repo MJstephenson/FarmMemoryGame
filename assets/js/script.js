@@ -102,7 +102,6 @@ function shuffleCards() {
   $(gameType).append(cards); // append the shuffled cards back to the DOM
 } 
 
-
 // Winning modal close button
 $("#win-close").on("click", function () {
   resetTimer();
@@ -266,7 +265,6 @@ function winnerModal() {
     playSound("assets/sounds/winner.mp3");
   }, 2500);
 }
-
 
 // make all cards flip when shift+r is pressed and flip back when both pressed again
 $(document).on('keydown', function (e) {
